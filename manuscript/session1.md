@@ -93,7 +93,7 @@ The majority of R packages are stored on CRAN (Comprehensive R Archive Network).
 
 
 # Case Study
-The case study for this first session is a set of water turbidity measurement for  number of suburbs in the same water network. The Laanecoorie water network is situated approximately 100 km North of Melbourne in Victoria, Australia. Water is sourced from the ** reservoir and treated with sand filtration.
+The case study for this first session is a set of water turbidity measurement for  number of suburbs in the same water network. The Laanecoorie water network is situated approximately 100 km North of Melbourne in Victoria, Australia. The plant extracts water from the  reservoir, which  and treated with sand filtration.
 
 The water network is divided in * water quality zones, each of which has a set of sample points installed at customer taps in the front of the house. The laboratory contractor regularly samples these taps and tests the water for a range of parameters, including turbidity.
 
@@ -108,31 +108,50 @@ The individual states of Australia each have their own water quality regulations
 The Victorian regulations for water quality specify that the 95th percentile of turbidity 
 
 # Examples
+This section explains how to analyse an example data set with turbidity data for compliance with the Victorian Safe Drinking Water Regulations. All the code is available in the [session1.R](../session1/session1.R "Session 1 code file") file. 
 
+The first step is to open the RStudio project file in the workshop folder. This file contains the basic settings for this project and sets the working folder.
 
-<a id="org50e9e49"></a>
+## Load data
+The data is stored in a csv file, which the `read.csv` file can read. The text between quotation marks is the path to the file. The path is relative to the working folder, so in this case we need to add the folder and the file name. Note that R uses the forward slash, common in Unix systems, and not the Windows backslash to form a path.
 
-## Loading the data
+	turbidity <- read.csv("CaseStudies/turbidity_laanecoorie.csv")
 
+If there is no error, the turbidity data is no loaded and visible in the Environment tab. The turbidity data is a 'data frame', which is a tabular set of data with rows and columns, very much like a spreadsheet.
+## Inspect data
+The next step is to see what is in the data. When you type the name of the variable, R will display all data in the console. This is not a practical way to inspect large sets. The `head` function only shows the first half dozen rows of the data, which prevents the screen from scrolling away. By the way, R also has the `tail` function, that shows the last rows of a data frame.
 
-<a id="orgdb88a1d"></a>
+The `View` function (note the capital V) opens the data in a separate read-only window. This is the most convenient way to inspect the data. You can also view the data this way by clicking on the variable name in the Environment tab.
 
-## Exploring the data
+The `names` function only shows the names of the columns. You can also use this function to rename variables in a data frame. 
 
+The `dim` function shows the number of rows and columns.
 
-<a id="org9586a31"></a>
+Lastly, the `str` function provides a succinct overview of the fields in the data set, including the data types. 
+
+You can also obtain this information by clicking on the triangle next to the variable name in the Environment tab. The functions are useful when you need to use them in calculations or change the properties of the data.
+## Convert data
+When using the `str` function, you will note that the `Date_Sampled` field is a factor instead of a date field. A factor is a type of character variable that can be used in calculations, which falls outside the scope of this introduction to R. Using factors as a date is problematic because data cannot be ordered chronologically.
+
+The `as.Date` function changes the factor into a proper date field that can be sorted chronologically and create a time series. R has many other functions to change the type of a variable, all of which start with `as.`.
+## Explore data
+Now we are ready to explore the data.
 
 ## Descriptive statistics
 
-
-<a id="org650464b"></a>
-
 ## Analysing the data
 
+# Assignment
+Using the functions described above, answer the following questions:
 
-<a id="org6f4e65d"></a>
+* How many samples were taken at each sample point?
+* How many sample points are in the database?
+* 
 
-# Homework
 
+
+If you are stuck, you can view a possible solution in the [assignment1.R](../session1/assignment1.R "First assignment")file. Best to leave the cheating until you have tried everything to get the answer.
+
+# Further study
 After you have followed Session 2, apply the Tidyverse approach to this data and produce the visualisation shown below.
 

@@ -12,7 +12,7 @@
 #########################################################
 
 # Load data
-turbidity <- read.csv("CaseStudies/turbidity_laanecoorie.csv")
+turbidity <- read.csv("session1/turbidity_laanecoorie.csv")
 
 # Inspect data
 turbidity
@@ -31,19 +31,19 @@ table(turbidity$Zone)
 max(turbidity$Result)
 range(turbidity$Result)
 summary(turbidity$Result)
-unique(turbidity$Subsite_Code)
+unique(turbidity$Zone)
 
 # Subset data
 turbidity[1:10, 4:5]
 
-turbidity[1:10, c("Zone", "Result")]
+turbidity[1:10, c("Sample_No", "Result")]
 
 turbidity$Zone == "Laanecoorie"
 
 harcourt <- subset(turbidity, Zone == "Laanecoorie")
 summary(harcourt$Result)
 
-harcourt <- turbidity[turbidity$Zone == "Laanecoorie", ]
+harcourt <- turbidity[turbidity$Zone == "Laanecoorie", "Result"]
 summary(harcourt$Result)
 
 # Add data
