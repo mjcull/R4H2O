@@ -21,28 +21,29 @@ The contents of this workshop are for a significant part based on articles of th
 Each of the three two-hour session includes a case study using realistic water utility data. The sessions start with a problem statement about the relevant case study. Participants have to load, transform, explore and analyse the data to solve the problem.
 
 ## Session 1: Introduction to data science programming
-This [first session](Session1.readme.md) starts with an introduction to the principles and best practice in data science. This session also introduces the basics of the R language to undertake simple statistical analysis.
+This first session starts with an introduction to the principles and best practice in data science. This session also introduces the basics of the R language to undertake simple statistical analysis.
 
 This session uses water quality laboratory testing data from a drinking water network. Participants use this data to assess descriptive statistics and compliance with regulations.
 
-{alt: "Distribution of turbidity results."}![Distribution of turbidity results](manuscript/images/turbidity-distribution.png)
+![Distribution of turbidity results](manuscript/images/turbidity-distribution.png)
 
 ## Session 2: Processing Data
-The Tidyverse is an extension of the R language that provides additional functionality that simplifies analysing data. In the [second session](session2/readme.org "Session 2"), participants learn how to clean and explore data.
+The Tidyverse is an extension of the R language that provides additional functionality that simplifies analysing data. In the second session, participants learn how to clean and explore data.
 
 The case study for this data are the results of a survey among American consumers about their perception of water services. Participants use this data set to clean, transform and visualise the data.
 
-{alt: "Consumer involvement with tap water."}![Consumer involvement with tap water](manuscript/images/consumer-involvement.png)
+![Consumer involvement with tap water](manuscript/images/consumer-involvement.png)
 
 ## Session 3: Analysing data
-In the [last session](session3/readme.org), participants will analyse an extensive data set to find anomalies in the water consumption data.
+In the last session, participants will analyse an extensive data set to find anomalies in the water consumption data.
 
 The case study for this session is simulated smart meter data for a water system. This data also contains simulated leaks and other anomalies.
 
-{alt: Digital metering diurnal curve}![Digital metering diurnal curve](manuscript/images/digital_metering.png)
+![Digital metering diurnal curve](manuscript/images/digital_metering.png)
 
 # Prerequisites
 To follow participate in this workshop, you need to have some understanding of the issues surrounding water management and experience with analysing data. Experience with writing computer code is helpful, but not required. 
+
 ## R and R Studio
 You will also need access to a recent version of the R language and RStudio.
 
