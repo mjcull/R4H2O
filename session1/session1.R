@@ -1,0 +1,58 @@
+#########################################################
+##                                                     ##
+##  Writing Data Science Code for Water Professionals  ##
+##                                                     ##
+##                    Dr Peter Prevos                  ##
+##                                                     ##
+##               Session 1: Introduction to R          ##
+##                Water Quality Regulations            ##
+##                                                     ##
+##  https://github.com/pprevos/RforWaterProfessionals  ##
+##                                                     ##
+#########################################################
+
+# Load data
+turbidity <- read.csv("CaseStudies/turbidity_laanecoorie.csv")
+
+# Inspect data
+turbidity
+head(turbidity)
+View(turbidity)
+
+names(turbidity)
+dim(turbidity)
+str(turbidity)
+
+# Convert data
+turbidity$Date_Sampled <- as.Date(turbidity$Date_Sampled)
+
+# Explore data
+table(turbidity$Zone)
+max(turbidity$Result)
+range(turbidity$Result)
+summary(turbidity$Result)
+unique(turbidity$Subsite_Code)
+
+# Subset data
+turbidity[1:10, 4:5]
+
+turbidity[1:10, c("Zone", "Result")]
+
+turbidity$Zone == "Laanecoorie"
+
+harcourt <- subset(turbidity, Zone == "Laanecoorie")
+summary(harcourt$Result)
+
+harcourt <- turbidity[turbidity$Zone == "Laanecoorie", ]
+summary(harcourt$Result)
+
+# Add data
+turbidity$Comply <- turbidity$Result <= 5
+
+# Anlyse data
+quantile(turbidity$Result, probs = 0.95, type = 5)
+
+sapply(1:9, function(m) quantile(turbidity$Result, 0.95, type = m))
+
+tapply(turbidity$Result, turbidity$Zone,
+       function(x) sapply(1:9, function(m) quantile(x, 0.95, type = m)))
