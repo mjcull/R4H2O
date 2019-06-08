@@ -1,0 +1,492 @@
+City,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10
+Los Angeles,1,1,7,7,7,7,1,1,1,1
+Boston,1,1,1,7,7,7,1,1,1,7
+Denver,2,6,3,2,5,1,7,7,6,5
+Boston,1,1,7,7,7,4,4,3,4,6
+Denver,1,1,7,7,7,7,1,1,2,1
+Denver,1,1,7,7,7,4,4,4,4,4
+Boston,1,1,7,7,7,7,1,1,1,1
+Denver,1,1,7,7,7,6,6,3,6,3
+Los Angeles,3,2,3,4,1,2,2,1,2,3
+Denver,1,2,4,4,7,5,4,6,4,2
+Boston,1,4,1,7,7,1,7,7,7,7
+Denver,1,1,7,7,7,7,1,1,1,1
+Boston,1,1,7,7,7,7,3,1,2,1
+Los Angeles,6,2,6,2,3,6,6,6,6,6
+Los Angeles,2,6,6,6,6,6,3,3,3,2
+Boston,2,1,5,6,7,4,3,2,3,2
+Boston,1,1,7,7,7,5,3,2,2,1
+Denver,7,7,4,2,6,1,7,4,7,7
+Boston,2,2,5,6,7,4,6,4,6,5
+Boston,1,1,7,7,7,7,1,1,1,1
+Denver,1,1,7,6,7,5,4,2,2,4
+Boston,1,2,7,7,7,5,5,3,5,2
+Los Angeles,1,4,7,7,7,4,4,4,4,4
+Los Angeles,2,2,6,6,7,5,4,4,5,4
+Denver,1,1,6,7,5,5,3,4,5,3
+Denver,1,1,6,7,7,5,4,3,4,3
+Los Angeles,1,1,7,7,7,7,1,1,1,1
+Boston,7,7,1,7,1,1,7,7,1,1
+Boston,7,1,7,7,7,7,7,1,7,1
+Denver,1,1,7,7,7,5,4,2,3,4
+Denver,6,2,6,2,5,1,7,7,7,4
+Boston,2,3,7,6,7,4,3,2,4,5
+Los Angeles,1,3,4,7,7,1,7,3,7,7
+Boston,2,6,2,2,1,3,6,6,5,7
+Boston,4,2,4,5,7,4,5,4,4,4
+Denver,2,2,6,6,6,5,3,3,3,3
+Los Angeles,1,1,7,7,7,5,6,4,7,2
+Denver,2,3,7,7,7,2,6,5,6,6
+Boston,1,1,5,5,5,4,4,3,4,4
+Los Angeles,1,1,7,7,7,6,3,3,2,4
+Boston,1,1,7,7,7,7,1,1,1,1
+Boston,1,1,7,7,7,1,7,7,4,4
+Boston,7,4,2,1,1,1,1,7,3,2
+Los Angeles,5,4,4,4,4,5,4,4,4,4
+Boston,1,2,6,7,7,6,3,3,3,1
+Denver,7,1,1,1,4,1,7,7,7,7
+Denver,1,2,7,7,7,6,3,3,2,1
+Denver,1,2,6,7,7,6,2,2,3,2
+Boston,2,1,6,6,6,4,4,3,4,4
+Boston,1,1,5,1,1,7,7,4,4,4
+Los Angeles,1,1,6,7,7,7,1,1,2,1
+Los Angeles,1,4,4,6,6,4,4,4,6,4
+Boston,1,1,5,7,7,5,4,4,4,2
+Denver,7,4,6,7,7,5,3,4,4,4
+Los Angeles,1,3,3,7,7,4,6,5,7,4
+Boston,1,1,7,7,7,5,2,1,3,1
+Denver,1,1,7,7,7,1,7,7,4,4
+Denver,2,2,4,7,7,4,4,3,7,4
+Denver,1,1,7,7,7,7,6,1,1,4
+Denver,1,1,7,7,7,7,7,1,1,1
+Los Angeles,1,1,7,7,7,7,1,1,1,1
+Boston,1,1,7,7,7,1,3,5,7,3
+Boston,1,7,7,7,7,7,7,7,7,7
+Denver,1,1,7,7,7,7,1,1,1,1
+Los Angeles,6,3,2,1,7,5,7,6,6,4
+Los Angeles,4,4,5,3,6,3,6,7,5,4
+Boston,1,3,6,3,7,5,4,4,5,3
+Denver,1,1,7,7,7,6,2,1,1,1
+Denver,1,1,4,7,7,4,4,4,4,4
+Los Angeles,1,1,7,7,7,5,6,3,5,3
+Denver,4,4,4,4,4,4,4,4,4,4
+Los Angeles,1,3,7,7,7,7,1,6,1,6
+Boston,1,1,7,7,7,6,2,1,1,1
+Denver,2,2,5,7,1,6,4,2,4,3
+Denver,1,6,7,7,7,6,2,3,6,6
+Boston,7,6,7,1,1,4,4,5,4,6
+Los Angeles,2,3,4,4,4,4,4,3,4,4
+Denver,1,1,7,7,7,4,4,4,4,1
+Los Angeles,4,4,3,3,2,3,5,6,5,4
+Boston,1,3,6,6,7,7,4,2,3,2
+Boston,1,1,6,7,7,5,3,1,3,3
+Denver,1,1,7,7,7,6,2,1,2,2
+Denver,1,2,5,6,7,4,4,2,4,4
+Los Angeles,1,1,7,7,7,7,6,1,1,2
+Denver,1,1,7,7,7,4,5,2,4,2
+Denver,1,1,7,7,7,7,1,1,1,1
+Boston,1,1,7,7,7,7,1,1,1,1
+Los Angeles,1,3,6,7,5,5,4,2,4,5
+Denver,4,3,5,6,6,3,6,4,6,6
+Los Angeles,5,4,5,6,5,4,4,3,6,5
+Boston,1,1,7,7,7,7,1,1,1,1
+Boston,1,2,7,7,7,5,4,4,4,3
+Los Angeles,7,7,4,1,1,4,7,7,4,7
+Los Angeles,1,1,7,7,7,2,6,5,6,7
+Boston,1,1,7,7,7,4,4,4,4,4
+Denver,2,4,4,4,4,1,7,4,7,7
+Boston,2,5,4,7,7,2,6,1,7,6
+Denver,1,1,7,7,7,7,1,1,1,1
+Boston,1,1,7,7,7,4,4,4,4,4
+Boston,1,1,7,7,7,4,4,2,4,4
+Los Angeles,1,1,7,7,7,5,4,6,4,6
+Los Angeles,5,4,4,4,4,7,7,7,7,1
+Denver,1,2,6,6,7,6,2,2,2,2
+Denver,1,1,7,7,7,6,4,1,4,3
+Boston,1,1,7,7,7,5,3,1,3,2
+Los Angeles,6,5,5,5,6,7,5,4,7,6
+Los Angeles,5,5,6,7,7,3,6,4,6,3
+Boston,5,6,2,2,2,2,6,6,6,6
+Denver,1,4,4,7,7,5,2,2,4,4
+Boston,7,7,1,1,1,5,7,7,7,7
+Los Angeles,3,4,5,6,6,4,4,4,5,4
+Los Angeles,1,1,7,7,7,4,6,7,4,4
+Los Angeles,1,1,7,7,1,7,3,2,4,1
+Denver,1,1,4,7,7,2,3,3,7,3
+Boston,1,1,6,7,7,1,4,5,7,4
+Boston,1,4,7,7,7,4,4,4,4,4
+Boston,1,2,7,7,7,5,4,2,2,2
+Los Angeles,1,2,3,5,7,1,7,6,7,6
+Denver,6,2,6,6,7,5,4,4,4,3
+Denver,1,2,6,5,7,5,4,3,4,3
+Boston,3,3,5,5,6,6,6,4,4,5
+Los Angeles,1,1,7,7,7,4,4,4,4,4
+Boston,1,1,7,7,7,7,1,1,1,1
+Denver,1,1,4,7,6,4,4,1,4,4
+Boston,1,1,5,7,7,4,2,3,3,3
+Boston,1,1,7,7,7,5,5,1,3,1
+Los Angeles,3,3,5,5,5,5,5,3,4,3
+Boston,4,4,4,4,4,7,7,7,7,7
+Boston,1,1,6,7,7,6,3,1,4,2
+Denver,1,1,7,7,7,1,7,4,7,7
+Los Angeles,1,2,7,7,7,4,3,2,4,3
+Denver,2,3,6,6,6,5,5,4,5,4
+Boston,4,2,7,7,6,6,3,2,6,2
+Boston,2,2,6,6,7,5,6,3,5,3
+Boston,1,1,7,7,7,1,7,1,7,7
+Los Angeles,3,3,5,4,6,4,4,6,4,4
+Los Angeles,1,1,7,7,7,7,1,1,1,1
+Boston,1,1,6,7,7,6,3,1,3,3
+Denver,1,1,5,7,6,1,7,6,4,3
+Boston,1,2,4,7,7,3,6,4,6,7
+Denver,1,1,7,7,7,3,5,3,4,5
+Denver,3,3,5,6,6,2,6,4,5,6
+Los Angeles,1,1,7,7,7,3,5,4,5,2
+Los Angeles,1,1,7,7,7,7,1,1,1,1
+Boston,7,7,6,7,7,4,4,4,4,4
+Los Angeles,1,4,4,7,7,4,4,4,4,4
+Denver,1,1,5,7,7,4,4,3,4,3
+Boston,2,2,6,7,7,2,4,4,4,4
+Boston,3,4,4,4,5,2,5,5,5,3
+Los Angeles,4,3,4,7,7,4,5,4,4,5
+Boston,6,6,3,3,4,4,5,6,6,5
+Los Angeles,1,3,5,5,7,3,4,2,7,6
+Boston,1,1,7,7,7,3,4,3,4,2
+Boston,1,1,7,6,7,6,2,1,3,2
+Denver,3,4,4,6,7,3,6,4,5,4
+Denver,3,4,6,5,6,5,2,4,4,4
+Boston,1,1,5,7,7,2,7,3,6,7
+Denver,1,2,7,7,7,5,4,3,4,2
+Denver,2,2,5,5,6,6,4,2,4,2
+Boston,1,1,7,7,7,7,1,2,1,2
+Denver,2,4,5,6,6,1,7,6,6,5
+Los Angeles,7,7,1,1,4,1,7,7,7,7
+Denver,1,1,6,7,7,5,4,5,4,3
+Boston,1,1,7,6,7,6,1,2,4,1
+Boston,1,3,4,7,7,4,4,6,4,4
+Denver,1,2,6,7,7,4,4,2,4,4
+Los Angeles,1,2,7,7,7,4,4,4,2,2
+Denver,7,7,7,1,1,1,7,7,7,7
+Los Angeles,1,1,7,7,7,2,7,7,5,5
+Denver,1,2,7,7,7,6,4,3,4,3
+Boston,1,1,7,7,7,6,1,1,2,1
+Los Angeles,4,5,5,4,6,5,4,6,5,3
+Boston,5,3,5,7,7,2,7,7,7,3
+Denver,1,1,7,7,7,4,4,1,5,4
+Denver,1,1,2,5,6,3,1,1,4,1
+Denver,3,4,6,5,6,3,6,4,5,3
+Los Angeles,1,1,7,7,7,4,4,4,4,1
+Boston,1,1,7,7,7,7,1,1,1,1
+Los Angeles,3,2,7,4,7,4,3,3,5,3
+Denver,2,1,4,7,7,4,7,2,6,4
+Denver,1,1,6,1,1,6,2,6,6,6
+Boston,2,2,6,5,6,4,4,5,4,4
+Denver,1,1,5,7,7,6,4,4,4,5
+Boston,1,2,6,6,7,3,1,2,5,5
+Los Angeles,1,1,6,7,7,6,1,1,3,1
+Boston,1,1,7,7,7,6,4,1,4,2
+Denver,1,1,7,7,7,5,3,1,1,3
+Denver,3,3,6,5,6,4,5,3,4,4
+Denver,2,1,5,7,7,4,4,4,4,4
+Los Angeles,1,1,7,7,7,4,3,1,3,1
+Boston,1,4,6,7,7,4,4,4,4,2
+Boston,1,1,5,7,7,5,4,1,4,5
+Denver,1,2,6,7,6,6,2,2,2,2
+Los Angeles,1,1,7,7,7,7,1,1,1,1
+Boston,2,2,5,6,6,2,4,4,6,4
+Denver,1,1,1,7,7,7,1,1,7,1
+Los Angeles,1,1,7,7,7,7,1,1,3,1
+Denver,1,4,4,7,7,4,5,4,4,4
+Los Angeles,1,1,7,7,7,7,4,7,7,4
+Los Angeles,1,1,7,7,7,4,7,3,5,3
+Denver,3,3,6,6,6,5,4,3,5,4
+Boston,1,1,7,7,7,7,3,4,7,3
+Denver,1,1,4,7,7,1,7,4,7,4
+Los Angeles,2,2,6,6,6,2,6,6,6,2
+Boston,3,4,5,5,5,2,6,4,4,4
+Boston,3,3,5,6,5,4,4,3,2,4
+Los Angeles,3,4,4,4,4,3,4,1,1,3
+Denver,1,1,7,7,7,4,4,3,4,4
+Boston,1,1,6,6,7,6,3,2,3,2
+Denver,2,2,6,6,2,5,4,2,3,3
+Los Angeles,2,5,6,6,7,3,6,3,6,2
+Denver,1,3,6,7,7,3,6,3,3,6
+Boston,1,1,7,7,7,7,1,1,1,4
+Boston,2,2,7,7,7,5,3,2,4,5
+Los Angeles,1,1,6,5,7,6,4,4,3,3
+Denver,1,1,6,6,7,3,7,4,5,4
+Los Angeles,7,6,7,1,7,4,1,2,1,1
+Los Angeles,1,1,7,7,7,7,4,4,4,1
+Los Angeles,1,2,7,7,7,6,6,1,4,4
+Boston,1,2,5,7,6,4,4,3,4,4
+Boston,2,1,7,6,7,4,3,4,4,4
+Denver,1,1,6,6,7,6,1,2,1,5
+Denver,1,1,7,7,7,4,4,1,6,3
+Los Angeles,2,2,6,6,6,5,4,4,4,3
+Los Angeles,1,1,7,7,7,7,1,1,1,1
+Los Angeles,4,7,2,1,7,1,6,7,7,6
+Boston,1,2,5,5,7,4,4,4,5,4
+Boston,2,4,4,5,6,2,6,6,6,6
+Boston,1,2,7,7,7,6,3,3,2,4
+Denver,1,1,7,7,7,7,1,1,1,4
+Boston,1,1,7,7,7,6,3,2,3,3
+Los Angeles,1,1,6,7,7,2,6,6,6,4
+Denver,1,1,7,7,7,5,7,2,7,3
+Boston,6,6,3,3,1,3,6,3,6,3
+Denver,1,4,7,7,7,4,4,4,6,4
+Los Angeles,1,1,6,6,6,6,4,2,4,2
+Denver,1,2,4,3,4,6,2,1,4,3
+Los Angeles,1,1,7,7,7,7,7,7,1,1
+Los Angeles,1,1,7,7,7,6,4,3,4,4
+Los Angeles,1,1,7,7,7,1,1,7,1,1
+Boston,4,3,4,6,5,5,5,3,4,4
+Los Angeles,1,4,7,7,7,5,7,4,3,4
+Denver,4,2,6,4,4,4,4,5,3,3
+Boston,1,2,6,7,7,7,4,2,3,4
+Los Angeles,1,1,7,7,7,5,3,2,1,2
+Denver,1,3,7,7,7,5,4,3,5,5
+Los Angeles,1,2,7,6,7,4,5,3,4,5
+Los Angeles,3,2,6,6,7,4,6,4,4,4
+Los Angeles,2,2,6,6,6,6,2,2,2,2
+Boston,1,3,6,7,7,6,2,2,3,2
+Denver,1,1,7,7,7,7,2,1,2,1
+Denver,1,1,6,7,7,6,4,4,2,4
+Boston,5,4,4,5,4,1,6,7,6,4
+Los Angeles,2,5,5,5,4,3,3,5,4,4
+Los Angeles,1,4,6,6,7,4,3,4,5,3
+Los Angeles,1,1,7,7,7,4,3,1,4,3
+Los Angeles,1,1,7,7,7,4,4,4,4,1
+Boston,1,1,6,7,7,4,4,4,6,2
+Los Angeles,2,2,2,6,6,3,6,6,6,6
+Denver,1,1,7,7,7,6,3,1,2,1
+Los Angeles,1,1,7,6,7,4,1,2,4,2
+Los Angeles,1,1,7,7,7,7,1,1,1,1
+Denver,1,1,7,7,7,6,6,2,4,1
+Denver,1,1,7,7,7,4,4,1,4,4
+Los Angeles,2,3,6,6,6,6,4,5,6,4
+Los Angeles,2,1,7,7,7,6,1,1,1,2
+Denver,2,2,4,6,7,4,4,5,5,5
+Boston,1,1,6,7,7,3,5,4,4,4
+Boston,1,1,7,7,7,5,6,1,4,4
+Los Angeles,1,1,7,7,7,4,4,4,4,4
+Los Angeles,1,1,5,7,7,5,4,3,4,1
+Los Angeles,1,1,7,7,7,7,1,1,1,1
+Los Angeles,1,1,7,7,7,1,6,6,7,7
+Los Angeles,3,3,5,4,7,4,5,6,5,3
+Denver,2,2,5,7,5,6,2,4,3,3
+Los Angeles,1,2,7,7,7,7,2,2,2,2
+Los Angeles,1,5,5,5,7,5,1,2,1,4
+Los Angeles,3,3,5,5,5,5,5,5,4,3
+Denver,3,3,6,7,7,6,3,2,4,3
+Denver,6,5,5,5,6,2,3,4,5,4
+Los Angeles,1,1,6,7,7,5,2,3,3,3
+Los Angeles,5,6,4,4,4,3,4,5,6,4
+Los Angeles,2,3,5,4,3,3,5,5,2,4
+Los Angeles,1,1,7,7,7,7,1,1,1,1
+Los Angeles,2,2,6,6,6,6,4,5,6,4
+Los Angeles,1,1,7,7,7,7,2,1,2,1
+Denver,1,1,7,7,7,4,5,4,4,3
+Denver,1,1,7,7,7,7,1,1,1,1
+Los Angeles,1,4,7,7,7,4,4,4,4,4
+Denver,1,2,6,6,5,6,2,2,3,3
+Boston,1,1,3,7,7,4,4,3,4,4
+Los Angeles,3,3,4,5,3,3,5,6,5,6
+Denver,1,1,7,7,7,1,7,6,4,4
+Boston,1,1,7,7,7,2,7,2,7,4
+Los Angeles,1,1,5,6,7,3,6,6,6,6
+Los Angeles,1,1,7,7,7,4,4,2,7,1
+Los Angeles,1,1,7,7,7,1,7,2,7,6
+Los Angeles,2,2,4,4,7,3,4,5,3,3
+Los Angeles,1,4,7,7,7,7,1,1,4,4
+Los Angeles,2,1,6,4,7,3,5,4,5,3
+Los Angeles,1,2,3,7,4,7,2,6,1,5
+Boston,1,1,7,7,7,4,4,1,4,4
+Los Angeles,2,5,3,4,5,2,4,5,6,5
+Los Angeles,2,5,3,6,6,6,2,2,2,2
+Los Angeles,7,6,2,6,3,5,5,1,4,4
+Los Angeles,1,1,2,6,7,2,6,7,5,4
+Los Angeles,1,1,7,7,7,7,4,1,4,1
+Los Angeles,1,1,7,7,7,4,7,1,7,1
+Los Angeles,6,7,6,7,7,6,6,6,5,6
+Los Angeles,1,1,7,6,7,4,4,1,4,3
+Boston,1,1,7,7,7,7,1,1,1,1
+Los Angeles,1,1,7,7,7,2,5,2,5,1
+Los Angeles,2,2,6,6,6,6,2,2,2,2
+Los Angeles,2,2,4,4,5,5,3,3,3,3
+Los Angeles,1,7,6,2,1,6,2,2,1,1
+Denver,1,1,7,6,7,7,2,1,2,1
+Boston,2,2,2,6,7,5,4,3,4,3
+Denver,1,5,7,7,7,5,4,1,6,4
+Boston,4,4,1,4,4,1,7,7,7,7
+Denver,1,2,6,7,7,4,5,2,4,3
+Los Angeles,1,4,7,7,7,7,1,4,7,5
+Los Angeles,2,4,6,6,6,3,6,4,4,4
+Los Angeles,2,3,4,6,7,6,6,5,4,1
+Los Angeles,1,2,6,7,7,1,7,4,7,4
+Denver,1,1,7,7,7,1,6,2,6,1
+Boston,1,1,7,7,7,5,4,3,4,1
+Denver,1,1,7,7,7,7,4,1,2,1
+Boston,1,1,7,7,7,5,3,3,3,2
+Boston,1,1,7,7,7,7,1,1,1,1
+Boston,1,1,7,7,7,4,7,4,4,4
+Boston,1,1,7,7,7,7,4,1,3,5
+Boston,5,6,5,6,5,6,6,6,2,2
+Boston,5,5,7,4,6,4,5,6,5,4
+Boston,1,1,7,7,7,5,1,1,3,1
+Boston,1,2,6,7,6,2,6,4,4,2
+Boston,4,5,1,1,1,2,3,4,2,2
+Boston,1,2,6,5,6,3,7,3,7,4
+Boston,1,1,6,7,7,5,4,2,4,2
+Boston,1,1,7,7,7,7,7,4,3,1
+Boston,1,1,7,7,7,7,4,1,4,1
+Boston,2,3,5,5,6,3,5,7,5,3
+Boston,1,1,7,7,7,7,1,1,1,1
+Boston,1,1,6,7,7,5,4,1,6,4
+Boston,1,1,7,7,7,1,7,6,6,1
+Boston,1,1,7,7,7,4,4,1,4,4
+Boston,1,1,6,6,6,4,6,4,1,4
+Boston,1,2,2,6,7,4,7,4,6,4
+Denver,1,1,7,7,7,7,3,3,3,1
+Denver,1,2,5,6,6,6,3,6,3,4
+Denver,1,1,6,7,7,4,5,3,5,4
+Boston,1,1,7,7,7,4,1,4,1,4
+Denver,1,2,7,6,7,6,3,3,3,3
+Denver,1,1,7,7,7,5,2,2,3,2
+Denver,1,1,7,7,7,6,2,1,2,2
+Denver,1,1,7,7,7,7,1,1,1,1
+Denver,7,7,7,7,7,4,5,5,3,7
+Denver,1,7,6,7,7,5,4,5,5,4
+Denver,5,3,4,5,5,6,6,4,4,4
+Denver,1,1,7,7,7,4,4,2,4,4
+Denver,1,1,7,7,7,7,2,2,2,2
+Denver,1,1,7,7,7,6,2,1,3,3
+Denver,2,3,4,5,6,4,6,4,4,4
+Denver,1,1,7,7,7,6,2,1,2,2
+Denver,1,2,6,7,7,3,5,5,2,3
+Boston,4,4,1,4,4,7,7,4,6,6
+Boston,4,5,4,4,1,1,7,7,7,7
+Boston,3,2,6,4,6,2,6,6,6,4
+Boston,6,4,4,5,7,2,7,4,6,6
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,1,1,7,7,7,4,4,2,4,4
+Denver,7,7,1,1,1,1,7,7,7,7
+Los Angeles,2,3,4,5,6,4,5,4,4,4
+Boston,1,1,7,7,7,4,4,1,4,4
+Los Angeles,2,2,5,6,7,6,1,1,1,2
+Los Angeles,4,6,3,4,3,6,6,6,6,6
+Los Angeles,1,1,7,7,7,5,3,3,2,3
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,1,1,7,7,7,4,4,4,4,2
+Los Angeles,2,2,5,6,7,5,4,2,4,3
+Los Angeles,1,1,7,7,7,7,1,1,1,1
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,2,2,6,7,6,4,4,4,4,4
+Denver,1,1,7,7,7,4,3,1,2,3
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,1,2,6,7,7,5,3,2,2,4
+Denver,1,1,6,7,7,4,6,5,5,5
+Los Angeles,3,2,5,6,3,1,6,6,6,5
+Los Angeles,1,1,7,7,7,7,3,1,2,2
+Boston,1,1,7,7,7,4,4,4,4,4
+Boston,2,2,5,6,6,6,6,4,6,6
+Los Angeles,1,1,7,7,7,6,3,2,4,3
+Boston,2,4,7,7,7,6,3,2,3,1
+Boston,1,1,7,7,7,7,1,1,1,1
+Boston,1,1,7,7,7,2,6,2,6,2
+Boston,1,1,7,7,7,4,4,4,4,4
+Los Angeles,5,4,4,4,4,3,5,4,4,4
+Boston,1,1,7,7,7,5,4,2,5,4
+Denver,1,1,7,7,7,6,2,2,2,2
+Denver,4,3,2,3,3,1,3,3,2,2
+Denver,2,4,5,5,6,5,4,4,5,3
+Los Angeles,1,2,7,6,7,7,6,4,2,5
+Los Angeles,6,2,6,6,6,5,5,3,6,2
+Los Angeles,1,1,4,7,4,3,4,2,5,4
+Boston,1,1,6,7,7,4,4,4,6,6
+Denver,1,4,5,7,7,4,7,5,6,5
+Boston,1,2,6,6,7,4,2,3,2,6
+Boston,1,1,6,7,7,1,7,2,7,4
+Boston,1,1,7,7,7,6,4,1,3,4
+Boston,1,1,7,7,7,5,3,7,3,2
+Denver,1,2,5,7,7,2,6,4,6,4
+Boston,1,2,6,6,6,2,4,4,7,1
+Boston,1,3,5,5,7,4,5,2,4,4
+Boston,1,3,5,6,7,4,6,2,4,4
+Boston,3,4,5,6,6,3,6,5,5,5
+Boston,6,6,4,6,3,3,2,4,2,4
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,7,1,7,7,7,7,1,1,1,1
+Boston,1,2,4,7,7,4,4,1,4,4
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,1,1,7,7,7,5,4,1,4,4
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,1,1,7,7,7,4,5,4,4,1
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,2,3,3,3,1,3,6,5,3,2
+Los Angeles,1,1,7,7,7,4,4,1,4,4
+Los Angeles,2,2,6,6,6,4,4,4,6,4
+Denver,1,2,4,7,7,1,7,4,7,7
+Los Angeles,1,1,7,4,7,4,4,4,4,4
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,1,1,4,7,7,3,7,7,7,7
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,1,1,7,7,7,1,6,4,7,4
+Denver,1,1,6,7,7,6,2,2,2,2
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,1,2,7,6,7,4,4,4,4,4
+Denver,1,1,7,7,7,5,2,2,2,4
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,2,3,6,6,4,5,5,4,4,3
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,1,1,7,7,7,6,2,1,2,2
+Los Angeles,2,2,6,6,7,3,6,4,4,2
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,2,1,6,7,7,4,4,4,4,2
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,1,1,7,7,7,4,4,1,5,2
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,1,1,7,7,7,4,4,1,4,7
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,1,2,6,7,7,3,5,3,6,4
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,1,1,7,7,7,7,2,1,2,2
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,2,2,4,6,6,5,4,2,4,4
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,1,1,7,7,7,1,6,4,6,2
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Boston,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Los Angeles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Denver,1,1,4,7,7,6,4,2,2,2
+Denver,1,1,7,7,7,5,3,1,2,1
+Denver,1,1,7,7,7,1,7,4,7,4
+Los Angeles,1,1,4,6,7,4,7,3,7,3

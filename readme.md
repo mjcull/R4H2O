@@ -1,5 +1,4 @@
 # R for Water Utility Professionals
-# Dr Peter Prevos
 
 Managing reliable water services requires not only a sufficient volume of water but also significant amounts of data. Water professionals continuously measure the flow and quality of the water and how customers perceive their service. Data and water are natural partners. Water utilities are awash, or even flooded with data. Data professionals use data pipelines and data lakes and cause data to flow from one place to another.
 

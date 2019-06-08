@@ -1,74 +1,36 @@
-# Introduction to Writing Data Science Code
+# Introduction to the R Language: Water Quality Regulations
+This first session introduces the principles of working with the R language using a case study about water quality monitoring. 
 
-# What is Data Science?
-
-## Data Science Workflow
-
-## What is Good Data Science?
-
-## Data Science Tools
-The last ten years have seen an explosion of available data science tools. There is no one single tool that can do everything. Just like a trades-person uses each tool for a specific job, so does a data scientist use tools for specific tasks within the workflow.
-
-### Spreadsheets
-The most common tool to solve data problems are spreadsheets. They are a great product that combines storing data, writing and executing code and displaying output. Their versatility is also their Achilles heel. Spreadsheets have limited capabilities and some intrinsic constraints. Spreadsheets are very easy to build, but they are extremely difficult to reverse-engineer. We all would have had the unpleasant experience of trying to understand how a spreadsheet made by somebody else, or one that you did ages ago, actually functions. The biggest issue with spreadsheets is reproducibility of the analysis process.
-
-### Business Intelligence Systems
-The software market is saturated with point-and-click business intelligence systems, such as Click, Tableau or Power BI. These tools are very user-friendly portals for end-users to consume data. Business intelligence tools are, however, not very suitable to analyse data. Their main strength is to present the results of analysis in a dynamic way. Analysing data is not just about visualisations. Good analysis reviews a lot of intermediate steps that are hidden from the end-user.
-
-Another limitation of these systems is that they are limited to visualisations, without any meaningful capacity to include a narrative. When writing a report, the user has too copy visualisations from the dashboard and then describe them in the report. Well-designed visualisations are, as they say, worth a thousand words, but the complexity of the anaytical process often needs a narrative to help the reader understand the purpose, method and conclusions.
-
-## Data science code
-Writing computer code has long been the domain of information technology professionals. This view is not helped by stereotypes of coders as slightly eccentric geeks that prefer to communicate with their terminal instead of with people. The main objective of this course is to dispel this false idea and to promote that water professionals should all ditch the spreadsheet and learn how to write code.
-
-For those that are used to developing spreadsheets, the jump to writing R code is not as large as it might seem. Every formula in a spreadsheet is in essence a part of a computer program. 
-
-A large range of data science languages is available, each with their own strengths and weaknesses.
-
-The Structured Query Language (SQL, pronounced seequel) is a language to access and manipulate databases. Many varieties of SQL exist, but they all have great similarities. The main strength of SQL is its ability extract, transform and load data. The first version of this language was released in 1986 and it is a robust data interface. This language is not very good at actually analysing data because it does not include any higher-order mathematics.
-
-Python is a general-purpose programming language. Developers use Python to develop many types of applications. Python has many extensions with specialised data science functions. 
-
-There are many other less popular languages such as Julia, Haskell, Fortran, Mathematica and so on.
-
-This workshop uses the R language because it is designed to analyse data. The basic functionality of R includes many higher-order functions to undertake statistical analysis. R is not as fast as some other languages. This book is about the R langauge because the way it is structured is close to the way subject-matter-experts think about analysis, instead of the way computer scientists structure software. 
+This session starts with a 
+In this session, participants learn to load data
 
 
+## The R Language
+R is a programming language for statistical computing and visualisation. This language is developed and maintained through the [R Foundation for Statistical Computing](https://www.r-project.org/foundation/ "The R website"). The R software is open source, which means that anyone can freely download, use, modify ad share the software. The open source model enables an activity community of developers that continuously improve the software.
 
-## Principles of Strategic Data Science
-This section is an extract of the book /Principles of Strategic Data Science/ by Peter Prevos. If you like to find out more about strategic data science, then please consider reading [this book](https://leanpub.com/strategic_data_science). Participants of the workshop will get access to a free copy. 
+Open source software is free. The word free in open source does not necessarily mean free as in free beer, but means freedom. The people developing open source software also need to be paid and most projects rely on donations from organisations that use the software commercially. If your organisation uses R, then I highly recommend considering financially supporting the R Foundation.
 
-![Prevos, P. (2019) Principles of Strategic Data Science](images/StrategicDataScience.jpg)
+The R language is one of the most common tools for data science that can be integrated with many other data science software systems, such as Power BI, Tableau, Mathematica, MATLAB and do so on.
 
+The easiest and fastest way to learn how to use R is by following one or more of the many courses available on the internet. This course is only a teaser to motivate water professionals to ditch their spreadsheets and start to write code. Some recommended resources are:
 
+* DataCamp: Provides free introduction courses
+* 
 
-# The R Language
-This workshop starts with an introduction to working with R and R Studio. Rather than describing the basics, readers are invited to use some of the many free resources to learn the basics before reading the case study.
+The basic R software only provides a console where the analyst can issue commands to the computer or run scripts. The best way is to use R in combination with an Integrated Development Environment (IDE). The most popular IDE for the R language is RStudio. This software is also an open source project with free and paid options. This workshop introduces some of the functionality of RStudio.
 
-* DataCamp
+When you open RStudio for the firs time, the window is divided in three panes, each with various tabs. The left pane is the console. The top right pane shows the environment
 
-## Prerequisites
-To follow participate in this workshop, you need to have some understanding of the issues surrounding water management and experience with analysing data. Experience with writing computer code is helpful, but not required. 
-### R and R Studio
-You will also need access to a recent version of the R language and RStudio.
+X> Move your cursor to the console and type some simple mathematical expressions, such as 1 + 1 and hit enter. Now do the same in the 
 
-The best way to access the R language is by downloading the latest version from the website of the [R Project for Statistical Computing](https://www.r-project.org/). RStudio is an IDE (Integrated Development Environment) that simplifies working with R and data. You can download a free version of this software from the [RStudio](https://www.rstudio.com/) website. Follow the instructions on these websites to complete the installation. You will need to install the R language before you install the IDE.
+![RStudio default screen layout](images/rstudio.png "RStudio default screen layout.")
 
-Alternatively, you can sign-up for a free account to access the [cloud version](https://rstudio.cloud/) of R Studio. This account will give you full access to R Studio and R in your browser without the need to install software. The cloud version is fully functional but not very fast. Installing R and RStudio on your own laptop is the preferred method.
-
-### Downloading the workshop material
-If you are participating in the workshop, you can download the documents by clicking on the 'clone or download' button and unzip the files to your computer. You can open the RStudio project file to begin the workshop and start playing with the data and code.
-
-For those using the cloud version of RStudio, click on the arrow next to the 'New Project' button and select 'New Project from GitHub Repo'. Copy the URL of this repository in the text field and hit enter. After a little while, RStudio will open the project.
-
-If you understand how to use Git, then feel free to fork and clone the repository. Feel free to create an issue or pull request if you find errors or like to provide additional content.
-
-##
+## Basic principles
 
 ## Packages
+One of the most exciting aspects of this language is that developers can write their own extensions of the R language, the so-called packages or libraries. Thousands of specialised packages are available that undertake a vast range of tasks. You can use R as a GIS and analyse spatial data, other packages help you to access data from various sources, such as SQL databases. Many R extensions undertake specialised tasks such as machine learning.
 
-One of the most exciting aspects of this language is that other developers can write their own extensions, the so-called packages or libraries. There are thousands of specialised packages that undertake a vast range of specialised tasks. You can use R as a GIS and analyse spatial data, other packages help you to access data from various sources, such as SQL databases, specialised analysis, machine learning, and so on.
-
-The majority of R packages are stored on CRAN (Comprehensive R Archive Network). You can easily install packages in R with the `install.packages` function. Within RStudio you can install packages in the *Tools* menu.
+The majority of R packages are stored on [CRAN](https://cran.r-project.org/ "The Comprehensive R Archive Network"), which is the Comprehensive R Archive Network. You can install packages in R with the `install.packages` function. Within RStudio you can install packages in the *Tools* menu.
 
 ### Water R packages
 
