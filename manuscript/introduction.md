@@ -1,5 +1,6 @@
 # R for Water Professionals
 
+{fullbleed}
 ![](resources/r4h20-logo.png)
 
 Managing reliable water services requires not only a sufficient volume of water but also significant amounts of data. Water professionals continuously measure the flow and quality of the water and asses how customers perceive their service. Water utilities are awash, or even flooded with data. Data professionals use data pipelines and data lakes and make data flow from one place to another.
@@ -22,7 +23,7 @@ The first session defines data science as an evolution of traditional analysis. 
 
 The content of this session is based on the ebook *Principles of Strategic Data Science*. Participants of this course can download a [free copy](http://leanpub.com/strategic_data_science/c/r4h2o) of this book.
 
-{alt: "Principles of Strategic Data Science.", align: "middle"}
+{width: "25%", alt: "Principles of Strategic Data Science.", align: middle}
 ![Prevos, P. (2019) Principles of Strategic Data Science](resources/StrategicDataScience.jpg)
 
 ## Session 2: Introduction to data science programming
