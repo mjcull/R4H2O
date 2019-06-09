@@ -22,6 +22,7 @@ The first session defines data science as an evolution of traditional analysis. 
 
 The content of this session is based on the ebook *Principles of Strategic Data Science*. Participants of this course can download a [free copy](http://leanpub.com/strategic_data_science/c/r4h2o) of this book.
 
+{alt: "Principles of Strategic Data Science.", align: "middle"}
 ![Prevos, P. (2019) Principles of Strategic Data Science](resources/StrategicDataScience.jpg)
 
 ## Session 2: Introduction to data science programming
@@ -37,6 +38,7 @@ The Tidyverse is an extension of the R language that provides additional functio
 
 The case study for this data are the results of a survey among American consumers about their perception of water services. Participants use this data set to clean, transform and visualise the data.
 
+{width: "70%", alt: "Consumer involvement with tap water.", align: "middle"}
 ![Consumer involvement with tap water](resources/consumer-involvement.png)
 
 ## Session 4: Analysing data
@@ -44,6 +46,7 @@ In the last session, participants will analyse an extensive data set to find ano
 
 The case study for this session is simulated smart meter data for a water system. This data also contains simulated leaks and other anomalies.
 
+{width: "70%", alt: "Digital metering diurnal curve.", align: "middle"}
 ![Digital metering diurnal curve](resources/digital_metering.png)
 
 ## Prerequisites
