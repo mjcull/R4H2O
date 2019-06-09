@@ -1,21 +1,21 @@
 # R for Water Professionals
 
-![R for Water Professionals](resources/r4h20-logo.png)
+![](resources/r4h20-logo.png)
 
 Managing reliable water services requires not only a sufficient volume of water but also significant amounts of data. Water professionals continuously measure the flow and quality of the water and asses how customers perceive their service. Water utilities are awash, or even flooded with data. Data professionals use data pipelines and data lakes and make data flow from one place to another.
 
 Data and water are, as such, natural partners. Professionals in the water industry rarely directly interact with water or customers, but they are constantly analysing data that describes these realities. The purpose of collecting and analysing this data is to maintain or improve the level of service to customers and to minimise the impact on the natural environment.
 
-Most professionals use spreadsheets to work with data. While spreadsheets are great tools, they are not ideal when working with large and complex data sets. Specialists in data analysis prefer to write code in one of the many available computing languages. This course introduces water utility professionals to the [R language](https://en.wikipedia.org/wiki/R_(programming_language)) for statistical computing.
+Most professionals use spreadsheets to work with data. While these tools are handy, they are not ideal when working with large and complex sets of data. Specialists in data analysis prefer to write code in one of the many available computing languages. 
 
-This workshop is not an exhaustive introduction into data science programming but a teaser to inspire water professionals to [ditch the spreadsheet](https://lucidmanager.org/spreadsheets-for-data-science/) and start writing code to create value from data.
- 
-The contents of this workshop are for a significant part based on articles of the [Lucid Manager](https://lucidmanager.org/hydroinfromatics/) website by Peter Prevos.
+This course introduces water utility professionals to the [R language](https://en.wikipedia.org/wiki/R_(programming_language)) for statistical computing. This language is one of the most popular tools among data scientists to create value from data. 
+
+This workshop is not an exhaustive introduction into data science programming but a teaser to inspire water professionals to [ditch their spreadsheets](https://lucidmanager.org/spreadsheets-for-data-science/) and start writing code to analyse data.
 
 ## Course content
 The course consists of four sessions. The first session introduces the principles of data science within the context of managing a water utility. The next three sessions include realistic case studies about water management. The last three sessions start with a problem statement about the relevant case study. The second part introduces participants to relevant aspects of the R language. Participants have to load, transform, explore and analyse the data to solve the problem.
 
-E> The content for this course is still in development. The full content will be available in the second week of July 2019.
+E> The content for this course is under development. The full content will be available in the second week of July 2019.
 
 ## Session 1: Introduction to Water Utility Data Science
 The first session defines data science as an evolution of traditional analysis. The greater availability of data, enhanced computer capacity and tools to analyse this information have revolutionised the industry. The second part of this session introduces a framework for best practice in data science.
@@ -53,12 +53,12 @@ You will also need access to a recent version of the R language and RStudio. The
 Alternatively, you can sign-up for a free account to access the [cloud version](https://rstudio.cloud/) of R Studio. This account will give you full access to R Studio and R in your browser without the need to install any software. The cloud version is fully functional but not very fast. Installing R and RStudio on your laptop is the preferred method.
 
 ## Downloading the workshop material
-All resources for this workshop are available on the [https://github.com/pprevos/r4h2o/](GitHub) website. GitHub is a popular repository for computer code and associated information that allows developers to share their work and contribute to other projects.
+All resources for this workshop are available on the [https://github.com/pprevos/r4h2o/](GitHub) website. GitHub is a popular repository for computer code and associated information that allows developers to share their work and collaborate.
 
-You can download the documents by clicking on the 'clone or download' button and unzip the files to your computer. You can open the RStudio project file to begin the workshop and start playing with the data and code.
+You can download the documents by clicking on the 'clone or download' button and extract the files to your computer. You can open the RStudio project file to begin the workshop and start playing with the data and code.
 
 For those using the cloud version of RStudio, click on the arrow next to the 'New Project' button and select 'New Project from GitHub Repo'. Copy the URL of this repository in the text field and hit enter. After a little while, RStudio will open the project.
 
 If you understand how to use Git, then feel free to fork and clone the repository. Feel free to create an issue or pull request if you find errors or like to provide additional content.
 
-E> Install R and RStudio and download the workshop materials.
+X> Install R and RStudio and download the workshop materials.
