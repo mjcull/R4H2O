@@ -62,3 +62,17 @@ For those using the cloud version of RStudio, click on the arrow next to the 'Ne
 If you understand how to use Git, then feel free to fork and clone the repository. Feel free to create an issue or pull request if you find errors or like to provide additional content.
 
 X> Install R and RStudio and download the workshop materials.
+
+D> This is a discussion blurb.
+
+E> This is an error blurb.
+
+I> This is an information blurb.
+
+Q> This is a question blurb.
+
+T> This is a tip blurb.
+
+W> This is a warning blurb.
+
+X> This is an exercise blurb.
