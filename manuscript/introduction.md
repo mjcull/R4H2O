@@ -1,6 +1,6 @@
 # R for Water Professionals
 
-{fullbleed: "true"}
+{width: "100%"}
 ![](resources/r4h20-logo.png)
 
 Managing reliable water services requires not only a sufficient volume of water but also significant amounts of data. Water professionals continuously measure the flow and quality of the water and asses how customers perceive their service. Water utilities are awash, or even flooded with data. Data professionals use data pipelines and data lakes and make data flow from one place to another.
@@ -16,6 +16,8 @@ This workshop is not an exhaustive introduction into data science programming bu
 ## Course content
 The course consists of four sessions. The first session introduces the principles of data science within the context of managing a water utility. The next three sessions include realistic case studies about water management. The last three sessions start with a problem statement about the relevant case study. The second part introduces participants to relevant aspects of the R language. Participants have to load, transform, explore and analyse the data to solve the problem.
 
+This course only discusses the basics of using the R language with only a limited scope. This course does not include any discussion of more advanced techniques such as machine learning.
+
 E> The content for this course is under development. The full content will be available in the second week of July 2019.
 
 ## Session 1: Introduction to Water Utility Data Science
@@ -23,7 +25,7 @@ The first session defines data science as an evolution of traditional analysis. 
 
 The content of this session is based on the ebook *Principles of Strategic Data Science*. Participants of this course can download a [free copy](http://leanpub.com/strategic_data_science/c/r4h2o) of this book.
 
-{width: "25%", alt: "Principles of Strategic Data Science.", align: "center"}
+{width: "25%", alt: "Principles of Strategic Data Science."}
 ![Prevos, P. (2019) Principles of Strategic Data Science](resources/StrategicDataScience.jpg)
 
 ## Session 2: Introduction to data science programming
@@ -50,10 +52,22 @@ The case study for this session is simulated smart meter data for a water system
 {width: "70%", alt: "Digital metering diurnal curve.", align: "middle"}
 ![Digital metering diurnal curve](resources/digital_metering.png)
 
+## Participant Activities
+This course contains several activities for participants. Several icons are used throughout the text to indicate these activities.
+
+Q> Questions and quizzes.
+
+X> Tasks.
+
+D> Points of discussion for face-to-face workshops.
+
+Each of the following four sections contains one or more quizzes to test your knowledge.
+
 ## Prerequisites
 To follow participate in this workshop, you need to have some understanding of the issues surrounding water management and experience with analysing data. Experience with writing computer code is helpful, but not required. 
 
-You will also need access to a recent version of the R language and RStudio. The best way to access the R language is by downloading the latest version from the website of the [R Project for Statistical Computing](https://www.r-project.org/). RStudio is an IDE (Integrated Development Environment) that simplifies working with R and data. You can download a free version of this software from the [RStudio](https://www.rstudio.com/) website. Follow the instructions on these websites to complete the installation. You will need to install the R language before you install the IDE.
+You will also need access to a recent version of the R language and RStudio. The best way to access the R language is by downloading the latest version from the website of the [R Project for Statistical Computing](https://www.r-project.org/). RStudio is an IDE (Integrated Development Environment) that simplifies working with R and data. You can download a free version of this software from the [RStudio](https://www.rstudio.com/) website. Follow the instructions on these 
+websites to complete the installation. You will need to install the R language before you install the IDE.
 
 Alternatively, you can sign-up for a free account to access the [cloud version](https://rstudio.cloud/) of R Studio. This account will give you full access to R Studio and R in your browser without the need to install any software. The cloud version is fully functional but not very fast. Installing R and RStudio on your laptop is the preferred method.
 
