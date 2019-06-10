@@ -295,7 +295,7 @@ First and foremost, visualisation needs to tell a story. The story in data visua
 
 Numerical data can contain several types of narratives. A graph can compare data points to show a trend among items or communicate differences between them. Bar charts are the best option to compare data points with each other. A line graph is possibly your best option to compare data points over time. The distribution of data points is best visualised using a histogram. Scatter plots or bubble charts show relationships between two or three variables (Figure 8).
 
-![Figure 8: Examples of stories with quantitative data](images/figure07_Stories.png)
+![Figure 8: Examples of stories with quantitative data](resources/session1/stories.png)
 
 The detailed considerations of choosing the most suitable visualisation are outside the scope of this book. The [Chart Chooser](https://chartchooser.com) website provides a dynamic interface to select the best graph to tell a story. The main point is that every visualisation needs to tell a story and not just summarise a bunch of data.
 
