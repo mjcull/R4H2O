@@ -26,7 +26,7 @@ When you open RStudio for the first time, the window is divided in three panes, 
 
 X> Move your cursor to the console and type the code examples show below. Don't copy and paste them because typing them will develop your muscle memory for the R syntax.
 
-{format: R, caption: "Basic R code"}
+{format: r, line-numbers: false}
 ```
 3 - 3 * 6 + 2
 
@@ -57,7 +57,7 @@ The laboratory contractor regularly samples these taps and tests the water for a
 ### Turbidity
 Turbidity is a measurement of the cloudiness of the water. In drinking water, the higher the turbidity level, the higher the risk that people may develop gastrointestinal diseases. Particles in the water scatter a light, which can be used to measure turbidity with a nephelometer. The units of turbidity are dimensionless Nephelometric Turbidity Units (NTU).
 
-{type: video}
+{type: video, align: middle, poster: "https://www.youtube.com/watch?v=9iwGuBRWUco/mqdefault.jpg"}
 ![Determination of Turbidity of water: Calibration and Measurement](https://www.youtube.com/watch?v=9iwGuBRWUco)
 
 The individual states of Australia each have their own water quality regulations. These regulations all rely on the federal Australian Drinking Water Quality Guidelines. 
