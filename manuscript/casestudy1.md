@@ -26,6 +26,7 @@ When you open RStudio for the first time, the window is divided in three panes, 
 
 X> Move your cursor to the console and type the code examples show below. Don't copy and paste them because typing them will develop your muscle memory for the R syntax.
 
+{format: R, caption: "Basic R code"}
 ```
 3 - 3 * 6 + 2
 

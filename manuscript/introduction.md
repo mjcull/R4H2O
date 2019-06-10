@@ -147,7 +147,7 @@ After digesting a research report or viewing a visualisation, managers ask thems
 Providing actionable intelligence is only a narrow scope of works for data scientists. The concept of usefulness in business needs to be extended beyond this short term and one-dimensional view. Business scholar [Bernard Jaworski](https://doi.org/10.1509/jmkg.75.4.211) classified the results of research into two types to help us make sense of how theory relates to practice. Some knowledge is suitable for action, which is the much sought-after actionable intelligence. Other research doesn't lead to action but inspires deeper thinking about managerial practice. Data science can direct action, but it can also motivate innovation by providing a more profound understanding of the current reality. The results of data science should either stimulate action or inspire contemplation. While the relevance of taking action is self-evident, reflection is not often recognised as a beneficial managerial impact.
 
 {width: "80%", alt: "Reality, Data, Information, Knowledge Pyramid."}
-![Figure 6: Reality, Data, Information, Knowledge Pyramid.](resources/session1/feedback_Loop.png)
+![Figure 6: Reality, Data, Information, Knowledge Pyramid.](resources/session1/feedback_loop.png)
 
 For data science to provide actionable intelligence, the raw data needs to be converted to knowledge following a standardised workflow. The well-known DIKW Pyramid (Data, Information, Knowledge and Wisdom) explains how data produces a useful analysis. The source of the original version of this model is lost in time as a multitude of authors has used it without citation. The basic principle of the hierarchy is that to obtain wisdom, you need to have the relevant knowledge, which derives from information, which in turn consists of the conclusions drawn from the data. Various versions of the model have been proposed, with slightly different terminology and interpretations.
 
@@ -295,6 +295,7 @@ First and foremost, visualisation needs to tell a story. The story in data visua
 
 Numerical data can contain several types of narratives. A graph can compare data points to show a trend among items or communicate differences between them. Bar charts are the best option to compare data points with each other. A line graph is possibly your best option to compare data points over time. The distribution of data points is best visualised using a histogram. Scatter plots or bubble charts show relationships between two or three variables (Figure 8).
 
+{width: 80%}
 ![Figure 8: Examples of stories with quantitative data](resources/session1/stories.png)
 
 The detailed considerations of choosing the most suitable visualisation are outside the scope of this book. The [Chart Chooser](https://chartchooser.com) website provides a dynamic interface to select the best graph to tell a story. The main point is that every visualisation needs to tell a story and not just summarise a bunch of data.
@@ -316,7 +317,8 @@ To improve this version, all unnecessary graphical elements have been removed. A
 
 The basic rule of visually communicating data is to not 'pimp' your visualisations with unnecessary graphical elements or text that does not add to the story. When visualising data, austerity is best-practice.
 
-![Figure 10: Examples of the data-pixel ratio.](resources/session1/visualisation.png)
+{width: 80%}
+![Figure 9: Examples of the data-pixel ratio.](resources/session1/visualisation.png)
 
 ### Reports
 Advertising executive Fred Barnard coined the now famous idiom that "a picture is worth (ten) thousand words" in 1927. While this might be the case, the complexity of data science in most cases requires text to explain the analysis.
