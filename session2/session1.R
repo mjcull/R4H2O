@@ -11,10 +11,10 @@
 ##                                                     ##
 #########################################################
 
-# Load data
-turbidity <- read.csv("session1/turbidity_laanecoorie.csv")
+## Load data
+turbidity <- read.csv("session2/turbidity_laanecoorie.csv")
 
-# Inspect data
+## Inspect data
 turbidity
 dim(turbidity)
 
@@ -25,12 +25,14 @@ View(turbidity)
 str(turbidity)
 
 names(turbidity)
-turbidity$Result
 
-# Convert data
+turbidity$Result
+turbidity$Date_Sampled
+
+## Convert data
 turbidity$Date_Sampled <- as.Date(turbidity$Date_Sampled)
 
-# Explore data
+## Explore data
 table(turbidity$Zone)
 max(turbidity$Result)
 range(turbidity$Result)

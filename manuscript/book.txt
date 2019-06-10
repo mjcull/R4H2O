@@ -1,5 +1,6 @@
+
+r4h2o.md
 introduction.md
-session1.md
-session2.md
-session3.md
-session4.md
+casestudy1.md
+casestudy2.md
+casestudy3.md

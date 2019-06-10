@@ -1,6 +1,34 @@
 # Welcome to the Tidyverse: Cleaning and Exploring Data
 
 In the first session we looked at some of the basic functionality of the R language. Some of the basic functionality of R is a bit cumbersome and many people have written packages to extend and improve functionality. One of the most promising series of extensions is the Tidyverse, developed by Kiwi R guru Hadley Wickham and many others.
+
+## R Packages
+One of the most exciting aspects of this language is that developers can write their own extensions of the R language, the so-called packages or libraries. Thousands of specialised packages are available that undertake a vast range of tasks. You can use R as a GIS and analyse spatial data, other packages help you to access data from various sources, such as SQL databases. Many R extensions undertake specialised tasks such as machine learning.
+
+The majority of R packages are stored on [CRAN](https://cran.r-project.org/ "The Comprehensive R Archive Network"), which is the Comprehensive R Archive Network. You can install packages in R with the `install.packages` function. Within RStudio you can install packages in the *Tools* menu.
+
+### Water R packages
+
+    The CRAN library contains many packages with specialised functions to analyse water. This workshop does not cover any of these packages. This list is for information only.
+
+* [agriwater](https://cran.r-project.org/web/packages/agriwater/index.html): Evapotranspiration and Energy Fluxes Spatial Analysis
+* [ambhasGW](https://cran.r-project.org/web/packages/ambhasGW/index.html): Ground Water Modelling
+* [baytrends](https://cran.r-project.org/web/packages/baytrends/index.html): Long Term Water Quality Trend Analysis
+    -   [biotic](https://cran.r-project.org/web/packages/biotic/index.html): Calculation of Freshwater Biotic Indices
+    -   [boussinesq](https://cran.r-project.org/web/packages/boussinesq/index.html): Analytic Solutions for (ground-water) Boussinesq Equation
+    -   [CityWaterBalance](https://cran.r-project.org/web/packages/CityWaterBalance/index.html): Track Flows of Water Through an Urban System
+    -   [dataRetrieval](https://cran.r-project.org/web/packages/dataRetrieval/index.html): Retrieval Functions for USGS and EPA Hydrologic and Water Quality Data
+    -   [dbhydroR](https://cran.r-project.org/web/packages/dbhydroR/index.html): 'DBHYDRO' Hydrologic and Water Quality Data
+    -   [driftR](https://cran.r-project.org/web/packages/driftR/index.html): Drift Correcting Water Quality Data
+    -   [ecoval](https://cran.r-project.org/web/packages/ecoval/index.html): Procedures for Ecological Assessment of Surface Waters
+    -   [EmiStatR](https://cran.r-project.org/web/packages/EmiStatR/index.html): Emissions and Statistics in R for Wastewater and Pollutants in Combined Sewer Systems
+    -   [gsw](https://cran.r-project.org/web/packages/gsw/index.html): Gibbs Sea Water Functions
+    -   [GWSDAT](https://cran.r-project.org/web/packages/GWSDAT/index.html): GroundWater Spatiotemporal Data Analysis Tool (GWSDAT)
+    -   [humidity](https://cran.r-project.org/web/packages/humidity/index.html): Calculate Water Vapor Measures from Temperature and Dew Point
+    -   EXPAND
+
+
+
 ## The Tidyverse
 
 The tidyverse is a collection R packages that provides additional functionality to extract, transform, visualise and analyse data.
@@ -142,6 +170,30 @@ This function creates a simple greyscale plot because we only should add colour 
 
 The outcomes of the survey items is best visualised with a histogram. This next code snippet also shows how to add titles. You can see the layered approach of ggplot. The first function call defines the plot canvas with the aesthetics
 
+#### A Splash of Colour
+In the era before the petrochemical revolution, colours were mostly limited to nature because artificial colouring was very expensive. The purple togas of Roman emperors were dyed with the secretion of thousands of sea snails. Seventeenth-century Dutch painter Johannes Vermeer used precious lapis lazuli to obtain the perfect blue for his paintings. The expense of creating colours in the past limited the art of choosing the right ones to artists and rich people.
+
+In our times, we have easy access to every imaginable colour. We can buy clothes in whatever colour or desire or paint our house like Pippi Longstocking's villa. We are spoilt for choice concerning colour. The increased possibilities are also a burden because we need to choose the right colour, not just any colour. This tyranny of choice also plays a role in designing beautiful visualisations.
+
+When buying clothing or painting a house, our choice of colours is hopefully governed by a sense of style. When designing visualisations, colour plays a more instrumental role. The colours in a graph are not decoration, but they communicate a narrative. The basic principle for good visualisation design is to minimise the number of colours.
+
+Colours have intrinsic meaning that helps to tell the story. Red is generally recognised as a warning sign and green a calmer tone. In Western cultures, pink associates with femininity and the colour blue is often used in a corporate sense. Marketers use these associations with colour when designing brands. The psychological meaning of colour is, however, not culturally constant and can vary between countries. The Color Psychology website ([colorpsychology.org](https://www.colorpsychology.org/)) contains valuable information about how colours are interpreted.
+
+Traffic lights are one of the most popular colour schemes in business reporting. The colour red stands for an adverse outcome, yellow for a neutral one and green is positive. This type of reporting helps managers to focus on problem areas so they can discuss actions to improve future performance. A note of caution is that this technique does not work for men with green/red colour blindness. This condition is not a problem with real traffic lights as the order of the lights is always the same. However, on a business report, the colours will all look the same to roughly eight per cent of men with this condition.
+
+The minimum amount of colour depends on the narrative you want to convey and the type of visualisation. Cartography often uses colour to communicate its message. One of the problems that plagued mathematicians for centuries is how many colours we need as a minimum to colour every area on a map, without two bordering regions with the same colour. Cartographers know from practical experience that this number is four, but mathematical proof only came in a few decades ago.
+
+Besides minimising the number of colours, we also need to know which colours to use. Cartographers Mark Harrower and Cynthia Brewer developed the Color Brewer system ([colorbrewer2.org](http://colorbrewer2.org/)) to help designers of visualisations select a good scheme. These colour schemes are designed for choropleth maps, but can also be used for non-spatial visualisations. [^fn_brewer] The Color Brewer system consists of three types of colour palates: sequential, diverging and qualitative (Figure 10).
+
+[^fn_brewer]: Harrower, M., & Brewer, C.A. (2003). ColorBrewer.org: An Online Tool for Selecting Colour Schemes for Maps. _The Cartographic Journal_, 40(1), 27–37. [DOI 10.1179/000870403235002042](https://doi.org/10.1179/000870403235002042).
+
+![Figure 10: Types of colour schemes.](images/figure10_ColorBrewer.png)
+
+Sequential schemes contain a series of colours with increasing strength. These colour schemes are most suitable to visualise magnitude from low to high, with light colours usually for low data values and dark colours for high values.
+
+Diverging colours are used to visualise a deviation from a norm, such as droughts or floods or adherence to a budget. Green, yellow and red are the most common use of this type of palate as business reports are filled with traffic lights to report progress.
+
+Qualitative colours are groups of colours that are aesthetically compatible but without a logical relationship between them based on the data. These palates can express qualitative values such as categories. The left graph in figure 9 is an example of a qualitative scheme to indicate categorical variables.
 
 
 
