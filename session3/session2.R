@@ -37,8 +37,6 @@ cities <- tibble(city = 1:3,
                  city_name = c("Los Angeles", "Denver", "Boston"))
 customers <- left_join(customers, cities)
 
-## Transfom reverse items
-customers
 
 ## Excell style
 left_join(select(filter(type_convert(rawdata[-1, ]), is.na(term)), 20:56), cities)

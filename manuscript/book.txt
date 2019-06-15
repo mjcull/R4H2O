@@ -1,6 +1,6 @@
-
-r4h2o.md
+summary.md
 introduction.md
-casestudy1.md
-casestudy2.md
-casestudy3.md
+casestudy01.md
+casestudy02.md
+casestudy03.md
+capstone.md
