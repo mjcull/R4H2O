@@ -29,7 +29,7 @@ The content of this session is based on the ebook *Principles of Strategic Data 
 ## Case Study 1: Introduction to the R Language --- Water Quality Regulations
 This first session introduces to the principles of data science and presents a framework for and best practice. This session also introduces the basics of the R language to undertake simple statistical analysis.
 
-This session uses laboratory testing data from a drinking water network. Participants use this data to assess descriptive statistics and compliance with regulations.
+This session uses laboratory testing data from a drinking water network. Participants use this data to !assess descriptive statistics and compliance with regulations.
 
 {width: "50%", alt: "Distribution of turbidity results.", align: "middle"}
 ![Distribution of turbidity results](resources/introduction/turbidity.png)

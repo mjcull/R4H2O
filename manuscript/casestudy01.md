@@ -1,4 +1,7 @@
 # Introduction to the R Language: Water Quality Regulations
+
+**THIS IS A WORK IN PROGRESS**
+
 This first practical session introduces the principles of working with the R language using a case study about water quality regulations. The objective of this session is to introduce the basic syntax and functionality of the R language. In this session, participants learn to load and explore water quality data and derive descriptive statistics from the data.
 
 ## The R Language
@@ -178,18 +181,6 @@ You can also obtain this information by clicking on the triangle next to the var
 The `as.Date` function changes the factor into a proper date field that can be sorted chronologically and create a time series. R has many other functions to change the type of a variable, all of which start with `as.`.
 
 ### Explore data
-
-
-{exercise, id: exercise-1a}
-
-? How many times its own height can a cat jump?
-
-A) Five
-b) Six
-c) Seven
-d) Eight
-
-{/exercise}
 
 ### Plotting data
 

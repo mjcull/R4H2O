@@ -1,5 +1,7 @@
 # Creating Data Products: Analysing Water Consumption
 
+**THIS IS A WORK IN PROGRESS**
+
 ## Literate Programming
 Reproducibility is on of the most important requirements for good data science. 
 
@@ -9,9 +11,7 @@ This crisis in some of the sciences has moved some journals to require authors t
 
 The most effective method to achieve full reproducibility is to use literate programming. This method combines computer code with text so that the analysis becomes fully transparent. Although many systems exist that at first instance might seem more user-friendly than writing code, point-and-click systems have severe limitations, and the results are often difficult to verify.
 
-
 ## Measuring water consumption
-
 
 ## Case Study: Smart Meter Data
 The case study for this session is a data simulated data set for digital metering. This data set provides a realistic example of 
@@ -20,4 +20,5 @@ The data for this case study is simulated for two reasons. Firstly, detailed inf
 
 
 ## Examples
+
 ## Assignment

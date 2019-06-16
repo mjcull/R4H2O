@@ -1,4 +1,7 @@
 # Processing Data --- Understanding Customer Perception
+
+**THIS IS A WORK IN PROGRESS**
+
 In the first session we looked at some of the basic functionality of the R language. Some of base code of the R language is a bit cumbersome and many people have written packages to extend and improve functionality. One of the most popular series of extensions is the [Tidyverse](https://www.tidyverse.org/), developed by Kiwi R guru Hadley Wickham and many others.
 
 ## R Packages
@@ -76,8 +79,8 @@ Packages in the tidyverse change fairly frequently. You can see if updates are a
 
 X> Install the Tidyverse packages on your computer.
 
-
 ## Tidy Data
+
 ## Using Colour in Visualisations
 In the era before the petrochemical revolution, colours were mostly limited to nature because artificial colouring was very expensive. The purple togas of Roman emperors were dyed with the secretion of thousands of sea snails. Seventeenth-century Dutch painter Johannes Vermeer used precious lapis lazuli to obtain the perfect blue for his paintings. The expense of creating colours in the past limited the art of choosing the right ones to artists and rich people.
 
