@@ -6,13 +6,13 @@ library(tidyverse)
 ## Boundary conditions
 n <- 100 # Number of simulated meters
 d <- 366 # Number of days to simulate
-s <- as.POSIXct("2020-01-01", tz = "UTC") # Start of simulation
+s <- as.POSIXct("2069-12-09", tz = "UTC") # Start of simulation
 
 set.seed(1969) # Seed random number generator for reproducibility
-rtu <- sample(1E6:2E6, n, replace = FALSE) # 6-digit id
+rtu <- paste0("RTU", sample(1E6:2E6, n, replace = FALSE)) # 6-digit id
 offset <- sample(0:3599, n, replace = TRUE) # Unique Random offset for each RTU
 
-# Generic Diurnal Curve
+## Generic Diurnal Curve
 diurnal <- tibble(TimeADT = 0:23,
                   Flow = round(c(1.36, 1.085, 0.98, 1.05, 1.58, 3.87,
                                  9.37, 13.3, 12.1, 10.3, 8.44, 7.04,
@@ -22,39 +22,38 @@ diurnal <- tibble(TimeADT = 0:23,
 ggplot(diurnal, aes(TimeADT, Flow)) + 
     geom_line(col = "dodgerblue2") +
     scale_x_continuous(breaks = 0:23) + ylab("Flow [L/h/p]") + 
-    ggtitle("Idealised diurnal curve for households")
+    ggtitle("Model diurnal curve for per person")
+ggsave("manuscript/resources/model-diurnal.png", dpi = 300)
 
-# Occupants
+## Occupants
+set.seed(123)
 occupants <- rpois(n, 1.5) + 1 # Number of occupants per connection
-as.data.frame(occupants) %>%
+as.tibble(occupants) %>%
   ggplot(aes(occupants)) + geom_bar(fill = "dodgerblue2", alpha = 0.5) + 
-  xlab("Occupants") + ylab("Connections") + ggtitle("Occupants per connection")
-ggsave("Hydroinformatics/DigitalMetering/occupants.png", dpi = 300)
+  xlab("Occupants") + ylab("Properties") + ggtitle("Occupants per connection")
+ggsave("manuscript/resources/occupants.png", dpi = 300)
 
 # Leak simulation
+set.seed(456)
 leaks <- rbinom(n, 1, prob = .1) * sample(10:50, n, replace = TRUE)
 tibble(DevEUI = rtu, Leak = leaks) %>%
-    subset(Leak > 0)
+    filter(Leak > 0)
 
 # Digital metering data simulation
-meter_reads <- matrix(ncol = 3, nrow = 24 * n * d)
-colnames(meter_reads) <- c("DevEUI", "TimeStampAST", "Count")
-dim(meter_reads)
+sim <- matrix(ncol = 3, nrow = 24 * n * d)
+colnames(sim) <- c("DevEUI", "TimeStampAST", "Count")
 
 for (i in 1:n) {
-  r <- ((i - 1) * 24 * d + 1):(i * 24 * d)
-  meter_reads[r, 1] <- rep(rtu[i], each = (24 * d))
-  meter_reads[r, 2] <- seq.POSIXt(s, by = "hour", length.out = 24 * d) + offset[i]
-  meter_reads[r, 3] <- round(cumsum((rep(diurnal * occupants[i], d) + leaks[i]) * 
-                                      runif(24 * d, 0.9, 1.1))/5)
-  meter_reads[r,4] <- 0
-  meter_reads[r,5] <- sample(c(rep(0,1000), 1, 2), (24 * d), replace = TRUE)
+    r <- ((i - 1) * 24 * d + 1):(i * 24 * d)
+    sim[r, 1] <- rep(rtu[i], each = (24 * d))
+    sim[r, 2] <- seq.POSIXt(s, by = "hour", length.out = 24 * d) + offset[i]
+    sim[r, 3] <- round(cumsum((rep(diurnal$Flow * occupants[i], d) + leaks[i]) *
+                                      runif(24 * d, 0.9, 1.1) / 5))
 } 
 
-meter_reads <- meter_reads %>% 
-  as_data_frame() %>%
-  mutate(TimeStampUTC = as.POSIXct(TimeStampUTC, origin = "1970-01-01", tz ="UTC"))
-meter_reads
+meter_reads <- as.tibble(meter_reads) %>% 
+    mutate(TimeStampAST = as.numeric(TimeStampAST),
+        TimeStampAST = as.POSIXct(TimeStampAST, origin = "1970-01-01", tz ="UTC"))
 
 ## MISSING DATA POINTS
 
@@ -62,6 +61,7 @@ meter_reads
 meter_reads <- mutate(meter_reads, remove = 0)
 
 ## Define faulty RTUs (2% of fleet)
+set.seed(123)
 faulty <- rtu[rbinom(n, 1, prob = 0.02) == 1]
 meter_reads$remove[meter_reads$DevEUI %in% faulty] <- rbinom(sum(meter_reads$DevEUI %in% faulty), 1, prob = .95)
 

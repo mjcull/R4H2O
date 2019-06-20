@@ -2,14 +2,14 @@
 
 **THIS IS A WORK IN PROGRESS**
 
-This first practical session introduces the principles of working with the R language using a case study about water quality regulations. The objective of this session is to introduce the basic syntax and functionality of the R language. In this session, participants learn to load and explore water quality data and derive descriptive statistics from the data.
+This first practical session introduces the principles of working with the R language, using a case study about water quality regulations. The objective of this session is to introduce the basic syntax and functionality of the R language. In this session, participants learn to load and explore water quality data and derive descriptive statistics from the data.
 
 ## The R Language
 R is a programming language for statistical computing and visualisation. This language is developed and maintained through the [R Foundation for Statistical Computing](https://www.r-project.org/foundation/). The R software is open source, which means that anyone can freely download, use, modify and share the software. The open source model relies on communities of developers that continuously improve the software.
 
 Open source software is free. Not free as in free beer, but free as in [freedom](https://www.gnu.org/philosophy/free-sw.html). The people developing open source software also need to be paid and most projects are not-for-profit organisations funded by organisations that use the software commercially. If your organisation uses R, then I highly recommend considering financially supporting the R Foundation.
 
-The R language is one of the most common tools for analysing data. This language has a lot of advanced mathematical functionality that is missing by default from other languages. This language also has built-in visualisation capabilities. R can be integrated with many other data science software systems, such as *Power BI*, *Tableau*, *Mathematica*, *MATLAB* and do so on.
+The R language is one of the most common tools for analysing data. This language includes a lot of advanced mathematical functionality that is missing by default from other languages. This language also has extensive built-in visualisation capabilities. Furthermore, R can be integrated with many other data science software systems, such as *Power BI*, *Tableau*, *Mathematica*, *MATLAB* and do so on.
 
 This session only gives a cursory overview of the R language with just enough theory to solve the case study. This course is only a teaser to motivate water professionals to ditch their spreadsheets and start to write code. For a more systematic introduction to this language, I recommend following one of the many courses available on the internet or read a book. Two recommended sources to systematically learn the basics of the R language in detail are:
 
@@ -65,10 +65,24 @@ Now retype the plot command, but only type the first two letters and then hit th
 
 Anther trick in the console is to use the arrow keys to repeat or modify previous commands.
 
-The console is a running record of the actions taken by R. While this is great, using the console makes it hard to reconstruct what steps you have taken to get to your result. To create reproducible code you need to write your code 
+{type: video, align: middle, poster: "https://www.youtube.com/watch?v=roTCgjxpMEg/mqdefault.jpg"}
+![Introduction to RStudio](https://youtu.be/roTCgjxpMEg)
 
-{type: video, align: middle}
-![Introducing RStudio.](resources/session2/rstudio-intro.mp4)
+Now it is your turn to play with the basic syntax of R and functionality of RStudio.
+
+W> Produce a plot of the function `y=-x^2-2x+3`$ in the R console.
+
+The formula for determining where the parabola intersects with the x-axis is:
+
+```$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+```
+
+When:  `ax^2 + bx + c = 0`$.
+
+X> Calculate intersects using the quadratic formula in the R console
+
+The console provides a running record of the actions taken by R. While this is great, using the console makes it hard to reconstruct what steps you have taken to get to your result. To create reproducible code you need to write your code 
 
 Create a new R script by going to *File > New File > R Script* or by simply hitting Control-Shift N.
 
@@ -86,6 +100,8 @@ One last feature you need to know before we continue are projects in RStudio. A 
 X> Open the project file for this course.
 
 After you open this file, you will see the relevant files in the bottom-left window. When you close the project after this session, all variables, the history of your commands and open files are stored for use in a later session.
+
+This is only a very short introduction into the basics of the R language and RStudio. The remainder of the workshop introduces further concepts as needed by the case studies.
 
 ## Case Study: Water Quality Regulations
 The case study for this first session is about assessing compliance with water quality regulations. The data for this case study is a set of turbidity measurements for the [Laanecoorie water network](https://www.coliban.com.au/site/root/your_town/loddon/laanecoorie.html), situated just over 100 km North of Melbourne in Victoria, Australia. The plant extracts water from the Laanecoorie reservoir, situated on the Loddon river.
@@ -138,22 +154,22 @@ Answer:
 
 1. Rank the results in ascending order: `0.1, 0.1, \ldots , 5, 5, 5`$.
 2. Determine the percentile rank: `0.95 \times (99 + 1) = 95`$.
-3. The 95^th^ percentile is 5 NTU.
+3. The 95^th^ percentile is the 95^th^ result, which is 5 NTU.
 
 ### Exploration
 This section explains how to analyse an example data set with turbidity data for compliance with the Victorian Safe Drinking Water Regulations. The data and the code is available in the [GitHub](https://github.com/pprevos/r4h2o/) repository.
 
 #### Load data
-The data is stored in a csv file, which the `read.csv` file can read. The text between quotation marks is the path to the file. The path is relative to the working folder, so in this case we need to add the folder and the file name. Note that R uses the forward slash, common in Unix systems, and not the Windows backslash to form a path.
+The data is stored in a csv file, which the `read.csv` file can read. The text between quotation marks is the path to the file. The path is relative to the working folder, so in this case we need to add the folder and the file name. Note that R uses the forward slash, common in Unix systems, and not the Windows backslash (`\`) to form a path.
 
 {format: r, line-numbers: false}
 ```
 turbidity <- read.csv("CaseStudies/turbidity_laanecoorie.csv")
 ```
 
-The turbidity data is now loaded and visible in the Environment tab. The turbidity data is a 'data frame', which is a tabular set of data with rows and columns, very much like a spreadsheet. 
+The turbidity data now visible in the *Environment* tab. The turbidity data is a 'data frame', which is a tabular set of data with rows and columns, very much like a spreadsheet.
 
-R can read many types of data. Some specialised extensions can be used to connect R to Excel spreadsheets, SQL databases, scrape websites and so on. The `extract_data.R` file in the sessioncase study folder shows how the turbidity data was extracted from an SQL server. The data has the following fields:
+R can read many types of data. Some specialised extensions can be used to connect R to Excel spreadsheets, SQL databases, scrape websites and so on. The `extract_data.R` file in the case study folder shows how the turbidity data was extracted from an SQL server. The data has the following fields:
 
 * `Date_Sampled`: The data the sample was taken.
 * `Sample_No`: Reference number of the sample.
@@ -161,12 +177,14 @@ R can read many types of data. Some specialised extensions can be used to connec
 * `Zone`: The zone within the water system.
 * `Sample_Point`: The reference number of eh sample point.
 * `Result`: The result of the laboratory test.
-* `Units`: The units of the result.
+* `Units`: The units of the result (NTU).
 
 #### Inspect the data
-The next step is to see what is in the data. When you type the name of the variable, R will display all data in the console. This is not a practical way to inspect large sets. The `head` function only shows the first half dozen rows of the data, which prevents the screen from scrolling away. By the way, R also has the `tail` function, that shows the last rows of a data frame.
+The next step is to see what is in the data. When you type the name of the variable, R will display all data in the console. This is not a practical way to inspect large sets because the data quickly across across the screen. 
 
-The `View` function (note the capital V) opens the data in a separate read-only window. This is the most convenient way to inspect the data. You can also view the data this way by clicking on the variable name in the Environment tab.
+The `head` function only shows the first half dozen rows of the data, which prevents the screen from scrolling away. R also knows the `tail` function, that shows the last rows of a data frame.
+
+The `View` function (note the capital V) opens the data in a separate read-only window. This is the most convenient way to inspect the data. You can also view the data this way by clicking on the variable name in the Environment tab. You cannot edit the data, but you can sort the information by column by clicking o the variable name.
 
 The `names` function only shows the names of the columns. You can also use this function to rename variables in a data frame.
 
@@ -177,6 +195,8 @@ X> Use the `nrow` and `ncol` functions to determine the size of the data frame.
 Lastly, the `str` function provides a succinct overview of the fields in the data set, including the data types. 
 
 You can also obtain this information by clicking on the triangle next to the variable name in the Environment tab. The functions are useful when you need to use them in calculations or change the properties of the data.
+
+
 
 The `as.Date` function changes the factor into a proper date field that can be sorted chronologically and create a time series. R has many other functions to change the type of a variable, all of which start with `as.`.
 
