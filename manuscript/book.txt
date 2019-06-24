@@ -1,6 +1,5 @@
-introduction.md
-datascience.md
-casestudy01.md
-casestudy02.md
-casestudy03.md
-capstone.md
+session0.md
+session1.md
+session2.md
+session3.md
+answers.md

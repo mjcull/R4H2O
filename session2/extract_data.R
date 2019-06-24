@@ -1,19 +1,20 @@
 ## Data extracted from Coliban Water data warehouse for session 2 case study
 
-library(RODBC) # Connect to SQL databases
+library(RODBC) ## Connect to SQL databases
+library(tidyverse)
 
 dwh <- odbcDriverConnect("driver={SQL Server};server=DWH;DATABASE=CW_DataWarehouse;trusted_connection=true")
 turbidity <- sqlQuery(dwh, "SELECT Date_Sampled, Sample_No, System, Zone, Subsite_Code AS Sample_Point, Result, Units  
                                 FROM WSL_retic_Sample_results 
                                 WHERE Subsite_Type='Customer Tap' AND
-                                    Measure='Turbidity' AND
+                                    Measure IN ('Turbidity', 'THM') AND
                                     Date_sampled>='2017-01-01' AND 
                                     System IN ('Laanecoorie', 'Bendigo')")
 odbcCloseAll()
 
 ## Save laanecoorie data
-filter(turbidity, System == "Laanecoorie") %>%
-    write.csv("session2/turbidity_laanecoorie.csv", row.names = FALSE)
+filter(turbidity, System == "Laanecoorie" & Measure == "Turbidity") %>%
+    write_csv("session2/turbidity_laanecoorie.csv")
 
 ## Create fake data
 zones <- filter(turbidity, System == "Bendigo") %>%
