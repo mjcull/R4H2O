@@ -26,8 +26,10 @@ text(1.4, max(d), "Outlier (max)")
 dev.off()
 
 ## Turbidity results
-png("manuscript/resources/session3/boxplot-zones.png")
+png("manuscript/resources/session3/boxplot-zones.png", width = 2400, height = 1800)
+par(cex = 4)
 boxplot(Result ~ Zone, data = turbidity, col = "lightblue",
         main = "Turbidity Results Laanecoorie water system",
-        ylab = "Turbidity (NTU)")
+        ylab = "Turbidity (NTU)", 
+        cex = 1, pch = 19)
 dev.off()

@@ -74,9 +74,23 @@ summary(gormsey$Result[gormsey$Measure == "Turbidity"])
 # Remove extreme
 gormsey$Result[gormsey$Result == 210] <- 5
 
-write_csv(gormsey, "session2/gormsey.csv")
+write_csv(gormsey, "casestudy1/gormsey.csv")
 
+## Sample Points
+sample_points <- tibble(Sample_Point = gormsey$Sample_Point,
+                        Zone = gormsey$Zone) %>%
+                  distinct()
 
+l <- length(unique(gormsey$Zone))
+zones <- tibble(Zone = unique(gormsey$Zone),
+                x = (0:(l - 1) %% 3) * 1000 + 1000,
+                y = floor(1:l / 3) * 1000 + 1000) 
+
+sample_points <- left_join(sample_points, zones) %>%
+    mutate(x = x + sample(-450:450, nrow(sample_points)),
+           y = y + sample(-450:450, nrow(sample_points)))
+
+write_csv(sample_points, "casestudy1/sample_points.csv")
 
 
 

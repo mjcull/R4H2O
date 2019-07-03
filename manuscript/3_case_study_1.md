@@ -228,7 +228,7 @@ The `hist()` function plots a histogram of a vector of integers or numerical val
 b <- max(turbidity$Result) / 0.1
 hist(turbidity$Result, breaks = b, main = "Turbidity Results")
 ```
-{width: "60%", alt: "Histogram of turbidity results."}
+{width: 60%, alt: "Histogram of turbidity results."}
 ![Figure 2.1: Histogram of turbidity results.](resources/session3/histogram.png)
 
 The regulations apply separately to each water quality zone, so we need to subset the data before plotting.
@@ -237,7 +237,7 @@ Q> Plot the histogram of each of the Laanecoorie water quality zone.
 
 Sub-setting each zone is tedious. One of the visualisations not listed on the *Chart Chooser* is the boxplot. This versatile visualisation summarises the distribution of numerical data (Figure 2.2).
 
-{width: "50%", alt: "Boxplot anatomy."}
+{width: 60%, alt: "Boxplot anatomy."}
 ![Figure 2.2: Boxplot anatomy.](resources/session3/boxplot-example.png)
 
 * The line that divides the box indicates the median.
@@ -254,7 +254,7 @@ boxplot(Result ~ Zone, data = turbidity, col = "lightblue",
         ylab = "Turbidity (NTU)")
 ```
 
-{width: "50%", alt: "Distribution of turbidity results."}
+{width: 50%, alt: "Distribution of turbidity results."}
 ![Figure 2.3: Distribution of turbidity results.](resources/session3/boxplot-zones.png)
 
 Each of these visualisation functions has extensive options to change the plot, which are outside the scope of this course. In the next two case studies, we explore the powerful visualisation functionality of the Tidyverse extension to the R language.
@@ -421,7 +421,7 @@ X> Load the Gormsey data and explore it using the tools described in this lesson
 
 After you have explored the data, you can complete the first quiz to test your proficiency. 
 
-X> Click on the link to complete the quiz.
+X> Click on the link to complete the quiz or move the [next chapter](#tidyverse).
 
 {quiz, id: casestudy1, attempts: 10}
 Load the Gormsey water quality data from the first case study and answer these ten questions.
@@ -498,7 +498,7 @@ d) 5
 
 Thanks for answering these questions.
 
-You can find the answers and workings for each of the questions in the `answers.md`  file in the `manuscript` folder.
+You can find the answers and workings for each of the questions at the end of the course.
 
 That's it for the first quiz. Now on to the next [chapter](#tidyverse) where we will look at visualising data with the *ggplot* library of the Tidyverse.
 

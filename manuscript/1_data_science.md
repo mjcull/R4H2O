@@ -4,7 +4,7 @@ This first session provides a framework for good data science. The first section
 ## What is data science?
 The earliest known form of writing is not an epic poem or religious text, but data. The [Ishango bone](https://arxiv.org/abs/1204.1019) is an engraved fibula of a baboon which was carved in central Africa 20,000 years ago. Some scholars hypothesised that the carvings represent an early number system as it lists several prime numbers, while others believe it to be a calendar. Some researchers dismiss these ideas and believe that the markings merely improve grip when using the bone as a club. Whatever their purpose, the groupings of the markings are distinctly mathematical (Figure 1.1).
 
-{width: "80%", alt: "Markings onthe Ishango bone."}
+{width: 80%, alt: "Markings onthe Ishango bone."}
 ![Figure 1.1: Markings on the Ishango Bone](resources/session1/ishango.png)
 
 The idea that data can be used to understand the world is thus almost as old as humanity itself and has gradually evolved into what we now call data science. Using data in organisations is also called business analytics or evidence-based management. There are also specific approaches, such as Six-Sigma, that use statistical analysis to improve business processes.
@@ -25,7 +25,7 @@ This revolution is not necessarily only about powerful machine learning algorith
 
 The expectations of data science are very high. Business authors position data science, and its natural partner 'big data', as a panacea for all societal problems and a means to increase business profits. In a 2012 article in *Harvard Business Review*, [Davenport and Patil](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century) even proclaimed data scientist the "sexiest job of the 21st century" (Figure 1.2). Who would not want to be part of a new profession with such enticing career prospects? The [Google Trends](https://trends.google.com/trends/explore?date=all&q=data%20science) website shows a significant increase in the number of people searching for 'Data Science' since the publication of this article.
 
-{width: "40%", alt: "Sexiest job of the 21st century?"}
+{width: 60%, alt: "Sexiest job of the 21st century?"}
 ![Figure 1.2: Sexiest job of the 21st century?](resources/session1/sexiest_job.png)
 
 For organisations that deliver physical products, data science is about improving how they collect, store and analyse data to extract more value from this resource. The objective of data science is not the data or the analysis itself but is closely intertwined with the strategic goals of the organisation. For a water utility, these objectives are generically maintaining or improving the experience that customers have with their service and minimising impact to the natural environment. Whatever kind of organisation you are in, the purpose of data science is to assist managers with changing reality to a more desirable state. A data scientist achieves this objective by measuring the current and past states of reality and using mathematical tools to predict a future state.
@@ -35,7 +35,7 @@ Data science is a systematic and strategic approach to using data, mathematics a
 ## The Elements of Data Science
 Now that we have defined data science within the context of managing a water utility, we can start describing the elements of data science. The best way to unpack the art and craft of data science is Drew Conway's often-cited Venn diagram cite (Figure 1.3). [Conway](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram) defines three competencies that a data scientist, or a data science team as a collective, need to possess. The diagram positions data science as an interdisciplinary activity with three dimensions: domain knowledge, mathematics and computer science. A data scientist is somebody who understands the subject matter under consideration in mathematical terms and writes computer code to solve problems.
 
-{width: "40%", alt: "Conway's data science Venn diagram."}
+{width: 60%, alt: "Conway's data science Venn diagram."}
 ![Figure 1.3: Conway's data science Venn Diagram.](resources/session1/conway.png)
 
 ### Domain Knowledge
@@ -85,7 +85,7 @@ Water utilities collect data along the flow path of the water. This data describ
 
 The term 'digital water utility' is often used to describe the situation where the flow of water and customer experience is fully captured with data. Some experts even suggest that digitisation represents a disruption of water utilities. The term digital water utility is a distraction because data is not a replacement for effective water management. No matter how much water utilities digitise, electronics will not meaningfully change the service utilities provide: a reliable supply of drinking water and sewerage services.
 
-{width: "80%", alt: "Tap water supply chain."}
+{width: 80%, alt: "Tap water supply chain."}
 ![Figure 1.4: Tap water supply chain.](resources/session1/water-utility-supply-chain.png)
 
 Digitisation also has limitations. Firstly, data cannot describe everything. Measuring physical processes is only ever a sample of the reality we seek to control. Secondly, the experience of customers is subjective, which requires human insight to understand. These limitations highlight the need for domain expertise to complement skills in mathematics and computing. Relying on data alone, without recognising the physical and social reality of water management does not add value to a community.
@@ -133,7 +133,7 @@ Buildings must have utility so people can use them for their intended purpose. A
 
 The Vitruvian rules for architecture can also define good data science. Excellent data science needs to have utility; it needs to be useful to create value. The analysis should be sound so it can be trusted. The products of data science also need to be aesthetic to maximise the value they provide to an organisation (Figure 1.6).
 
-{width: "40%", alt: "Principles of good data science."}
+{width: 60%, alt: "Principles of good data science."}
 ![Figure 1.6: The principles of good data science.](resources/session1/vitruvius.png)
 
 ### Useful Data Science
@@ -151,7 +151,7 @@ After digesting a research report or viewing a visualisation, managers ask thems
 
 Providing actionable intelligence is only a narrow scope of works for data scientists. The concept of usefulness in business needs to be extended beyond this short term and one-dimensional view. Business scholar [Bernard Jaworski](https://doi.org/10.1509/jmkg.75.4.211) classified the results of research into two types to help us make sense of how theory relates to practice. Some knowledge is suitable for action, which is the much sought-after actionable intelligence. Other research doesn't lead to action but inspires deeper thinking about managerial practice. Data science can direct action, but it can also motivate innovation by providing a more profound understanding of the current reality. The results of data science should either stimulate activity or inspire contemplation. While the relevance of taking action is self-evident, managers often fail to recognise contemplation as a beneficial managerial impact.
 
-{width: "50%", alt: "Reality, Data, Information, Knowledge Pyramid."}
+{width: 60%, alt: "Reality, Data, Information, Knowledge Pyramid."}
 ![Figure 1.7: Reality, Data, Information, Knowledge Pyramid.](resources/session1/feedback-loop.png)
 
 For data science to provide actionable intelligence, the raw data needs to be converted to knowledge following a standardised workflow. The well-known DIKW Pyramid (Data, Information, Knowledge and Wisdom) explains how data produces a useful analysis. The source of the original version of this model is lost in time as a multitude of authors has used it without citation. The basic principle of the hierarchy is that to obtain wisdom; you need to have the relevant knowledge, which derives from information, which in turn consists of the conclusions drawn from the data. Various versions of the model have been proposed, with slightly different terminology and interpretations.
@@ -216,7 +216,7 @@ The distinguishing difference between traditional forms of business analysis and
 
 This systematic approach ensures that the outcomes of data science can be relied upon to decide on alternative courses of action. Systematic data science uses the principles of scientific enquiry, but it is more pragmatic in its approach. While scientists search for general truths to explain the world, data scientists pragmatically seek to solve problems. The basic principles that underpin this systematic approach are the validity, reliability and reproducibility of the data, the methods and the results.
 
-{width: "80%", alt: "Validity and reliability of data and analysis."}
+{width: 80%, alt: "Validity and reliability of data and analysis."}
 ![Figure 1.8: Visualising validity and reliability.](resources/session1/soundness.png)
 
 #### Validity
@@ -279,6 +279,7 @@ Data visualisations are everywhere. They are no longer the domain of scientific 
 
 Aesthetics and usefulness go hand in hand. Some data visualisations in engineering remind me of a [Jackson Pollock](https://en.wikipedia.org/wiki/Jackson_Pollock) painting, with multitudes of lines and colours splashed over the screen. Adding too much information to a graph and using too many colours reduces its usability. When visualisation is not aesthetic, it becomes harder to interpret, which leads to the wrong conclusions and can even deceive the user.
 
+{width: 80%}
 ![Jackson Pollock (1952) Blue Poles number 11. Drip Painting in enamel and aluminium paint with glass on canvas (National Gallery, Canberra. Source: Wikimedia).](https://upload.wikimedia.org/wikipedia/commons/6/62/Bluepoles.jpg)
 
 A data scientist needs to be aware of cognitive biases to prevent them and create data products that don't deceive. Many of these biases relate to how information is presented.
@@ -287,7 +288,7 @@ Our perception is not always an accurate representation of reality, and we often
 
 Perhaps a good data visualisation should look more like a painting by [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) who is famous for his austere compositions with straight lines and primary colours. Using art to explain data visualisation is not an accidental metaphor because visual art represents how the artist perceives reality. This comparison between Pollock and Mondrian is not a judgement of their artistic abilities. For Pollock, reality was chaotic and messy, while Mondrian saw a geometric order behind the perceived world.
 
-{width: "50%", alt: "Piet Mondrian, Composition in Red, Yellow and Blue."}
+{width: 50%, alt: "Piet Mondrian, Composition in Red, Yellow and Blue."}
 ![Piet Mondrian (1928) Composition with red, yellow and blue. Oil on canvas (Municipal Museum, the Hague).](https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Mondrian%2C_Compositie_met_rood%2C_geel_en_blauw.jpg/512px-Mondrian%2C_Compositie_met_rood%2C_geel_en_blauw.jpg)
 
 Although visualising data has some parallels with art, it is very different. All works of art are a form of deception. The artist paints a three-dimensional image on a flat canvas, and although we see people, we are just looking at blobs of paint. Data visualisation as an art form needs to be truthful and not deceive, either intentionally or accidentally. The purpose of any graph is to validly and reliably reflect reality.

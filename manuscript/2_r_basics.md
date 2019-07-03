@@ -28,7 +28,7 @@ X> Open the appearance menu and change the settings to your personal preferences
 ## Basics of R
 Now we are ready to write some code. Move your cursor to the console and type the code examples listed below. Don't copy and paste them because typing the code develops your muscle memory for the R syntax and you some of the experience the features of the text editor.
 
-T> Type the following code, or variations thereof into the console and review the results.
+X> Type the following code, or variations thereof into the console and review the results.
 
 {format: r, line-numbers: false}
 ```r
@@ -173,6 +173,7 @@ abline(v = 0, col = "grey")
 points(c(x1, x2), c(0, 0), col = "red", pch = 19)
 ```
 
+{width: 50%}
 ![Parabola visualisation](resources/session2/parabola.png)
 
 Now it is time to apply these basic skills to the first [case study](#casestudy1).

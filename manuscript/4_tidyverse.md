@@ -57,7 +57,7 @@ The primary *ggplot* function starts with the name of the data frame, followed b
 ggplot(gormsey, aes(Measure)) + 
     geom_bar()
 ```
-
+{width: 70%}
 ![Figure 4.1: Bar chart of the number of samples per measure.](resources/session4/gormsey_measures.png)
 
 The example shows a simple bar plot for the number of samples taken for each measure in Gormsey. This code plots data from the Gormsey data frame and visualises the `Measure` variable. The first part of the function call (before the plus sign) defines the context for the plot. The function calls after the plus sign defines the geometry (geom) and other possible elements of the visualisation, explained in more detail below. 
@@ -81,7 +81,7 @@ The next sections discuss each of these step by step to build a complete visuali
 ### Data and aesthetic mapping
 The *ggplot* function always takes a data frame as its first option, as shown in the previous example. The aesthetic mapping is listed between brackets and defines which variables in the data frame are visualised.
 
-The aesthetics option can also add colour by another variable. The example below creates a bar chart of the number of observations for each measure and colours the bars depending on the zone in which they were taken, creating a stacked bar chart.
+The aesthetics option can also add colour by another variable. The example below creates a bar chart of the number of observations for each measure and colours the bars depending on the zone in which they were taken, creating a stacked bar chart (Figure 4.2).
 
 {format: r, line-numbers: false}
 ```
@@ -95,6 +95,7 @@ This example is not an optimal use of this functionality because there are too m
 
 Note how this code is written over two lines, with the second part indented. This is standard practice in writing code to improve readability and ensure it is reproducible. RStudio can automatically indent code by selecting the relevant lines and pressing Control-I.
 
+{width: "70%"}
 ![Figure 4.2: Stacked bar chart of the number of samples per measure and zone.](resources/session4/gormsey_measures_zones.png)
 
 ### Geometric objects (lines, bars and so on)
@@ -110,10 +111,12 @@ ggplot(gormsey, aes(Zone, fill = Measure)) +
     geom_bar() + 
     coord_flip()
 ```
-
+{width: 70%}
 ![Figure 4.3: Flipped bar chart of the number of samples per zone.](resources/session4/gormsey_zones.png)
 
-The column geometry, expressed as `geom_col()`, also produces a bar chart, but for a different type of data. While the bar geom counts the number of occurrences of the variable, the column version reads the number from the data. The little example below creates a data frame of the number of turbidity samples in Merton and visualises the result.
+The column geometry, expressed as `geom_col()`, also produces a bar chart, but for a different type of data. While the bar geom counts the number of occurrences of the variable, the column version reads the number from the data. 
+
+The example below creates a data frame of the number of turbidity samples in Merton and visualises the result. The `table()` function is a convenient method to quickly count the number of unique elements in a vector.
 
 {format: r, line-numbers: false}
 ```
@@ -125,16 +128,16 @@ samples <- subset(samples, Samples != 0)
 ggplot(samples, aes(Sample_Point, Samples)) +
     geom_col() 
 ```
-
+{width: 70%}
 ![Figure 4.4: Turbidity samples in Merton](resources/session4/gormsey_turbidity_merton.png)
 
 X> Recreate this code in RStudio and reverse engineer it to understand how it works.
 
 Q> Recreate this chart using the bar geom.
 
-Q> Use the aggregate and length functions to create a data frame with the number of samples for each analyte (measure) and visualise it with a bar chart.
+Q> Use the aggregate and length functions to create a bar chart with the number of samples for each analyte (measure).
 
-Laboratory data is a time series, which means that we measure a variable over time. The line chart is one of the most common methods to visualise a time series. Before we can do this for the Gormsey data, we need to convert the sample date field to a data variable.
+Laboratory data are time series, which means that we measure a variable over time. The line chart is one of the most common methods to visualise a time series. Before we can do this for the Gormsey data, we need to convert the sample date field to a data variable.
 
 The `read.csv()` function imports the `Date_Sampled` variable as a Factor. The `as.Date()` function converts the factor into a proper date, which we can plot.
 
@@ -166,6 +169,7 @@ ggplot(thm, aes(Date_Sampled, Result)) +
     geom_hline(yintercept = .25, col = "red") +
     geom_vline(xintercept = thm$Date_Sampled[mx], col = "blue")
 ```
+{width: 70%}
 ![Figure 4.5: Time series of THM results](resources/session4/gormsey_thm_time_series.png)
 
 The data is quite spikey, and it is not easy to recognise a pattern, other than the outliers. The `geom_smooth()` function can be added to display a trend line in a time series. This function can show a trend using several methods. The method is indicated with the `method` option. Two basic options are:
@@ -174,7 +178,7 @@ The data is quite spikey, and it is not easy to recognise a pattern, other than 
 
 Q> Add the trend line the THM time series. Experiment with the two different methods.
 
-The last geom discussed in this section is the boxplot, considered in the first [case study](#casestudy1). To create a boxplot, just follow the same principles. The code below selects the turbidity measures for the Merton and Southwold zones.
+The last geom discussed in this section is the boxplot, considered in the first [case study](#casestudy1). To create a boxplot, just follow the same principles. The code below selects the turbidity measures for the Merton and Southwold zones. Note that we use the or operator because a sample cannot be taken in two zones.
     
 {format: r, line-numbers: false}
 ```
@@ -190,7 +194,7 @@ Q> Create boxplot of the THM levels for each zone in the Gomsey system.
 Every visualisation is plotted on a canvas with a certain scale. The *ggplot* function is quite intelligent in determining the optimal scaling for a graph. The functionalities to change scales, including the scaling of colours is quite extensive and fall outside the scope of this lesson.
 
 ### Facets of the visualisation
-When visualising data from grouped data, such as water quality per zone or several individual time series in one chart. The code below subsets the data into THM and turbidity results and plots the time series for both. 
+When visualising data from grouped data, such as water quality per zone or several individual time series in one chart. The code below subsets the data into THM and turbidity results and plots the time series for both (Figure 4.6). 
 
 The `facet_wrap()` function takes a variable, preceded by a tilde `~` and creates individual plots for each of these variables, within the same window. 
 
@@ -204,12 +208,13 @@ ggplot(subset(gormsey, Measure == "THMs" | Measure == "Turbidity"),
 
 X> Repeat this same visualisation without the facet and note the difference.
 
-![Faceted time series for THM and Turbidity for Gormsey.](resources/session4/gormsey_thm_turbidity.png)
+{width: 70%}
+![Figure 4.6: Faceted time series for THM and Turbidity for Gormsey.](resources/session4/gormsey_thm_turbidity.png)
 
 ### Themes
 The *ggplot2* library has extensive options to change the theme of a graph. Every aspect of the canvas colours and lines, text sizes, fonts, and so on can be changed. This is quite a complex topic due to the countless variations in what can e changed. 
 
-The *ggplot2* package also has themes with predefined designs. The image in Figure 4.* shows four of these themes. To use one of these themes, simply add `theme_name()` to the *ggplot* call and replace 'name' with the name of the theme, for example:.
+The *ggplot2* package also has themes with predefined designs. The image in Figure 4.7 shows four of these themes. To use one of these themes, simply add `theme_name()` to the *ggplot* call and replace 'name' with the name of the theme, for example:.
 
 {format: r, line-numbers: false}
 ```
@@ -217,15 +222,30 @@ ggplot(gormsey, aes(Measure)) +
     geom_bar() + 
     theme_bw()
 ```
+{width: 70%}
+![Figure 4.7: Four *ggplot2* themes.](resources/session4/themes.png)
 
-![Figure *: Four *ggplot2* themes.](resources/session4/themes.png)
+## Adding text
+The `labs()` function is useful to add text to the plot and change the axes labels, as shown in the example below (Figure 4.8). Adding text to plot prevents any confusion in case the file is separated from its context.
+
+{format: r, line-numbers: false}
+```
+ggplot(gormsey, aes(Measure)) + 
+    geom_bar(fill = "dodgerblue") + 
+    labs(title = "Sample numbers", 
+         subtitle = "Gormsey system",
+         x = "Analyte", y = "Number") + 
+    theme_classic()
+```
+{width: 70%}
+![Figure 4.8: Adding text to a plot](resources/session4/gormsey_text.png)
 
 ### Saving visualisations
 Showing the graphs on the screen is fine, but you will most likely want to share it with colleagues. The `ggsave()` function provides a convenient method to save a *ggplot2* graph to a file in png, pdf, jpg or many other formats. The default settings save the figure at a resolution of 300 dpi. The width and height default to inches. This method does not work for graphs created with the base functions discussed in the previous chapters.
 
 {format: r, line-numbers: false}
 ```
-ggsave("resources/session4.test.png", dpi = 100, width = 6, height = 4)
+ggsave("resources/session4.test.png", width = 8, height = 4.5)
 ```
 
 X> Save one of your visualisations as a png file and share it with fellow course participants on the online community.
@@ -238,14 +258,15 @@ In the next chapter, we discuss a [case study](#casestudy2) about customer perce
 This last section contains all the answers to the questions posed in this lesson.
 
 ### Add your favourite colour to the bar plot
-You can add any colour you like. I choose to use chocolate as inspiration.
+You can add any colour you like. I choose to use chocolate as inspiration (Figure 4.9).
 
 {format: r, line-numbers: false}
 ```
 ggplot(gormsey, aes(Measure)) + 
     geom_bar(fill = "chocolate4")
 ```
-![Figure 4.x: Bar chart of the number of samples per zone.](resources/session4/gormsey_measures_col.png)
+{width: 70%}
+![Figure 4.9: Bar chart of the number of samples per zone.](resources/session4/gormsey_measures_col.png)
 
 ### Recreate this chart using the bar geom.
 {format: r, line-numbers: false}
@@ -265,7 +286,7 @@ ggplot(measures, aes(Measure, Samples)) +
 ```
 
 ### Add the trend line the THM time series. Experiment with the two different methods
-You can keep adding layers to a *ggplot* visualisation, as shown below.
+You can keep adding layers to a *ggplot* visualisation, as shown in Figure 4.10.
 
 {format: r, line-numbers: false}
 ```
@@ -275,10 +296,11 @@ ggplot(subset(gormsey, Measure == "THMs"), aes(Date_Sampled, Result)) +
     geom_smooth(method = lm) +
     geom_smooth(method = loess, col = "green") 
 ```
-![Figure *: THM trends in Gormsey systems](resources/session4/gormsey_thm_trend.png)
+{width: 70%}
+![Figure 4.10: THM trends in Gormsey systems](resources/session4/gormsey_thm_trend.png)
 
 ### Create boxplot of the THM levels for each zone in the Gomsey system
-Adding two variables to the aesthetics in a boxplot groups the data by the first variable. The plot is rotated to prevent overlapping text. Note that the line is still a horizontal line although the x-axis is now vertical.
+Adding two variables to the aesthetics in a boxplot groups the data by the first variable. The plot is rotated to prevent overlapping text. Note that the line is still a horizontal line although the x-axis is now vertical (Figure 4.11).
 
 {format: r, line-numbers: false}
 ```
@@ -287,5 +309,7 @@ ggplot(thm, aes(Zone, Result)) +
     coord_flip() + 
     geom_hline(yintercept = 0.25, col = "red")
 ```
+{width: 70%}
+![Figure 4.11 THM distributions in the Gormsey water quality zones.](resources/session4/gormsey_thm_zone.png)
 
-![THM distributions in the Gormsey water quality zones.](resources/session4/gormsey_thm_zone.png)
+In the second [case study](#casestudy2) we dig deeper into he Tidyverse by analysing smart meter data.

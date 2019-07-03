@@ -6,32 +6,36 @@ library(tidyverse)
 ## Boundary conditions
 n <- 100 # Number of simulated meters
 d <- 366 # Number of days to simulate
-s <- as.POSIXct("2069-12-09", tz = "UTC") # Start of simulation
+s <- as.POSIXct("2069-12-09", tz = "Australia/Melbourne") # Start of simulation
 
-set.seed(1969) # Seed random number generator for reproducibility
+set.seed(2069) # Seed random number generator for reproducibility
 rtu <- paste0("RTU", sample(1E6:2E6, n, replace = FALSE)) # 6-digit id
 offset <- sample(0:3599, n, replace = TRUE) # Unique Random offset for each RTU
 
 ## Generic Diurnal Curve
-diurnal <- tibble(TimeADT = 0:23,
+diurnal <- tibble(Time = 0:24,
                   Flow = round(c(1.36, 1.085, 0.98, 1.05, 1.58, 3.87,
                                  9.37, 13.3, 12.1, 10.3, 8.44, 7.04,
                                  6.11, 5.68, 5.58, 6.67, 8.32, 10.0,
-                                 9.37, 7.73, 6.59, 5.18, 3.55, 2.11)) - 1)
+                                 9.37, 7.73, 6.59, 5.18, 3.55, 2.11, 1)) - 1)
 
-ggplot(diurnal, aes(TimeADT, Flow)) + 
-    geom_line(col = "dodgerblue2") +
-    scale_x_continuous(breaks = 0:23) + ylab("Flow [L/h/p]") + 
-    ggtitle("Model diurnal curve for per person")
-ggsave("manuscript/resources/model-diurnal.png", dpi = 300)
+ggplot(diurnal, aes(Time, Flow)) + 
+    geom_area(fill = "dodgerblue", alpha = 0.5) +
+    scale_x_continuous(breaks = 0:23) + 
+    scale_y_continuous()
+    labs(title = "Model diurnal curve",
+         subtitle = "Liters per person per hour",
+         y = "Flow [L/h/p]")
+ggsave("manuscript/resources/session7/model-diurnal.png", width = 8, height = 6)
 
 ## Occupants
 set.seed(123)
 occupants <- rpois(n, 1.5) + 1 # Number of occupants per connection
 as.tibble(occupants) %>%
-  ggplot(aes(occupants)) + geom_bar(fill = "dodgerblue2", alpha = 0.5) + 
-  xlab("Occupants") + ylab("Properties") + ggtitle("Occupants per connection")
-ggsave("manuscript/resources/occupants.png", dpi = 300)
+  ggplot(aes(occupants)) + geom_bar(fill = "dodgerblue", alpha = 0.5) + 
+  labs(title = "Occupants per connection",
+       x = "Occupants", y = "Properties")
+ggsave("manuscript/resources/session7/occupants.png", width = 8, height = 6)
 
 # Leak simulation
 set.seed(456)
@@ -51,9 +55,9 @@ for (i in 1:n) {
                                       runif(24 * d, 0.9, 1.1) / 5))
 } 
 
-meter_reads <- as.tibble(meter_reads) %>% 
-    mutate(TimeStampAST = as.numeric(TimeStampAST),
-        TimeStampAST = as.POSIXct(TimeStampAST, origin = "1970-01-01", tz ="UTC"))
+sim
+
+meter_reads <- as.tibble(sim)
 
 ## MISSING DATA POINTS
 
