@@ -22,42 +22,50 @@ diurnal <- tibble(Time = 0:24,
 ggplot(diurnal, aes(Time, Flow)) + 
     geom_area(fill = "dodgerblue", alpha = 0.5) +
     scale_x_continuous(breaks = 0:23) + 
-    scale_y_continuous()
+    scale_y_continuous(breaks = seq(0, 15, 5)) + 
     labs(title = "Model diurnal curve",
          subtitle = "Liters per person per hour",
          y = "Flow [L/h/p]")
 ggsave("manuscript/resources/session7/model-diurnal.png", width = 8, height = 6)
 
+diurnal <- diurnal[-24, ] # Last entry only for vidualisation
+
 ## Occupants
 set.seed(123)
 occupants <- rpois(n, 1.5) + 1 # Number of occupants per connection
 as.tibble(occupants) %>%
-  ggplot(aes(occupants)) + geom_bar(fill = "dodgerblue", alpha = 0.5) + 
-  labs(title = "Occupants per connection",
+  ggplot(aes(occupants)) + geom_bar(fill = "dodgerblue") + 
+  labs(title = "Simulated occupants per connection",
        x = "Occupants", y = "Properties")
 ggsave("manuscript/resources/session7/occupants.png", width = 8, height = 6)
 
-# Leak simulation
+## Leak simulation
 set.seed(456)
 leaks <- rbinom(n, 1, prob = .1) * sample(10:50, n, replace = TRUE)
 tibble(DevEUI = rtu, Leak = leaks) %>%
     filter(Leak > 0)
 
-# Digital metering data simulation
+## Digital metering data simulation
 sim <- matrix(ncol = 3, nrow = 24 * n * d)
-colnames(sim) <- c("DevEUI", "TimeStampAST", "Count")
+colnames(sim) <- c("DevEUI", "Time_Stamp", "Count")
 
 for (i in 1:n) {
     r <- ((i - 1) * 24 * d + 1):(i * 24 * d)
     sim[r, 1] <- rep(rtu[i], each = (24 * d))
     sim[r, 2] <- seq.POSIXt(s, by = "hour", length.out = 24 * d) + offset[i]
-    sim[r, 3] <- round(cumsum((rep(diurnal$Flow * occupants[i], d) + leaks[i]) *
-                                      runif(24 * d, 0.9, 1.1) / 5))
+    diurnal_service <- (diurnal$Flow * runif(1, 0.8, 1.2) * occupants[i]) + 
+        (leaks[i] + runif(1, 0.8* leaks[i], 1.2 * leaks[i]))
+    sim[r, 3] <- cumsum(rep(diurnal_service, d)) / 5
 } 
 
-sim
+meter_reads <- as.tibble(sim) %>%
+    type_convert() %>%
+    mutate(Time_Stamp = as.POSIXct(Time_Stamp, origin = " 1970-01-01"))
 
-meter_reads <- as.tibble(sim)
+ggplot(meter_reads, aes(Time_Stamp, Count)) + 
+    geom_line() + 
+    facet_wrap(~DevEUI) + 
+    theme_void()
 
 ## MISSING DATA POINTS
 

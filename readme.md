@@ -9,4 +9,4 @@ This repository contains the following folders:
 * `casestudy1`: Case study data and files.
 * `casestudy2`: Case study data and files.
 * `casestudy3`: Case study data and files.
-* `manuscript`: Course syllabus (best viewed through [LeanPub course](https://leanpub.com/c/R4H2O).
+* `manuscript`: Course syllabus (best viewed through [LeanPub course](https://leanpub.com/c/R4H2O)).

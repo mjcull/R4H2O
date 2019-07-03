@@ -77,12 +77,12 @@ To participate in this workshop, you need to have some understanding of the issu
 
 You also need access to a recent version of the R language and RStudio. RStudio is an IDE (Integrated Development Environment) that simplifies working with R and data. To install this software, follow these steps:
 
-* Go to the [R Project download](https://cran.r-project.org/) site
-* Download the *base* version for your operating system (approximately 80 megabytes)
-* Install the software
-* Go to the [RStudio download page](https://www.rstudio.com/products/rstudio/download/)
-* Download the installer for the free version for your operating system
-* Install the software
+* Go to the [R Project download](https://cran.r-project.org/) site.
+* Download the *base* version for your operating system.
+* Install the software.
+* Go to the [RStudio download page](https://www.rstudio.com/products/rstudio/download/).
+* Download the installer for the free version for your operating system.
+* Install the software.
 
 Alternatively, you can sign-up for a free account to access the [cloud version](https://rstudio.cloud/) of R Studio. This account gives you full access to R Studio and R in your browser without the need to install any software. The cloud version is fully functional but not very fast. Installing R and RStudio on your laptop is the preferred method.
 
