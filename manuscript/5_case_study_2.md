@@ -195,17 +195,18 @@ This case study is about consumer involvement, which is only one of several para
 
 This code selects the `id` and `City` columns and all columns that start with a lowercase p. The `starts_with()` function is a useful shortcut to selecting multiple columns. The *dplyr* library also has other selectors, such as `ends_width()` and `contains()`.
 
-Q> Create a new data frame that selects all variables that contain either a 0 or a 1.
+Q> Create a new data frame that selects all variables that contain either a 2 or a 3.
 
-The second line reverses the value of five of the items that were presented in reverse order, as explained in the introduction. Where a respondent answered 7, the new score becomes 1, and so on.
+The second line reverses the value of five of the items that were presented in reverse order, as explained in the introduction. Where a respondent answered 7, the new score becomes 1, and so on. The last line saves this data to disk for future reference.
 
 {format: r, line-numbers: false}
 ```
 pii <- select(customers, id, City = city_name, starts_with("p", ignore.case = FALSE))
 pii[, c(2, 3, 8, 9, 10, 11)] <- 8 - pii[, c(2, 3, 8, 9, 10, 11)]
+write_csv(pii, "casestudy2/involvement_tidy.csv")
 ```
 
-## Tidy Data
+## Tidy Data{#tidy}
 The last step in cleaning the survey is to create a tidy data set. [Tidy data](https://www.jstatsoft.org/article/view/v059i10) is a standard way of mapping the meaning of a dataset to its structure. Before we start writing more code, some theory.
 
 A dataset is a collection of values, mostly numbers or strings. Values are organised in two ways. Every value belongs to a variable and to an observation. A variable contains all values that measure the same underlying attribute (like height, temperature, duration) across units. An observation contains all values measured on the same unit (like a person, or a day, or a race) across attributes.
@@ -216,12 +217,26 @@ A dataset is messy or tidy depending on how rows, columns and tables are matched
 * Each observation forms a row.
 * Each type of observational unit forms a table.
 
-The laboratory results sets used in the first [case study]{#casestudy1} are stored in a tidy dataset because all measurement are in the same column (Figure 5.3 on the right). The involvement data is, however, not tidy because the results are spread across multiple columns (Figure 5.3 on the left).
+The laboratory results sets used in the first [case study](#casestudy1) are a tidy dataset because all measurement are in the same column (Figure 5.3 on the right). The involvement data is, however, not tidy because the results are spread across multiple columns (Figure 5.3 on the left).
 
 {width: 80%}
-![Figure 5.3: Schematic overview of data.](resources/session5/tidy_data.png)
+![Figure 5.3: Schematic overview of wide and long data.](resources/session5/tidy_data.png)
 
 To tidy the involvement data we need to, speaking in Excel terms, 'un-pivot' the data. The `gather()` function in the *tidyr* package helps to create tidy sets of data. This function takes multiple columns and collapses them in to key-value pairs.
+
+The example below creates the wide data frame in figure 5.3 and transforms it to the tidy long version. The first option in the `gather()` function is the name of the data frame. The second and third options provide the names of the new columns. 
+
+{format: r, line-numbers: false}
+```
+df <- tibble(A = c(1, 2),
+             B = c(12, 34),
+             C = c(43, 76),
+             D = c(5, 12))
+
+gather(df, "var", "val", -A)
+```
+
+X> Reverse-engineer this example. Run the `gather()` function without excluding the first column and inspect the difference in result.
 
 This parameters in this function are the data frame name and then followed by the names of variables and values. We exclude the `id` and `City` variables because we want to keep them as the key.
 
@@ -232,9 +247,9 @@ pii <- gather(pii, "Item", "Score", -id, -City)
 
 Q> Create a tidy data set of the service quality questions.
 
-This ends the introduction to cleaning data. In the last [case stud](#casestudy3) we will use the Tidyverse to analyse data. Before you move to the [next chapter](#dataproducts) about sharing the results of your analysis, one more question.
+This ends the introduction to cleaning data. In the last [case study](#casestudy3) we will use the Tidyverse to analyse data. Before you move to the [next chapter](#dataproducts) about sharing the results of your analysis, one more question.
 
-Q> Visualise the results of the involvement data using a boxplot for each item
+Q> Visualise the results of the involvement data using a boxplot for each item.
 
 D> What pattern do you observe in these results?
 
@@ -311,12 +326,12 @@ ggplot(gormsey, aes(x, y, col = Zone)) +
 {width: 80%}
 ![Figure 5.4: Gormsey sample point locations by zone.](resources/session5/gormsey_sample_points.png)
 
-### Create a new data frame that selects all variables that contain either a 0 or a 1
+### Create a new data frame that selects all variables that contain either a 2 or 3
 The select formula lists all conditions with a comma. There is no need to use conditional operators such as `&` and `|`. 
 
 {format: r, line-numbers: false}
 ```
-select(customers, contains("0"), contains("1"))
+select(customers, contains("2"), contains("3"))
 ```
 
 ### Create a tidy data set of the service quality questions
@@ -329,7 +344,7 @@ sq <- gather(sq, "Item", "Score", -id, -City)
 ```
 
 ### Visualise the results of the involvement data using a boxplot for each item
-This solution uses 
+This solution uses the boxplot geom to show the distribution of results. The `Item` variable is in this case used to group the data by item, so we see ten individual boxplots.
 
 {format: r, line-numbers: false}
 ```
@@ -342,6 +357,10 @@ ggplot(pii, aes(Item, Score)) +
 
 {width: 80%}
 ![Figure 5.5: Personal Involvement Index results.](resources/session5/pii_boxplot.png)
+
+D> Do you notice anything unusual in this data? What conclusion might you draw from this pattern?
+
+We have not yet determined the level of involvement, as requested in the problem statement. We hold this back until we look at analysing data with Tidyverse in the third case study.
 
 The [next chapter](#dataproducts) looks at methods to publish results through data products s that we can share our beautiful visualisations and analysis.
 

@@ -158,7 +158,7 @@ The *ggplot2* library can also add additional lines to the chart. In this case, 
 
 The `geom_hline()` adds a horizontal line in the graph at a given intercept with the y-axis. In the same way, the `geom_vline()` adds a line at a given intercept with the x-axis.
 
-The location of the vertical line is the location where the highest results were measured. The `which()` function helps to determine the date when this occurred. This function results in the index number of those elements in a vector that meet a condition. The code below assigns that location to the variable `mx`. 
+The location of the vertical line is the location where the highest results were measured. The `which()` function helps to determine the date when this occurred. This function results in the index number of those elements in a vector that meet a condition. For example, the expression `which(c("a", "b" "c") == "b")` results in 2. The code below assigns the location(s) of the maximum THM result location to the variable `mx`.
 
 {format: r, line-numbers: false}
 ```
@@ -248,14 +248,14 @@ Showing the graphs on the screen is fine, but you will most likely want to share
 ggsave("resources/session4.test.png", width = 8, height = 4.5)
 ```
 
-X> Save one of your visualisations as a png file and share it with fellow course participants on the online community.
+X> Save one of your visualisations as a png file and share it with fellow course participants on the [online community](https://community.leanpub.com/c/r4h2o).
 
 This ends the short introduction into the functionality of the *ggplot2* library. This chapter is only a very brief overview of the principles as the capabilities of this package are extensive.
 
 In the next chapter, we discuss a [case study](#casestudy2) about customer perception where we practice visualisation and dig deeper into analysing data with the Tidyverse.
     
 ## Answers
-This last section contains all the answers to the questions posed in this lesson.
+This last section contains the answers to the questions posed in this lesson.
 
 ### Add your favourite colour to the bar plot
 You can add any colour you like. I choose to use chocolate as inspiration (Figure 4.9).
@@ -312,4 +312,4 @@ ggplot(thm, aes(Zone, Result)) +
 {width: 70%}
 ![Figure 4.11 THM distributions in the Gormsey water quality zones.](resources/session4/gormsey_thm_zone.png)
 
-In the second [case study](#casestudy2) we dig deeper into he Tidyverse by analysing smart meter data.
+In the second [case study](#casestudy2) we dig deeper into he Tidyverse by cleaning data from a customer survey.

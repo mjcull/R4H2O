@@ -48,6 +48,8 @@ customers <- rawdata[-1, ] %>%
     rename(id = V1, City = city_name) %>%
     select(-city)
 
+write_csv(customers, "casestudy2/customers.csv")
+
 ## Use the three approaches to exclude the data from Los Angeles and only retain the first 11 columns.
 la <- filter(customers, City == "Los Angeles")
 la <- select(la, 1:11)
@@ -69,17 +71,28 @@ ggplot(gormsey, aes(x, y, col = Zone)) +
 ggsave("manuscript/resources/session5/gormsey_sample_points.png", width = 8, height = 6)
 
 # Variables with 0 or 1
-select(customers, contains("0"), contains("1"))
+select(customers, contains("2"), contains("3"))
 
 ## Isolate involvement data
 pii <- select(customers, id, City, starts_with("p", ignore.case = FALSE))
 pii[, c(1, 2, 7, 8, 9, 10) + 2] <- 8 - pii[, c(1, 2, 7, 8, 9, 10) + 2]
 
-## Tidy data
+## Tidy data example
+df <- tibble(A = c(1, 2),
+             B = c(12, 34),
+             C = c(43, 76),
+             d = c(5, 12))
+
+gather(df, "var", "val", -A)
+
+## Create tidy data
 pii <- gather(pii, "Item", "Score", -id, -City)
+write_csv(pii, "casestudy2/involvement_tidy.csv")
 
 ## Service quality data
-sq <- select(customers, id, City, starts_with("t0", ignore.case = FALSE), starts_with("f", ignore.case = FALSE))
+sq <- select(customers, id, City, 
+             starts_with("t0", ignore.case = FALSE), 
+             starts_with("f", ignore.case = FALSE))
 sq <- gather(sq, "Item", "Score", -id, -City)
 
 ## Visualise PII
@@ -90,5 +103,15 @@ ggplot(pii, aes(Item, Score)) +
     theme_minimal()
 ggsave("manuscript/resources/session5/pii_boxplot.png", width = 8, height = 6)
 
+## Visualise customer service
+ggplot(sq, aes(Item, Score)) +
+    geom_boxplot(fill = "forestgreen", col = "darkgreen") +
+    labs(title = "Service Quality for Tap Water",
+         subtitle = "Item Scores") + 
+    theme_minimal()
+ggsave("manuscript/resources/session5/sq_boxplot.png", width = 8, height = 6)
 
- 
+customers <- read.csv("casestudy2/customers.csv")
+cities <- as.data.frame(table(customers$City))
+names(cities) <- c("City", "Respondents")
+knitr::kable(cities, caption = "Repspondent cites.")

@@ -1,5 +1,4 @@
 # Capstone Project: Reporting Water Quality Performance {#capstone}
-
 This capstone project sets a challenge to help you develop further R coding sills. This document does not explain any further R functionality, as their are various methods to solve this problem. Participants need to use self study to develop the additional skills needed to provide an complete this capstone project. The end of this document contains suggestions where to find help and resources for further study.
 
 ## Problem Statement
@@ -87,26 +86,9 @@ T>
 https://community.leanpub.com/c/r4h2o
 
 ## R Markdown
-You can upload your solution to [RPubs](https://rpubs.com/), using the functionality in RStudio. Please note the that results on projects on RPubs are publicly visible. The data in this case study is simulated to prevent any privacy breaches.
-
-You will need to install various packages to enable to publishing functionality in RStudio. The software will automatically prompt you to install these when you first try to publish
-
-1. In RStudio, create a new R Markdown document.
-2. Develop the dashboard
-3. Click the Knit HTML button in the doc toolbar to preview your document. 
-4. In the preview window, click the Publish button.
-
-You will need to create a free account with RPubs before you can publish any documents.
 
 ## Getting Help
 The internet is full of valuable resources to expand your skills in creating value with R. The main problem with getting help is to know where to start and how to ask the right question.
-
-### The Help Function
-The R language has a built-in help function for every function. For example, type `help(mean)` to learn everything about the mean function. One of the weaknesses of R is that the help files can be quite cryptic to beginning users.
-
-The first section describes the function in words. The second section shows how to use the function. The arguments of the function are listed in the third section.
-
-The following sections provide background information and links to other similar functions. Most help entries also show examples that help you to reverse-engineer the functionality.
 
 ### Searching for answers
 If the help entry is not very helpful you can try searching your problem in your favourite search engine. You will quickly find that there will be very few problems that have not already been experienced and solved by somebody else.
