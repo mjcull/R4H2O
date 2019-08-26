@@ -33,12 +33,14 @@ turbidity[, 4:5] ## Show all rows with column four and five
 
 turbidity[1:10,] ## Show all variables for the first ten rows
 
+turbidity[1:10, "Result"]
+
 turbidity[1:10, c("Zone", "Result")] ## First ten rows of zone and result
 
 ## What is the result of the last sample taken in the turbidity?
 turbidity$Result[nrow(turbidity)]
 
-turbidity[turbidity$Zone == "Bealiba", ] ## All results for Bealiba
+turbidity[turbidity$Zone == "Bealiba", "Result"] ## All results for Bealiba
 subset(turbidity, Zone == "Bealiba") ## All results for Bealiba
 
 turbidity[turbidity$Zone == "Laanecoorie" & turbidity$Result > 1, ]
@@ -47,6 +49,12 @@ turbidity[turbidity$Zone == "Laanecoorie" & turbidity$Result > 1, ]
 nrow(subset(turbidity, Zone != "Bealiba" & Result < 0.1))
 
 ## VISUALISE
+
+hist(turbidity$Result)
+
+
+
+
 
 ## Histogram
 b <- max(turbidity$Result) / 0.1
@@ -64,6 +72,24 @@ for (z in unique(turbidity$Zone)) {
     hist(l$Result, breaks = b, main = z)
 }
 
+turbidity_bealiba <- turbidity$Result[turbidity$Zone == "Bealiba"]
+hist(turbidity_bealiba)
+
+max(turbidity_bealiba)
+
+
+
+
+
+
+
+
+
+
+boxplot(turbidity$Result)
+
+
+
 ## Boxplot
 boxplot(Result ~ Zone, data = turbidity, col = "lightblue",
         main = "Turbidity Results Laanecoorie water system",
@@ -73,6 +99,8 @@ boxplot(Result ~ Zone, data = turbidity, col = "lightblue",
 
 ## What is the mean turbidity value for the samples in Bealiba?
 mean(turbidity$Result[turbidity$Zone == "Bealiba"])
+
+median(turbidity$Result)
 
 ## What is the third quartile for the turbidity of sample point 090A01?
 summary(turbidity$Result[turbidity$Sample_Point == "090A01"])

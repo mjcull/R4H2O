@@ -6,7 +6,7 @@ set.seed(1)
 sample(LETTERS[1:4], 10, replace = TRUE)
 
 ## Read data
-gormsey <- read.csv("session2/gormsey.csv")
+gormsey <- read.csv("casestudy1/gormsey.csv")
 
 ## Question 1: How many results does the Gormsey data contain?
 dim(gormsey)

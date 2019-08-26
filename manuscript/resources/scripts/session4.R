@@ -2,7 +2,8 @@
 
 ## Load data
 library(tidyverse)
-gormsey <- read.csv("casestudy1/gormsey.csv")
+gormsey <- read_csv("casestudy1/gormsey.csv")
+str(gormsey)
 
 ## Basics
 ggplot(gormsey, aes(Measure)) + 
@@ -44,19 +45,23 @@ measures <- aggregate(list(Samples = gormsey$Sample_No),
 ggplot(measures, aes(Measure, Samples)) + 
     geom_col()
 
+
+
 ## Time series
 class(gormsey$Date_Sampled)
 gormsey$Date_Sampled <- as.Date(gormsey$Date_Sampled)
 class(gormsey$Date_Sampled)
+
 thm <- subset(gormsey, Measure == "THMs")
 
 ## abline
-mx <- which(thm$Result == max(thm$Result))
+mx <- which(thm$Result >= 0.25)
 
 ggplot(thm, aes(Date_Sampled, Result)) +
-    geom_line() +
+    geom_line() + 
     geom_hline(yintercept = .25, col = "red") + 
-    geom_vline(xintercept = thm$Date_Sampled[mx], col = "blue")
+    geom_vline(xintercept = thm$Date_Sampled[mx], col = "blue") + 
+    geom_vline(xintercept = as.Date("2018-03-01"), col = "green")
 ggsave("manuscript/resources/session4/gormsey_thm_time_series.png", width = 8, height = 6)
 
 ## Add the trend line the THM timeseries. Experiment with the two different methods.
@@ -65,10 +70,17 @@ ggplot(subset(gormsey, Measure == "THMs"), aes(Date_Sampled, Result)) +
     geom_hline(yintercept = .25, col = "red") +
     geom_smooth(method = lm) +
     geom_smooth(method = loess, col = "green") 
+
 ggsave("manuscript/resources/session4/gormsey_thm_trend.png", width = 8, height = 6)
+
+
+
+ggplot(gormsey, aes(Zone, Result)) + geom_boxplot() + coord_flip()
 
 ## boxplot
 turbidity <- subset(gormsey, Measure == "Turbidity" & Zone == "Merton" | Zone == "Southwold")
+
+
 ggplot(turbidity, aes(Zone, Result)) + 
     geom_boxplot()
 
@@ -80,10 +92,11 @@ ggsave("manuscript/resources/session4/gormsey_thm_zone.png", width = 8, height =
 
 
 ## Facets
-ggplot(subset(gormsey, Measure == "THMs" | Measure == "Turbidity"), 
-       aes(Date_Sampled, Result, col = Measure)) + 
+ggplot(gormsey, aes(Date_Sampled, Result, col = Measure)) + 
     geom_line() + 
     facet_wrap(~Measure, scales = "free_y")
+
+
 ggsave("manuscript/resources/session4/gormsey_thm_turbidity.png", width = 8, height = 6)
 
 ## Themes

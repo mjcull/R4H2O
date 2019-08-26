@@ -10,29 +10,26 @@ Most professionals use spreadsheets to collect and analyse data and present the 
 
 This course introduces water utility professionals to the [R language](https://en.wikipedia.org/wiki/R_(programming_language)) for data science. This language is one of the most popular and versatile tools among data scientists to create value from data.
 
-The content of this course represents a very steep learning curve because we take a deep dive into the functionalities of the R language. Just keep in mind that the steeper the leanring curve, the bigger to payoff!
+The content of this course represents a steep learning curve because we take a deep dive into the functionalities of the R language. Just keep in mind that the steeper the leanring curve, the bigger to payoff!
 
 This workshop is not an exhaustive introduction into data science programming but a teaser to inspire water professionals to ditch their spreadsheets and instead write code to analyse data. The best way to learn to solve problems with computer code is to start with practical examples and learn the principles as you progress through ever more complex cases.
 
 This course only discusses the basics of using the R language with a limited scope. This course does not include advanced techniques such as machine learning. All data used in this course is tabular, text analysis and other unstructured data are not part of the curriculum.
 
-The course consists of seven sessions. The first session introduces the principles of data science within the context of managing a water utility. Following a case-study approach, this course includes four realistic water management problems. The case studies are based on material previously published on [The Devil is in the Data](https://lucidmanager.org/data-science/), a blog about creating value and having fun with the R language.
+The course consists of an introduction and three case studies. The introduction introduces the principles of data science within the context of managing a water utility. The three case studies look at water quality data, customer perception and digital metering data. The case studies are based on material previously published on [The Devil is in the Data](https://lucidmanager.org/data-science/), a blog about creating value and having fun with the R language.
 
 The case studies start with a problem statement and introduce participants to the relevant aspects of the R language. Participants have to load, transform, explore and analyse the data to solve the stated problem.
 
-## Principles of Water Utility Data Science
+## Introduction: Principles of Water Utility Data Science
 The first session defines data science as an evolution of traditional analysis. The greater availability of data, enhanced computer capacity and tools to analyse this information have revolutionised the industry. 
 
-This course is not only about the vocabulary and syntax of R but also about producing good data science. The second part of this session introduces a framework for best practice in analysing data and sharing the results. This framework derives from the book *Principles of Strategic Data Science* by Peter Prevos. The three case studies each implement aspects of this framework.
+This course is not only about the vocabulary and syntax of R but also about producing good data science. The second part of this session introduces a framework for best practice in analysing data and sharing the results. This framework derives from the book [Principles of Strategic Data Science](https://www.packtpub.com/big-data-and-business-intelligence/principles-strategic-data-science) by Peter Prevos. The three case studies each implement aspects of this framework.
 
 {width: "25%", alt: "Principles of Strategic Data Science."}
-![Peter Prevos, (2019) Principles of Strategic Data Science.](resources/session0/StrategicDataScience.jpg)
-
-## Basics of the R Language
-The second session introduces the basic principles of the R language and some of the functionality of the RStudio development environment.
+![Peter Prevos, (2019) Principles of Strategic Data Science.](resources/session0/StrategicDataScience.png)
 
 ## Case Study 1: Introduction to the R Language --- Water Quality Regulations
-This first session introduces the basics of the R language to undertake basic statistical analysis. Participants apply these skills to laboratory testing data from a drinking water network. The case study revolves around checking the data for compliance with water quality regulations.
+This first session introduces the basics of the R language to undertake statistical analysis. Participants apply these skills to laboratory testing data from a drinking water network. The case study revolves around checking the data for compliance with water quality regulations.
 
 {width: "80%", alt: "Distribution of turbidity results.", align: "middle"}
 ![Distribution of turbidity results (Case Study 1).](resources/session3/boxplot-zones.png)
@@ -67,6 +64,9 @@ X> Tasks to undertake to progress the course.
 D> Points of discussion for face-to-face workshops. If you follow the online version, then add your answer to the [course community](https://community.leanpub.com/c/r4h2o).
 
 T> Tips and suggestions for further study.
+
+## Face-to-Face Sessions
+This course is occasionally also provided in face-to-face sessions. This one-day session includes the first case study and the chapters on ggplot visualisation and data products.
 
 ## Discussion Forum
 This course includes a [discussion forum](https://community.leanpub.com/c/r4h2o) where participants can ask questions and share the results of their work to get feedback. 

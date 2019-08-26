@@ -66,7 +66,7 @@ rawdata <- read_csv("casestudy2/Customer_Perception_USA.csv")
 
 We use the `rawdata` variable name because we want to keep this data intact as we process it, in case we need to use it again.
 
-In Tidyverse, rectangular data is not a data frame, as in base R code, but a 'tibble'. This odd term is a pun on how the word table sounds in the New Zealand accent of Hadley Wickham, the lead developer. Tibbles have the same properties as a data frame, but have some extended capabilities to make life easier. The terms data frame ad tibble are used interchangeably.
+In Tidyverse, rectangular data is not a data frame, as in base R code, but a 'tibble'. This odd term is a pun on how the word table sounds in the New Zealand accent of Hadley Wickham, the lead developer. Tibbles have the same properties as a data frame, but have some extended capabilities to make life easier. The words data-frame and tibble are used interchangeably.
 
 X> View the raw data in the console.
 
@@ -99,6 +99,8 @@ The next step is to remove any respondents that either:
 * Does not live in one of the three nominated cities
 * Quit the survey before completion
 
+#  Like, which row shows those who failed the attention filter test. Something like that.
+
 The Qualtrics survey software stores this information in the `term` field. To summarise the content of this field, we can use the `table()` function. This function creates, as expected, a table with a count of the unique elements in a vector.
 
 {format: r, line-numbers: false}
@@ -112,12 +114,16 @@ After reviewing the data, we can conclude that we only want those rows of data t
 
 In the *dplyr* package of Tidyverse, the `filter()` function conditionally chooses rows of a data frame. For example, using `filter(customers, term == "attention")` results in a data frame with only those entries that failed the attention filter. In the filter function, we don't have to repeat the data frame name and can specify the variable name, as we did in the `subset()` function ([case study 1](#casestudy1)).
 
+You can use the `which()` function to find out which variable in a vector meets a critrion. For example: `which(customers$term == "attention")`. This code provides the index numbers of the data that meets this condition.
+
 In our case we want all values with `NA` because these are the responses without termination. To find these observations we need to use a special function. The `is.na()` function results in a logical variable (TRUE or FALSE) that shows whether a field is not available. Try `is.na(customers$term)` to see the result.
 
 {format: r, line-numbers: false}
 ```
 customers <- filter(customers, is.na(term))
 ```
+
+To see all respondents that did not complete the survey, you can negate the `ìs.na(term)` statement with an exclamation mark (the not function): `filter(customers, !is.na(term))`. The exclamation mark indicates a logical negation and thus reverses the value of the condition. For example: `!(3 == 3)` results in `FALSE`.
 
 The Qualtrics data contains metadata that we don't need for further analysis. The first 19 columns contain information about when the survey was taken and so on and the last two columns are irrelevant. The next step is to filter the data, so we only use the first column as a unique ID and columns 20 to 56.
 

@@ -1,12 +1,7 @@
 # Principles of Water Utility Data Science{#datascience}
-This first session provides a framework for good data science. The first section defines data science within the context of managing water and sewerage services. The second section presents a framework for good data science.
+This session provides a framework for good data science. The first section defines data science within the context of managing water and sewerage services. The second section presents a framework for good data science.
 
 ## What is data science?
-The earliest known form of writing is not an epic poem or religious text, but data. The [Ishango bone](https://arxiv.org/abs/1204.1019) is an engraved fibula of a baboon which was carved in central Africa 20,000 years ago. Some scholars hypothesised that the carvings represent an early number system as it lists several prime numbers, while others believe it to be a calendar. Some researchers dismiss these ideas and believe that the markings merely improve grip when using the bone as a club. Whatever their purpose, the groupings of the markings are distinctly mathematical (Figure 1.1).
-
-{width: 80%, alt: "Markings onthe Ishango bone."}
-![Figure 1.1: Markings on the Ishango Bone](resources/session1/ishango.png)
-
 The idea that data can be used to understand the world is thus almost as old as humanity itself and has gradually evolved into what we now call data science. Using data in organisations is also called business analytics or evidence-based management. There are also specific approaches, such as Six-Sigma, that use statistical analysis to improve business processes.
 
 Although data science is merely a new term for something that has existed for decades, some recent developments have created a watershed between the old and new ways of analysing a business. The difference between traditional business analysis and the new world of data science is threefold.
@@ -37,6 +32,9 @@ Now that we have defined data science within the context of managing a water uti
 
 {width: 60%, alt: "Conway's data science Venn diagram."}
 ![Figure 1.3: Conway's data science Venn Diagram.](resources/session1/conway.png)
+
+{type: video, align: middle, poster: "https://www.youtube.com/watch?v=roTCgjxpMEg/mqdefault.jpg"}
+![What is data science?](https://youtu.be/cJO8ASwk_XU)
 
 ### Domain Knowledge
 The most vital skill within a data science function is *domain knowledge*. While the results of advanced applied mathematics such as machine learning are impressive, without understanding the reality that these models describe, they are devoid of meaning and can cause more harm than good. Anyone analysing a problem needs to understand the context of the issues and the potential solutions. The subject of data science is not the data itself but the reality this data describes. Data science is about things and people in the real world, not about numbers and algorithms.
@@ -126,6 +124,9 @@ The question that arises from this introduction is how to manage and analyse dat
 
 The three case studies of this course implement these principles so that participants not only learn R syntax but also best practice in analysing data.
 
+{type: video, align: middle, poster: "https://www.youtube.com/watch?v=Gge5aZ9jZqo/mqdefault.jpg"}
+![What is good data science?](https://youtu.be/Gge5aZ9jZqo)
+
 ### Data Science Trivium
 Although data science is a quintessential twenty-first-century activity, to define good data science, we can find inspiration in a Roman architect and engineer who lived two thousand years ago. Vitruvius wrote his books *About Architecture*, which inspired Leonardo da Vinci to draw his famous Vitruvian man. Vitruvius wrote that an ideal building must exhibit three qualities: *utilitas*, *firmitas* and *venustas*, or usefulness, soundness and aesthetics.
 
@@ -160,12 +161,15 @@ The source of the original version of this model is lost in time as a multitude 
 
 The version in this book is modified to understand better how to create useful data science (Figure 1.6). Firstly, wisdom no longer forms part of the model because this concept is too nebulous to be helpful. Anyone seeking wisdom should study philosophy or practice religion as data science is unable to provide this need. Secondly, the bottom of the pyramid needs to be grounded in reality. The standard DIKW model ignores the reality from which the data is collected that creates the information and knowledge used to make business decisions. The second addition to the traditional model is a feedback loop from knowledge to the real world. The purpose of data science is to enhance the knowledge that professionals use to influence reality by converting data into information.
 
+{type: video, align: middle, poster: "https://www.youtube.com/watch?v=_ITXY6Daa5s/mqdefault.jpg"}
+![What is useful data science?](https://www.youtube.com/watch?v=_ITXY6Daa5s)
+
 ### Reality
 Useful data science positively influences reality by collecting data, creating information and increasing our knowledge about and understanding of reality. This knowledge is useful when it changes the way we perceive reality to innovate the way we do things, and when it enables better operational or strategic decisions. When data science is independent of the world it seeks to understand or influence, it loses its power to be valuable.
 
 This reality of data science can be either physical or social, each of which requires a different paradigm to describe the world. Our physical reality can be measured with almost arbitrary precision. We can measure size, weight, chemical composition, time, and other physical entities, with high validity and reliability.
 
-Numbers can suThe social world can also be summarised in numbers, but these measurements are almost always indirect. We cannot read people's minds. When we want to know how somebody feels about a level of service or another psychological parameter, we can only indirectly measure this variable. Data from the social world is often qualitative and requires different considerations than in the physical world.
+Numbers can summarise the social world, but measurements of how people feel and think are always indirect observations. We cannot read people's minds. When we want to know how somebody feels about a level of service or another psychological parameter, we can only indirectly measure this variable. Data from the social world is often qualitative and requires different considerations than in the physical world.
 
 The complicated relationship between the data and the reality it seeks to improve emphasises the need for subject-matter expertise about the problem under consideration. Data should never be seen as merely an abstract series of numbers or a corpus of text and images, but should always be interpreted in its context to do justice to the reality it describes.
 
@@ -220,6 +224,9 @@ This systematic approach ensures that the outcomes of data science can be relied
 
 {width: 80%, alt: "Validity and reliability of data and analysis."}
 ![Figure 1.8: Visualising validity and reliability.](resources/session1/soundness.png)
+
+{type: video, align: middle, poster: "https://www.youtube.com/watch?v=_hAXvAvx92I/mqdefault.jpg"}
+![What is sound data science?](https://www.youtube.com/watch?v=_hAXvAvx92I)
 
 #### Validity
 The validity of a data set and the information derived from it relates to the extent to which the data matches the reality it describes. The validity of data and information depends on how this information was collected and how it was analysed.
@@ -316,6 +323,9 @@ Beauty is in the eye of the beholder, and there are no formulas or algorithms to
 
 Edward Tufte is an American statistician who is famous for his work on visualisation. Tufte introduced the concept of the data-ink ratio. In simple terms, this ratio expresses the relationship between the ink on the paper that tells a story and the total amount of ink on the paper. Tufte argues that this ratio should be as close to one as possible. In other words, we should not use any graphical elements that don't communicate any information, such as background images, superfluous lines and text.
 
+{type: video, align: middle, poster: "https://www.youtube.com/watch?v=_5grTD8cGZQM/mqdefault.jpg"}
+![Data-to-Pixel ratio](https://www.youtube.com/watch?v=5grTD8cGZQM)
+
 Now that we are in the paperless era, we can use the data-pixel ratio as a generic measure for the aesthetics of visualisations. The principle is the same as in the analogue days. Unnecessary lines, multiple colours or multiple narratives risk confusing the user of the report.
 
 The data-ink ratio is not a mathematical concept that needs to be expressed in exact numbers. This ratio is a guideline for designers of visualisations to help them decide what to include and, more importantly, what to exclude from an image.
@@ -330,7 +340,7 @@ The basic rule of visually communicating data is to not 'pimp' your visualisatio
 ![Figure 1.10: Examples of the data-pixel ratio.](resources/session1/data-pixel-ratio.png)
 
 #### Reports
-Advertising executive Fred Barnard coined the well-worn cliché that "a picture is worth (ten) thousand words" in 1927. While this might be the case, the complexity of data science in most cases requires text to explain the analysis.
+Advertising executive Fred Barnard coined the well-worn cliche that "a picture is worth (ten) thousand words" in 1927. While this might be the case, the complexity of data science in most cases requires text to explain the analysis.
 
 To claim that a report needs to be written with clarity and precision in proper spelling and grammar almost seems redundant. The importance of readable reports implies that the essential language a data scientist needs to master is not Python or R but English, or another human language.
 

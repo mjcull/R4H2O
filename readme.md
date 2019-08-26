@@ -5,7 +5,7 @@
 This GitHub repository contains the instructions, examples and data sets for a course on writing data science code for water professionals. This one-day workshop introduces participants to analysing data using the [R language](https://www.r-project.org/), using a range of realistic water management case studies.
 
 This repository contains the following folders:
-* `capstone`: Files related to the capstone project.
+* `basicr`: Introduction to the R language.
 * `casestudy1`: Case study data and files.
 * `casestudy2`: Case study data and files.
 * `casestudy3`: Case study data and files.

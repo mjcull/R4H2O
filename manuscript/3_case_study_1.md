@@ -64,6 +64,21 @@ The text between quotation marks is the path to the file. Note that R uses the f
 
 The turbidity data is now visible in the *Environment* tab. The turbidity variable is a data frame, which is a tabular set of data with rows (observations) and columns (variables), very much like a spreadsheet.
 
+A data frame is a variable that holds tabular data, like in a spreadsheet. The data is stored in rows and columns. Each column is a variable, which are sometimes called a data field or a parameter. Each row holds an observation or a measurement. The table below shows the start of a data frame with one row as an example.
+
+| Sample_No | Date_Sampled | Sample_Point | Zone | Result | Units |
+|-----------|--------------|--------------|------|--------|-------|
+| 1235      | 2019-12-01   | AB234        | Test | 0.30   | NTU   |
+
+The data in this case study has the following fields:
+
+* `Sample_No`: Reference number of the sample.
+* `Date_Sampled`: The sampling date.
+* `Sample_Point`: The reference number of the sample point.
+* `Zone`: The zone within the water system.
+* `Result`: The result of the laboratory test.
+* `Units`: The units of the result (NTU).
+
 R can read many types of data. Some specialised extensions can connect R to Excel spreadsheets, SQL databases, scrape data from websites, and many other sources. The `extract_data.R` file in the case study folder shows how the turbidity data was extracted from a corporate SQL server.
 
 Many organisations maintain spreadsheets as their single source of truth. If a spreadsheet is indeed your only solution to store data, you should stick to some simple rules to be able to easily use it in R, or any other data science package:
@@ -74,14 +89,7 @@ Many organisations maintain spreadsheets as their single source of truth. If a s
 * Don't add any calculations in the data tab.
 * Every cell below a column should be a data point or empty
 
-Following these guidelines, you can store your data in a clean way that makes analysing the results with R much more straightforward. The data in this case study has the following fields:
-
-* `Sample_No`: Reference number of the sample.
-* `Date_Sampled`: The sampling date.
-* `Sample_Point`: The reference number of the sample point.
-* `Zone`: The zone within the water system.
-* `Result`: The result of the laboratory test.
-* `Units`: The units of the result (NTU).
+Following these guidelines, you can store your data in a clean way that makes analysing the results with R much more straightforward. 
 
 ### Inspect the data
 The next step is to explore the data. When you type the name of the variable in the console, RStudio displays the data up to the first 1000 rows. This method is not ideal for viewing large sets because the data scrolls quickly across the screen. R has a series of functions to inspect data frames in more detail.

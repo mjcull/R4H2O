@@ -47,10 +47,13 @@ library(cats)
 bad <- ggplot(comparison, aes(item, value, fill = item)) +
     add_cat(bw = FALSE) +
     geom_col(alpha = 0.5, col = "black") +
+    scale_fill_discrete(name = "Brand") + 
     theme_gray(base_size = 40) +
     theme(legend.position="left", legend.key.size = unit(5,"line"),
           plot.title = element_text(face = "bold")) +
-    ggtitle("Low Data-Pixel Ratio")
+        labs(title= "Cat food sales",
+         subtitle = "Low Data-Pixel Ratio",
+         x = "Brand", y = "Sales")
 
 comparison$item <- factor(comparison$item, level = comparison$item[order(comparison$value)])
 
@@ -59,12 +62,11 @@ good <- ggplot(comparison, aes(item, value)) +
     theme_minimal(base_size = 40) +
     theme(plot.title = element_text(face = "bold")) + 
     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + 
-    ggtitle("High Data-Pixel Ratio")
+    labs(title= "Cat food sales",
+         subtitle = "High Data-Pixel Ratio",
+         x = "Brand", y = "Sales")
 
 png("manuscript/resources/session1/data-pixel-ratio.png",
     width = 1800, height = 1000)
 grid.arrange(bad, good, ncol = 2, widths = c(1.1, 0.9))
 dev.off()
-
-
-

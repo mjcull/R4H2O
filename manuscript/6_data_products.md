@@ -18,6 +18,9 @@ The workflow for analytical projects starts with defining a problem that needs s
 {width: 80%}
 ![Figure 6.1: Data science workflow.](resources/session6/workflow.png)
 
+{type: video, align: middle, poster: "https://www.youtube.com/watch?v=_PHc6clrOxvs/mqdefault.jpg"}
+![What is sound data science?](https://www.youtube.com/watch?v=PHc6clrOxvs)
+
 ### Define
 The first step of a data science project is to define the problem. This first step describes the problem under consideration and the desired future state. The problem definition should not make specific reference to available data or possible methods but be limited to the issue at hand. An organisation could seek to optimise production facilities, reduce energy consumption, monitor effectiveness, understand customers, and so on. A concise problem definition is necessary to ensure that a project does not deviate from its original purpose or is cancelled when it becomes apparent that the problem cannot be solved.
 
