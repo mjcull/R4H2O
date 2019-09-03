@@ -25,7 +25,7 @@ The first session defines data science as an evolution of traditional analysis. 
 
 This course is not only about the vocabulary and syntax of R but also about producing good data science. The second part of this session introduces a framework for best practice in analysing data and sharing the results. This framework derives from the book [Principles of Strategic Data Science](https://www.packtpub.com/big-data-and-business-intelligence/principles-strategic-data-science) by Peter Prevos. The three case studies each implement aspects of this framework.
 
-{width: "25%", alt: "Principles of Strategic Data Science."}
+{width: "25%", alt: "Principles of Strategic Data Science.", align: "middle"}
 ![Peter Prevos, (2019) Principles of Strategic Data Science.](resources/session0/StrategicDataScience.png)
 
 ## Case Study 1: Introduction to the R Language --- Water Quality Regulations
@@ -68,6 +68,9 @@ T> Tips and suggestions for further study.
 ## Face-to-Face Sessions
 This course is occasionally also provided in face-to-face sessions. This one-day session covers the first case study and the chapters on ggplot visualisation and data products.
 
+{width: "100%", alt: "R for Water Professionals workshop (Melbourne, 2019).", align: "middle"}
+![R for Water Professionals workshop (Melbourne, 2019).](resources/session0/workshop.jpg)
+
 ## Discussion Forum
 This course includes a [discussion forum](https://community.leanpub.com/c/r4h2o) where participants can ask questions and share the results of their work to get feedback. 
 
@@ -100,6 +103,6 @@ For those using the cloud version of RStudio, click on the arrow next to the 'Ne
 
 The repository contains several folders:
 * The `manuscript` folder source files of the course text, images and videos.
-* The `basicr` an case study folders contain the data and code for each of the chapters.
+* The `basicr` and case study folders contain the data and code for each of the chapters.
 
 The [next chapter](#datascience) introduces the principles of data science and presents a framework for good data science. This framework forms the foundation of the case studies.

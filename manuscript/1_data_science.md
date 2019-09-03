@@ -34,7 +34,7 @@ Now that we have defined data science within the context of managing a water uti
 ![Figure 1.3: Conway's data science Venn Diagram.](resources/session1/conway.png)
 
 {type: video, align: middle, poster:
-"https://img.youtube.com/vi/cJO8ASwk_XU/mqdefault.jpg" }
+"https://img.youtube.com/vi/cJO8ASwk_XU/mqdefault.jpg"}
 ![What is data science?](https://www.youtube.com/watch?v=cJO8ASwk_XU)
 
 ### Domain Knowledge
@@ -126,7 +126,7 @@ The question that arises from this introduction is how to manage and analyse dat
 The three case studies of this course implement these principles so that participants not only learn R syntax but also best practice in analysing data.
 
 {type: video, align: middle, poster:
-"https://img.youtube.com/vi/Gge5aZ9jZqo/mqdefault.jpg" }
+"https://img.youtube.com/vi/Gge5aZ9jZqo/mqdefault.jpg"}
 ![What is data good science?](https://www.youtube.com/watch?v=Gge5aZ9jZqo)
 
 ### Data Science Trivium
@@ -164,7 +164,7 @@ The source of the original version of this model is lost in time as a multitude 
 The version in this book is modified to understand better how to create useful data science (Figure 1.6). Firstly, wisdom no longer forms part of the model because this concept is too nebulous to be helpful. Anyone seeking wisdom should study philosophy or practice religion as data science is unable to provide this need. Secondly, the bottom of the pyramid needs to be grounded in reality. The standard DIKW model ignores the reality from which the data is collected that creates the information and knowledge used to make business decisions. The second addition to the traditional model is a feedback loop from knowledge to the real world. The purpose of data science is to enhance the knowledge that professionals use to influence reality by converting data into information.
 
 {type: video, align: middle, poster:
-"https://img.youtube.com/vi/_ITXY6Daa5s/mqdefault.jpg" }
+"https://img.youtube.com/vi/_ITXY6Daa5s/mqdefault.jpg"}
 ![What is data useful science?](https://www.youtube.com/watch?v=_ITXY6Daa5s)
 
 ### Reality
@@ -229,7 +229,7 @@ This systematic approach ensures that the outcomes of data science can be relied
 ![Figure 1.8: Visualising validity and reliability.](resources/session1/soundness.png)
 
 {type: video, align: middle, poster:
-"https://img.youtube.com/vi/_hAXvAvx92I/mqdefault.jpg" }
+"https://img.youtube.com/vi/_hAXvAvx92I/mqdefault.jpg"}
 ![What is data sound science?](https://www.youtube.com/watch?v=_hAXvAvx92I)
 
 #### Validity
@@ -293,7 +293,7 @@ Data visualisations are everywhere. They are no longer the domain of scientific 
 Aesthetics and usefulness go hand in hand. Some data visualisations in engineering remind me of a [Jackson Pollock](https://en.wikipedia.org/wiki/Jackson_Pollock) painting, with multitudes of lines and colours splashed over the screen. Adding too much information to a graph and using too many colours reduces its usability. When visualisation is not aesthetic, it becomes harder to interpret, which leads to the wrong conclusions and can even deceive the user.
 
 {width: 80%}
-![Jackson Pollock (1952) Blue Poles number 11. Drip Painting in enamel and aluminium paint with glass on canvas (National Gallery, Canberra. Source: Wikimedia).](https://upload.wikimedia.org/wikipedia/commons/6/62/Bluepoles.jpg)
+![Jackson Pollock (1952) Blue Poles number 11. Drip Painting in enamel and aluminium paint with glass on canvas (National Gallery, Canberra. Source: Wikimedia).](resources/session1/bluepoles.jpg)
 
 A data scientist needs to be aware of cognitive biases to prevent them and create data products that don't deceive. Many of these biases relate to how information is presented.
 
@@ -302,7 +302,7 @@ Our perception is not always an accurate representation of reality, and we often
 Perhaps a good data visualisation should look more like a painting by [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) who is famous for his austere compositions with straight lines and primary colours. Using art to explain data visualisation is not an accidental metaphor because visual art represents how the artist perceives reality. This comparison between Pollock and Mondrian is not a judgement of their artistic abilities. For Pollock, reality was chaotic and messy, while Mondrian saw a geometric order behind the perceived world.
 
 {width: 50%, alt: "Piet Mondrian, Composition in Red, Yellow and Blue."}
-![Piet Mondrian (1928) Composition with red, yellow and blue. Oil on canvas (Municipal Museum, the Hague).](https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Mondrian%2C_Compositie_met_rood%2C_geel_en_blauw.jpg/512px-Mondrian%2C_Compositie_met_rood%2C_geel_en_blauw.jpg)
+![Piet Mondrian (1928) Composition with red, yellow and blue. Oil on canvas (Municipal Museum, the Hague).](resources/session1/mondrian.jpg)
 
 Although visualising data has some parallels with art, it is very different. All works of art are a form of deception. The artist paints a three-dimensional image on a flat canvas, and although we see people, we are just looking at blobs of paint. Data visualisation as an art form needs to be truthful and not deceive, either intentionally or accidentally. The purpose of any graph is to validly and reliably reflect reality.
 
@@ -328,7 +328,7 @@ Beauty is in the eye of the beholder, and there are no formulas or algorithms to
 Edward Tufte is an American statistician who is famous for his work on visualisation. Tufte introduced the concept of the data-ink ratio. In simple terms, this ratio expresses the relationship between the ink on the paper that tells a story and the total amount of ink on the paper. Tufte argues that this ratio should be as close to one as possible. In other words, we should not use any graphical elements that don't communicate any information, such as background images, superfluous lines and text.
 
 {type: video, align: middle, poster:
-"https://img.youtube.com/vi/5grTD8cGZQM/mqdefault.jpg" }
+"https://img.youtube.com/vi/5grTD8cGZQM/mqdefault.jpg"}
 ![What is data aesthetic science?](https://www.youtube.com/watch?v=5grTD8cGZQM)
 
 Now that we are in the paperless era, we can use the data-pixel ratio as a generic measure for the aesthetics of visualisations. The principle is the same as in the analogue days. Unnecessary lines, multiple colours or multiple narratives risk confusing the user of the report.
