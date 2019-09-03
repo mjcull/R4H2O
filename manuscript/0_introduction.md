@@ -18,7 +18,7 @@ This course only discusses the basics of using the R language with a limited sco
 
 The course consists of an introduction and three case studies. The introduction introduces the principles of data science within the context of managing a water utility. The three case studies look at water quality data, customer perception and digital metering data. The case studies are based on material previously published on [The Devil is in the Data](https://lucidmanager.org/data-science/), a blog about creating value and having fun with the R language.
 
-The case studies start with a problem statement and introduce participants to the relevant aspects of the R language. Participants have to load, transform, explore and analyse the data to solve the stated problem.
+Each of the case studies starts with a problem statement and introduces participants to the relevant aspects of the R language. Participants have to load, transform, explore and analyse the data to solve the stated problem.
 
 ## Introduction: Principles of Water Utility Data Science
 The first session defines data science as an evolution of traditional analysis. The greater availability of data, enhanced computer capacity and tools to analyse this information have revolutionised the industry. 
@@ -35,7 +35,7 @@ This first session introduces the basics of the R language to undertake statisti
 ![Distribution of turbidity results (Case Study 1).](resources/session3/boxplot-zones.png)
 
 ## The Tidyverse
-The Tidyverse is an extension of the R language that provides additional functionality to simplify manipulating, analysing and presenting data science. The fourth session delves into the basic principles of visualising data with the *ggpot2* library of the Tidyverse, using data from the first case study.
+The ![Tidyverse](https://tidyverse.org/) is an extension of the R language that provides additional functionality to simplify manipulating, analysing and presenting data science. The fourth session delves into the basic principles of visualising data with the ggpot2 library of the Tidyverse, using data from the first case study.
 
 ## Case Study 2: Processing Data --- Understanding Customer Perception
 The data for the second case study consists of the results of a survey of American consumers about their perception of tap water services. Participants use the Tidyverse to clean, transform and visualise this data.
@@ -66,7 +66,7 @@ D> Points of discussion for face-to-face workshops. If you follow the online ver
 T> Tips and suggestions for further study.
 
 ## Face-to-Face Sessions
-This course is occasionally also provided in face-to-face sessions. This one-day session includes the first case study and the chapters on ggplot visualisation and data products.
+This course is occasionally also provided in face-to-face sessions. This one-day session covers the first case study and the chapters on ggplot visualisation and data products.
 
 ## Discussion Forum
 This course includes a [discussion forum](https://community.leanpub.com/c/r4h2o) where participants can ask questions and share the results of their work to get feedback. 
@@ -100,6 +100,6 @@ For those using the cloud version of RStudio, click on the arrow next to the 'Ne
 
 The repository contains several folders:
 * The `manuscript` folder source files of the course text, images and videos.
-* The session folders contain the data and code for each of the sessions and case studies.
+* The `basicr` an case study folders contain the data and code for each of the chapters.
 
 The [next chapter](#datascience) introduces the principles of data science and presents a framework for good data science. This framework forms the foundation of the case studies.
