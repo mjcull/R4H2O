@@ -33,8 +33,6 @@ Now that we have defined data science within the context of managing a water uti
 {width: 60%, alt: "Conway's data science Venn diagram."}
 ![Figure 1.3: Conway's data science Venn Diagram.](resources/session1/conway.png)
 
-{type: video, align: middle, poster:
-"https://img.youtube.com/vi/cJO8ASwk_XU/mqdefault.jpg"}
 ![What is data science?](https://www.youtube.com/watch?v=cJO8ASwk_XU)
 
 ### Domain Knowledge
@@ -125,8 +123,6 @@ The question that arises from this introduction is how to manage and analyse dat
 
 The three case studies of this course implement these principles so that participants not only learn R syntax but also best practice in analysing data.
 
-{type: video, align: middle, poster:
-"https://img.youtube.com/vi/Gge5aZ9jZqo/mqdefault.jpg"}
 ![What is data good science?](https://www.youtube.com/watch?v=Gge5aZ9jZqo)
 
 ### Data Science Trivium
@@ -163,8 +159,6 @@ The source of the original version of this model is lost in time as a multitude 
 
 The version in this book is modified to understand better how to create useful data science (Figure 1.6). Firstly, wisdom no longer forms part of the model because this concept is too nebulous to be helpful. Anyone seeking wisdom should study philosophy or practice religion as data science is unable to provide this need. Secondly, the bottom of the pyramid needs to be grounded in reality. The standard DIKW model ignores the reality from which the data is collected that creates the information and knowledge used to make business decisions. The second addition to the traditional model is a feedback loop from knowledge to the real world. The purpose of data science is to enhance the knowledge that professionals use to influence reality by converting data into information.
 
-{type: video, align: middle, poster:
-"https://img.youtube.com/vi/_ITXY6Daa5s/mqdefault.jpg"}
 ![What is data useful science?](https://www.youtube.com/watch?v=_ITXY6Daa5s)
 
 ### Reality
@@ -228,8 +222,6 @@ This systematic approach ensures that the outcomes of data science can be relied
 {width: 80%, alt: "Validity and reliability of data and analysis."}
 ![Figure 1.8: Visualising validity and reliability.](resources/session1/soundness.png)
 
-{type: video, align: middle, poster:
-"https://img.youtube.com/vi/_hAXvAvx92I/mqdefault.jpg"}
 ![What is data sound science?](https://www.youtube.com/watch?v=_hAXvAvx92I)
 
 #### Validity
@@ -327,8 +319,6 @@ Beauty is in the eye of the beholder, and there are no formulas or algorithms to
 
 Edward Tufte is an American statistician who is famous for his work on visualisation. Tufte introduced the concept of the data-ink ratio. In simple terms, this ratio expresses the relationship between the ink on the paper that tells a story and the total amount of ink on the paper. Tufte argues that this ratio should be as close to one as possible. In other words, we should not use any graphical elements that don't communicate any information, such as background images, superfluous lines and text.
 
-{type: video, align: middle, poster:
-"https://img.youtube.com/vi/5grTD8cGZQM/mqdefault.jpg"}
 ![What is data aesthetic science?](https://www.youtube.com/watch?v=5grTD8cGZQM)
 
 Now that we are in the paperless era, we can use the data-pixel ratio as a generic measure for the aesthetics of visualisations. The principle is the same as in the analogue days. Unnecessary lines, multiple colours or multiple narratives risk confusing the user of the report.

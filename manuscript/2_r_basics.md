@@ -76,6 +76,7 @@ mean(a)
 a * 2
 ```
 
+{width: 100%}
 ![Introduction to RStudio](https://www.youtube.com/watch?v=roTCgjxpMEg)
 
 In its most basic form, R is a calculator that uses arithmetic operators as listed in the table below.
@@ -147,29 +148,28 @@ Another useful function of the console is to use the arrow keys to repeat or mod
 ### Assignment
 Now it is your turn to play with the basic syntax of R and functionality of RStudio. The answers are at the end of this chapter.
 
-You need to measure the flow in a rural channel with a rectangular weir. You take three measurements: 125, 100, and 50mm. What is the flow in this channel when the width of the weir is 300mm?
-
-The Kindsvater-Carter rectangular weir equation is ([ISO 1438:2017](https://www.iso.org/standard/66463.html):
+You need to measure the flow in a rural channel with a rectangular weir. You take three measurements: 125, 100, and 50mm. The width of the weir is 300mm. To calculate the flow, use the Kindsvater-Carter rectangular weir equation ([ISO 1438:2017](https://www.iso.org/standard/66463.html):
 
 ```$
-q = \frac{2}{3} C_d \sqr{(2g)} bh^(3/2)
+q = \frac{2}{3} C_d \sqrt{(2g)} bh^{(3/2)}
 ```
 
 - `q`$: Flow rate (m^3^/s).
 - `C_d`$: Discharge constant (assume 0.6).
 - `g`$: Gravitation (9.81 m/s²).
 - `b`$: Width of the weir (m).
-- `h`$: Head on the weir (m).
+- `h`$: Head at the weir (m).
 
-The value for `C_d`$ is an approximation because it depends on the dimensions of the weir.
+The value for `C_d`$ is an approximation because it depends on the dimensions of the weir. The photo below shows what such a weir looks like in practice. With this information, answer the two questions below.
 
+{width: 100%}
 ![Example of a channel with a rectangular weir (Photo: Coliban Water).](resources/session2/weirplate.jpg)
 
 Q> What is the flow in the channel in megalitres per day for the three measurements?
 
 Q> Produce a plot of this channel, converting mm head into megalitres per day.
 
-T> One megalitre is one million litres (1000 cubic metres). This is a unit of volume measurement unique to Australia.
+T> One megalitre is one million litres (1000 cubic metres). This is a unit of volume measurement used in Australia.
 
 ## RStudio scripts and projects
 The console provides a running record of the actions taken by R. While this is great, using the console makes it hard to reconstruct what steps you have taken to get to your result. To create reproducible code, you need to write your code in a file. 
@@ -222,7 +222,7 @@ max(a)
 The solution is also available in the `channel.R` script in the `basicr` folder.
 
 {format: r, line-numbers: false}
-```R
+```R 
 ## Measurements
 b <- 0.3 
 h <- c(.125, .1, .05) # Heights in meters
@@ -235,11 +235,15 @@ q = (2/3) * Cd * sqrt(2 * 9.81) * b * h^(3/2)
 
 q * 3600 * 2400 / 1E6
 
-h <- (0:300/1000)
+h <- (0:300) / 1000
+
 flow = (2/3) * Cd * sqrt(2 * 9.81) * b * h^(3/2) * 3600 * 24 / 1E6
 
 plot(h, flow, type = "l", main = "Channel flow (b = 300, Cd = 0.6)")
 ```
+
+{width: 50%}
+![Channel flows.](resources/session2/channel_flow.png)
 
 In practice you would create a function for the formula, so you don't have to repeat the equation. Functions do not form part of this course. The example below shows how to create and call a function for this problem.
 
@@ -250,4 +254,4 @@ kindsvater_carter <- function(b, h, Cd = 0.6) {
 }
 
 kindsvater_carter(0.6, 0.3, 0.3)
-```
+```	
