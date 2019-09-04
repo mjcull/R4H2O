@@ -76,6 +76,8 @@ mean(a)
 a * 2
 ```
 
+![Introduction to RStudio](https://www.youtube.com/watch?v=roTCgjxpMEg)
+
 In its most basic form, R is a calculator that uses arithmetic operators as listed in the table below.
 
 | Operator | Function       | Example        |
@@ -110,9 +112,6 @@ The table below shows some of the mathematical operators available in R.
 | `log(x, base = y)` | Logarithm of `x` with base `y` | log(10) = 2.302585 |
 | `sqrt(x)`          | Square root of `x`             | sqrt(25) = 5       |
 
-{type: video, align: middle, poster: "https://www.youtube.com/watch?v=roTCgjxpMEg/mqdefault.jpg"}
-![Introduction to RStudio](https://youtu.be/roTCgjxpMEg)
-
 This example code demonstrates some basic features of the language. The first line is a simple, arithmetic problem. After you hit enter, R displays the answer below the line.
 
 The next two lines define the variables `x` and `y`. The values -10 to + 10 are assigned (`<-`) to variable `x`. The `y` variable is given the value of `x^2`$.
@@ -121,9 +120,9 @@ The `sum()` function adds all the members of the `x` vector. The `length()` func
 
 The third part plots the variables `x` and `y` as a line, showing the parabola in the plot window. Without the `type = "l"` parameter, the plot consists of points.
 
-X> Try the same plot without the parameter, or with `type = "b"`.
+X> Try the same plot without the `type` parameter, or with `type = "b"` and review the difference.
 
-The variable `a` is assigned a vector of eight numbers using the `c()` function. The `mean()` function shows the arithmetic mean of the vector `a`.
+The variable `a` is assigned a vector of eight numbers using the `c()` function. The `mean()` function shows the arithmetic mean of the vector `a`. Some other arithmetic function in R are:
 
 | Function  | Operation                                 |
 |-----------|-------------------------------------------|
@@ -135,27 +134,42 @@ The variable `a` is assigned a vector of eight numbers using the `c()` function.
 Q> Apply the functions in the previous two tables to the following vector and inspect the result: `c(12, 3, -23, 45, 2, 99, 1, 0)`.
 
 You should notice a few things when you start typing:
-* When you hit enter, the result of the expressions without the `<-` symbol is shown in the console
-* When you type plot and mean, R gives you suggestions on how to continue
-* When typing brackets or quotation marks, RStudio includes the closing bracket or quotation mark
-* The variables you declared (`x`, `y` and `a`) are shown in the Environment window
+* When you hit enter, the result of any expressions without the assignment symbol (`<-`) is shown in the console.
+* When you type `plot()`,  `mean()`, or other functions, RStudio gives you suggestions on how to continue.
+* When typing brackets or quotation marks, RStudio includes the closing bracket or quotation mark.
+* The variables you declared (`x`, `y` and `a`) are shown in the Environment window.
 * The plot appears in a tab of the bottom-right window.
 
 Now retype the plot command, but only type the first two letters and then hit the TAB key. R now gives you suggested functions that start with `pl`. You can use the cursor keys to select the plot function. You can continue this way, and R guides you through the function. This functionality is great for when you forget the specific syntax when writing code.
 
 Another useful function of the console is to use the arrow keys to repeat or modify previous commands.
 
+### Assignment
 Now it is your turn to play with the basic syntax of R and functionality of RStudio. The answers are at the end of this chapter.
 
-Q> Produce a plot of the function `y=-x^2-2x+3`$.
+You need to measure the flow in a rural channel with a rectangular weir. You take three measurements: 125, 100, and 50mm. What is the flow in this channel when the width of the weir is 300mm?
 
-The formula for determining where the parabola intersects the x-axis is:
+The Kindsvater-Carter rectangular weir equation is ([ISO 1438:2017](https://www.iso.org/standard/66463.html):
 
 ```$
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+q = \frac{2}{3} C_d \sqr{(2g)} bh^(3/2)
 ```
 
-Q> Use the quadratic formula in the R console. Where does this parabola intersect with the x-axis?
+- `q`$: Flow rate (m^3^/s).
+- `C_d`$: Discharge constant (assume 0.6).
+- `g`$: Gravitation (9.81 m/s²).
+- `b`$: Width of the weir (m).
+- `h`$: Head on the weir (m).
+
+The value for `C_d`$ is an approximation because it depends on the dimensions of the weir.
+
+![Example of a channel with a rectangular weir (Photo: Coliban Water).](resources/session2/weirplate.jpg)
+
+Q> What is the flow in the channel in megalitres per day for the three measurements?
+
+Q> Produce a plot of this channel, converting mm head into megalitres per day.
+
+T> One megalitre is one million litres (1000 cubic metres). This is a unit of volume measurement unique to Australia.
 
 ## RStudio scripts and projects
 The console provides a running record of the actions taken by R. While this is great, using the console makes it hard to reconstruct what steps you have taken to get to your result. To create reproducible code, you need to write your code in a file. 
@@ -194,64 +208,46 @@ These are only some of the mathematical functions available in R. When you enter
 a <- c(12, 3, -23, 45, 2, 99, 1, 0)
 
 abs(a)
-
 exp(a)
-
 factorial(a)
-
 log(a, base = 10)
-
 sqrt(a)
-
 sum(a)
-
 prod(a)
-
 min(a)
-
 max(a)
 ```
 
-### Produce a plot of the function `y=-x^2-2x+3`$.
-To plot this function, we can use the same approach as in the example, with some enhancement.
+### Channel flows
+The solution is also available in the `channel.R` script in the `basicr` folder.
 
 {format: r, line-numbers: false}
 ```R
-x <- seq(-5, 3, .1)
-y <- -x^2 - 2 * x + 3
-plot(x, y, type = "l")
+## Measurements
+b <- 0.3 
+h <- c(.125, .1, .05) # Heights in meters
+
+## Constant
+Cd <- 0.6 # approximation
+
+## Kindsvater-Carter
+q = (2/3) * Cd * sqrt(2 * 9.81) * b * h^(3/2)
+
+q * 3600 * 2400 / 1E6
+
+h <- (0:300/1000)
+flow = (2/3) * Cd * sqrt(2 * 9.81) * b * h^(3/2) * 3600 * 24 / 1E6
+
+plot(h, flow, type = "l", main = "Channel flow (b = 300, Cd = 0.6)")
 ```
 
-This code uses the `seq()` function to create a smoother line than an integer sequence (`-5:3`). This function creates a vector from -5 to 1 with steps of 0.1.
+In practice you would create a function for the formula, so you don't have to repeat the equation. Functions do not form part of this course. The example below shows how to create and call a function for this problem.
 
-### Use the quadratic formula in the R console. Where does this parabola intersect with the x-axis?
-We can assign the appropriate numbers to the variables `a`$, `b`$ and `c`$ and enter these into the formula.
+```R
+## Fancy version
+kindsvater_carter <- function(b, h, Cd = 0.6) {
+    (2/3) * Cd * sqrt(2 * 9.81) * b * h^(3/2)
+}
 
-This code rewrites the previous section to generalise the problem to demonstrate reproducibility. This way you can re-use this code for other parabolas. Change some of teh variables to see the result.
-
-We can enhance the basic plot to visualise the solution. The `abline()` function adds a horizontal and vertical grey line to indicate the axes. The `points()` function adds red points at the calculated intersects. Both these functions add elements to an existing plot instead of creating a new one.
-
-Reverse-engineer this code to make sure you understand the principles.
-
-{format: r, line-numbers: false}
+kindsvater_carter(0.6, 0.3, 0.3)
 ```
-a <- -1 
-b <- -2
-c <- 3
-
-x1 <- (-b + sqrt(b^2 - 4 * a * c)) / (2 * a)
-x2 <- (-b - sqrt(b^2 - 4 * a * c)) / (2 * a)
-
-x <- seq((x1 - 2), (x2 + 2), .1)
-y <- -(a * x)^2 + b * x + c
-plot(x, y, type = "l")
-
-abline(h = 0, col = "grey")
-abline(v = 0, col = "grey")
-points(c(x1, x2), c(0, 0), col = "red", pch = 19)
-```
-
-{width: 50%}
-![Parabola visualisation](resources/session2/parabola.png)
-
-Now it is time to apply these basic skills to the first [case study](#casestudy1).
