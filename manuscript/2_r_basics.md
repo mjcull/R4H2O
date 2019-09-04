@@ -156,7 +156,7 @@ q = \frac{2}{3} C_d \sqrt{(2g)} bh^{(3/2)}
 
 - `q`$: Flow rate (m^3^/s).
 - `C_d`$: Discharge constant (assume 0.6).
-- `g`$: Gravitation (9.81 m/s²).
+- `g`$: Gravitation (9.81 m/s^2^).
 - `b`$: Width of the weir (m).
 - `h`$: Head at the weir (m).
 

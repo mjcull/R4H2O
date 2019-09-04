@@ -11,7 +11,7 @@ Your water utility has just completed a pilot study of 100 services in the Gorms
 ## Analysing data with the Tidyverse
 Before we get started with analysing water consumption, we return to case study 2 to explain some principles of analysing data with the *dplyr* library of the Tidyverse. We still have not answered the main question for this case study: What is the level of consumer involvement for tap water?
 
-X> Activate the Tidyverse library and read the Personal Involvement Index data to the `involvement` data frame.
+X> Activate the Tidyverse library and read the Personal Involvement Index data (you created this in [Case Study 2](#involvement)) to the `involvement` data frame.
 
 In case you forgot, this data frame consists of four variables: the respondent id, their city of origin, the item on the scale and the score. The `glimpse()` function gives this result:
 

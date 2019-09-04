@@ -25,7 +25,7 @@ The first session defines data science as an evolution of traditional analysis. 
 
 This course is not only about the vocabulary and syntax of R but also about producing good data science. The second part of this session introduces a framework for best practice in analysing data and sharing the results. This framework derives from the book [Principles of Strategic Data Science](https://www.packtpub.com/big-data-and-business-intelligence/principles-strategic-data-science) by Peter Prevos. The three case studies each implement aspects of this framework.
 
-{width: "25%", alt: "Principles of Strategic Data Science.", align: "middle"}
+{width: "30%", alt: "Principles of Strategic Data Science.", align: "middle"}
 ![Peter Prevos, (2019) Principles of Strategic Data Science.](resources/session0/StrategicDataScience.png)
 
 ## Case Study 1: Introduction to the R Language --- Water Quality Regulations
@@ -66,7 +66,20 @@ D> Points of discussion for face-to-face workshops. If you follow the online ver
 T> Tips and suggestions for further study.
 
 ## Face-to-Face Sessions
-This course is occasionally also provided in face-to-face sessions. This one-day session covers the first case study and the chapters on ggplot visualisation and data products.
+This course is occasionally also provided in face-to-face sessions. This one-day session covers the first case study and the chapters on visualisation and data products.
+
+| Time  | Topic                    | Chapter            |
+|-------|--------------------------|--------------------|
+| 09:00 | Data science principles  | [1](#datascience)  |
+| 09:30 | Basics of the R language | [2](#basics)       |
+| 10:30 | Water quality case study | [3](#casestudy1)   |
+| 11:30 | Online quiz              | [3](#casestudy1)   |
+| 12:00 | Lunch                    |                    |
+| 12:30 | Tidyverse: ggplot        | [4](#tidyverse)    |
+| 14:00 | Data products            | [6](#dataproducts) |
+| 15:00 | Water quality reporting  | [6](#dataproducts) |
+| 16:00 | Close                    |                    |
+|-------|--------------------------|--------------------|
 
 {width: "100%", alt: "R for Water Professionals workshop (Melbourne, 2019).", align: "middle"}
 ![R for Water Professionals workshop (Melbourne, 2019).](resources/session0/workshop.jpg)

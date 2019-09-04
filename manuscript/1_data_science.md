@@ -2,6 +2,9 @@
 This session provides a framework for good data science. The first section defines data science within the context of managing water and sewerage services. The second section presents a framework for good data science.
 
 ## What is data science?
+
+![What is data science?](https://www.youtube.com/watch?v=cJO8ASwk_XU)
+
 The idea that data can be used to understand the world is thus almost as old as humanity itself and has gradually evolved into what we now call data science. Using data in organisations is also called business analytics or evidence-based management. There are also specific approaches, such as Six-Sigma, that use statistical analysis to improve business processes.
 
 Although data science is merely a new term for something that has existed for decades, some recent developments have created a watershed between the old and new ways of analysing a business. The difference between traditional business analysis and the new world of data science is threefold.
@@ -32,8 +35,6 @@ Now that we have defined data science within the context of managing a water uti
 
 {width: 60%, alt: "Conway's data science Venn diagram."}
 ![Figure 1.3: Conway's data science Venn Diagram.](resources/session1/conway.png)
-
-![What is data science?](https://www.youtube.com/watch?v=cJO8ASwk_XU)
 
 ### Domain Knowledge
 The most vital skill within a data science function is *domain knowledge*. While the results of advanced applied mathematics such as machine learning are impressive, without understanding the reality that these models describe, they are devoid of meaning and can cause more harm than good. Anyone analysing a problem needs to understand the context of the issues and the potential solutions. The subject of data science is not the data itself but the reality this data describes. Data science is about things and people in the real world, not about numbers and algorithms.
@@ -136,6 +137,9 @@ The Vitruvian rules for architecture can also define good data science. Excellen
 ![Figure 1.6: The principles of good data science.](resources/session1/vitruvius.png)
 
 ### Useful Data Science
+
+![What is data useful science?](https://www.youtube.com/watch?v=_ITXY6Daa5s)
+
 How do we know that something is useful? The simple, but not very illuminating answer is that when something is useful, it has utility. Some philosophers interpret utility as the ability to provide the greatest good for the highest number of people. This definition is quite compelling, but it requires contextualisation. What is right in one situation might not be so beneficial in another.
 
 The highest number of people is open to interpretation. Is something only useful when it benefits all of humanity, or can it also be useful when it helps just one person? The requirement to include the highest number of people in our definition of usefulness might work well for government organisations. This rule is not so evident in corporations that seek to maximise the benefits to their shareholders.
@@ -158,8 +162,6 @@ For data science to provide actionable intelligence, the raw data needs to be co
 The source of the original version of this model is lost in time as a multitude of authors has used it without citation. The basic principle of the hierarchy is that to obtain wisdom; you need to have the relevant knowledge, which derives from information, which in turn consists of the conclusions drawn from the data. Various versions of the model have been proposed, with slightly different terminology and interpretations.
 
 The version in this book is modified to understand better how to create useful data science (Figure 1.6). Firstly, wisdom no longer forms part of the model because this concept is too nebulous to be helpful. Anyone seeking wisdom should study philosophy or practice religion as data science is unable to provide this need. Secondly, the bottom of the pyramid needs to be grounded in reality. The standard DIKW model ignores the reality from which the data is collected that creates the information and knowledge used to make business decisions. The second addition to the traditional model is a feedback loop from knowledge to the real world. The purpose of data science is to enhance the knowledge that professionals use to influence reality by converting data into information.
-
-![What is data useful science?](https://www.youtube.com/watch?v=_ITXY6Daa5s)
 
 ### Reality
 Useful data science positively influences reality by collecting data, creating information and increasing our knowledge about and understanding of reality. This knowledge is useful when it changes the way we perceive reality to innovate the way we do things, and when it enables better operational or strategic decisions. When data science is independent of the world it seeks to understand or influence, it loses its power to be valuable.
@@ -213,6 +215,9 @@ The last and most important part of this data science model is the feedback loop
 Either option eventually leads to improved decisions using the best available data and analysis. Care needs to be taken, however, that the correct conclusions are drawn. The GIGO principle only covers the input of the process, but also the process itself needs to be sound. Although the data might be of good quality, a lousy analysis still result in 'garbage'. The next two sections discuss how we can ascertain whether the outcomes of data science are sound and ensure the user draws the correct conclusion from the information.
 
 ### Sound Data Science
+
+![What is data sound science?](https://www.youtube.com/watch?v=_hAXvAvx92I)
+
 Just like a building should be sound and not collapse, a data product needs to be sound to be able to create business value. Soundness is where the science and the data meet. The soundness of a data product is defined by the validity and reliability of the analysis, which are well-established scientific principles (Figure 1.8).  The soundness of data science also requires that the results are reproducible. Lastly, the data and the process of creating data products need to be governed to assure beneficial outcomes.
 
 The distinguishing difference between traditional forms of business analysis and data science is the systematic approach to solving problems. The keyword in the term data science is thus not data but *science*. Data science is only useful when the data answers a helpful question, which is the science part of the process.
@@ -221,8 +226,6 @@ This systematic approach ensures that the outcomes of data science can be relied
 
 {width: 80%, alt: "Validity and reliability of data and analysis."}
 ![Figure 1.8: Visualising validity and reliability.](resources/session1/soundness.png)
-
-![What is data sound science?](https://www.youtube.com/watch?v=_hAXvAvx92I)
 
 #### Validity
 The validity of a data set and the information derived from it relates to the extent to which the data matches the reality it describes. The validity of data and information depends on how this information was collected and how it was analysed.
@@ -317,9 +320,9 @@ Visualising qualitative information is a language with many options to tell a st
 #### Visualisation Design
 Beauty is in the eye of the beholder, and there are no formulas or algorithms to ensure perfect visualisations. The social network Reddit has two groups dedicated to visualisations. Users members of the [Data is Ugly](https://reddit.com/r/dataisugly/) and [Data is Beautiful](https://reddit.com/r/dataisbeautiful/) groups share images of visualisations they consider ugly or beautiful. These two groups sometimes share the same visualisations because of different interpretations of aesthetics in data. What is a beautiful visualisation to one person, is an abomination to somebody else. The aesthetics of data visualisation is for a significant part in the eye of the beholder. However, when viewing aesthetics from a practical perspective, we can define what this means with a simple heuristic.
 
-Edward Tufte is an American statistician who is famous for his work on visualisation. Tufte introduced the concept of the data-ink ratio. In simple terms, this ratio expresses the relationship between the ink on the paper that tells a story and the total amount of ink on the paper. Tufte argues that this ratio should be as close to one as possible. In other words, we should not use any graphical elements that don't communicate any information, such as background images, superfluous lines and text.
-
 ![What is data aesthetic science?](https://www.youtube.com/watch?v=5grTD8cGZQM)
+
+Edward Tufte is an American statistician who is famous for his work on visualisation. Tufte introduced the concept of the data-ink ratio. In simple terms, this ratio expresses the relationship between the ink on the paper that tells a story and the total amount of ink on the paper. Tufte argues that this ratio should be as close to one as possible. In other words, we should not use any graphical elements that don't communicate any information, such as background images, superfluous lines and text.
 
 Now that we are in the paperless era, we can use the data-pixel ratio as a generic measure for the aesthetics of visualisations. The principle is the same as in the analogue days. Unnecessary lines, multiple colours or multiple narratives risk confusing the user of the report.
 

@@ -196,7 +196,7 @@ Q> The folder for Case Study 1 contains the `sample_points.csv` file. Join it to
 
 Q> Visualise the location of the sample points, coloured by Zone.
 
-### Involvement data
+### Involvement data{#involvement}
 This case study is about consumer involvement, which is only one of several parameter collected in the survey. We have cleaned the data for the whole survey, but we need to take one more step because we are only interested in the Personal Involvement Index (PII).
 
 This code selects the `id` and `City` columns and all columns that start with a lowercase p. The `starts_with()` function is a useful shortcut to selecting multiple columns. The *dplyr* library also has other selectors, such as `ends_width()` and `contains()`.

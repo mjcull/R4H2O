@@ -314,7 +314,6 @@ We now have all the knowledge to answer the original question.
 
 Q> Determine the 95^th^percentile using the Weibull method for all water quality zones in Laanecoorie.
 
-
 ## Answers to the questions
 
 ### You have 99 turbidity results. The first 94 are 0.1 NTU, and the last five are 5 NTU. What is the 95^th^ percentile using the Weibull method?

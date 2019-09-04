@@ -15,11 +15,10 @@ This section explains how to share the fruits of your labour with colleagues and
 ## Data Science Workflow
 The workflow for analytical projects starts with defining a problem that needs solving (Figure 6.1). The next step involves loading and transforming the data into a format that is suitable for the required analysis. The data science workflow contains a loop, the so-called data vortex. This vortex consists of three steps: exploration, modelling and reflection that are repeated until the problem is solved or is shown to be unsolvable.
 
-{width: 80%}
+{width: 80%, align: "middle"}
 ![Figure 6.1: Data science workflow.](resources/session6/workflow.png)
 
-{type: video, align: middle, poster: "https://www.youtube.com/watch?v=_PHc6clrOxvs/mqdefault.jpg"}
-![What is sound data science?](https://www.youtube.com/watch?v=PHc6clrOxvs)
+![The data science workflow.](https://www.youtube.com/watch?v=PHc6clrOxvs)
 
 ### Define
 The first step of a data science project is to define the problem. This first step describes the problem under consideration and the desired future state. The problem definition should not make specific reference to available data or possible methods but be limited to the issue at hand. An organisation could seek to optimise production facilities, reduce energy consumption, monitor effectiveness, understand customers, and so on. A concise problem definition is necessary to ensure that a project does not deviate from its original purpose or is cancelled when it becomes apparent that the problem cannot be solved.
@@ -137,11 +136,13 @@ When working on a project, it is best first to write the code in a well-commente
 
 The basic principles of R Markdown are explained in detail on R Markdown [cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf).
 
-X> Familiarise yourself with R Markdown using the RStudio cheat sheet.
+X> Familiarise yourself with R Markdown using the template. For advanced use, review the cheat sheet.
 
 The output of data analysis is often expressed in tables. To create neat tables in a report, you should use the `kable()` function of the *knitr*  package. This example below shows how to export a table in an R-Markdown file.
 
-The first two lines read the customer survey data and create a data frame with a count of each of the three cities. The third line changes the generic variable names assigned by R to something more meaningful. The last line calls the `kable()` function in the  *knitr* library.
+The first two read the customer survey data and create a data frame with a count of each of the three cities. In this case, we convert the output of the `table()` function to a data frame with `as.data.frame()`.
+
+The third line changes the generic variable names assigned by R to something more meaningful. The last line calls the `kable()` function in the  *knitr* library.
 
 {format: r, line-numbers: false}
 ```
@@ -165,7 +166,7 @@ ptions(digits = 15)
 print(a)
 ```
 
-This method will change the output of all calculation. To only change the current variable, use either of these three functions.
+This method will change the output of all calculations. To only change the current variable, use either of these three functions.
 
 {format: r, line-numbers: false}
 ```
@@ -214,11 +215,15 @@ This chapter closes with an assignment using the data from the first or second c
 
 X> Create a short report in Word that assesses the Gormsey data to solve the problem statement at the start of this chapter, repeated below.
 
+### Problem Statement
 > The regulator for water quality has released a new guideline that lowers the maximum guideline value for trihalomethanes at the customer tap to 0.15 mg/l. This report assesses the historical performance of the Gormsey water system to evaluate the risk of non-compliance, assuming no operational changes are implemented.
 
 To undertake this task, you can follow this workflow:
-* Load the Gormsey data
-* Subset the 
+* Load the Gormsey water quality data (in the `casestudy1` folder).
+* Subset the data to only keep the THM results.
+* Count the number of samples per zone.
+* Visualise the data for each water quality zone and indicate the current and new limit.
+* Show a table of the exceedsances.
 
 X> If you like to boast or seek feedback, upload your solution to the [course community](https://community.leanpub.com/c/r4h2o).
 
