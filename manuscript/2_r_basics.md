@@ -63,18 +63,18 @@ X> Type the following code, or variations thereof into the console and review th
 ```r
 3 - 3 * 6 + 2
 
-x <- -10:10
-y <- x^2
-
-sum(x)
-
-plot(x, y, type = "l")
-
 a <- c(12, 3, -23, 45, 2, 99, 1, 0)
 mean(a)
 
-a * 2
+x <- -10:10
+y <- -x^2 -2 * x + 30
+
+plot(x, y, type = "l", col = "blue")
+abline(h = 0, col = "grey")
+abline(v = 0, col = "grey")
 ```
+
+The video below explains the basic principles of RStudio.
 
 {width: 100%}
 ![Introduction to RStudio](https://www.youtube.com/watch?v=roTCgjxpMEg)
@@ -105,14 +105,14 @@ Functions or mathematical operators can be applied to single numbers and to vect
 
 The table below shows some of the mathematical operators available in R.
 
-| Function           | Operation                      | Example            |
-|--------------------|--------------------------------|--------------------|
-| `abs(x)`           | Absolute value of `x`          | abs(-10) = 10      |
-| `exp(x)`           | Exponential of `x`             | exp(1) = 2.718281  |
-| `factorial(x)`     | Factorial of `x`, `x1`         | factorial(3) = 6   |
-| `log(x, base = y)` | Logarithm of `x` with base `y` | log(10) = 2.302585 |
-| `sqrt(x)`          | Square root of `x`             | sqrt(25) = 5       |
-
+| Function           | Operation   |
+|--------------------|-------------|
+| `abs(x)`           | `abs{x}`$   |
+| `exp(x)`           | `e^x`$      |
+| `factorial(x)`     | `x!`$       |
+| `log(x, base = b)` | `log _b x`$ |
+| `sqrt(x)`          | `x^2`$      |
+	
 This example code demonstrates some basic features of the language. The first line is a simple, arithmetic problem. After you hit enter, R displays the answer below the line.
 
 The next two lines define the variables `x` and `y`. The values -10 to + 10 are assigned (`<-`) to variable `x`. The `y` variable is given the value of `x^2`$.
@@ -125,12 +125,13 @@ X> Try the same plot without the `type` parameter, or with `type = "b"` and revi
 
 The variable `a` is assigned a vector of eight numbers using the `c()` function. The `mean()` function shows the arithmetic mean of the vector `a`. Some other arithmetic function in R are:
 
-| Function  | Operation                                 |
-|-----------|-------------------------------------------|
-| `sum(x)`  | Sum of all elements in the vector `x`     |
-| `prod(x)` | Product of all elements in the vector `x` |
-| `min(x)`  | Minimum value of vector `x`               |
-| `max(x)`  | Minimum value of vector `x`               |
+| Function    | Operation                                 |
+|-------------|-------------------------------------------|
+| `sum(x)`    | Sum of all elements in the vector `x`     |
+| `prod(x)`   | Product of all elements in the vector `x` |
+| `min(x)`    | Minimum value of vector `x`               |
+| `max(x)`    | Minimum value of vector `x`               |
+| `median(x)` | median value of vector `x`                |
 
 Q> Apply the functions in the previous two tables to the following vector and inspect the result: `c(12, 3, -23, 45, 2, 99, 1, 0)`.
 
@@ -148,7 +149,7 @@ Another useful function of the console is to use the arrow keys to repeat or mod
 ### Assignment
 Now it is your turn to play with the basic syntax of R and functionality of RStudio. The answers are at the end of this chapter.
 
-You need to measure the flow in a rural channel with a rectangular weir. You take three measurements: 125, 100, and 50mm. The width of the weir is 300mm. To calculate the flow, use the Kindsvater-Carter rectangular weir equation ([ISO 1438:2017](https://www.iso.org/standard/66463.html):
+You need to measure the flow in a rural channel with a rectangular weir. You take three measurements: 125, 100, and 50mm. The width of the weir is 300mm. To calculate the flow, use a simplified version of the Kindsvater-Carter rectangular weir equation ([ISO 1438:2017](https://www.iso.org/standard/66463.html):
 
 ```$
 q = \frac{2}{3} C_d \sqrt{(2g)} bh^{(3/2)}
@@ -157,26 +158,46 @@ q = \frac{2}{3} C_d \sqrt{(2g)} bh^{(3/2)}
 - `q`$: Flow rate (m^3^/s).
 - `C_d`$: Discharge constant (assume 0.6).
 - `g`$: Gravitation (9.81 m/s^2^).
-- `b`$: Width of the weir (m).
-- `h`$: Head at the weir (m).
+- `b`$: Width of the weir (assume 600 mm).
+- `h`$: Measured head at the weir (mm).
 
-The value for `C_d`$ is an approximation because it depends on the dimensions of the weir. The photo below shows what such a weir looks like in practice. With this information, answer the two questions below.
+The value for `C_d`$ is approximated because it depends on the dimensions of the weir. Follow [this link](https://www.engineeringexcelspreadsheets.com/tag/kindsvater-carter-formula/) for a detailed discussion on using this formula. The photo below shows what such a weir looks like in practice. 
 
 {width: 100%}
 ![Example of a channel with a rectangular weir (Photo: Coliban Water).](resources/session2/weirplate.jpg)
 
-Q> What is the flow in the channel in megalitres per day for the three measurements?
-
-Q> Produce a plot of this channel, converting mm head into megalitres per day.
+{quiz, id: quiz1}
+With this information, answer the quiz questions below. Remember to use the arrow button to retrieve previous commands.
 
 T> One megalitre is one million litres (1000 cubic metres). This is a unit of volume measurement used in Australia.
+
+? What is the flow in the channel in megalitres per day when the height is 100mm?
+
+A) 290.4521 ML
+b) 0.3361714 ML
+c) 121.0217 ML
+
+? What is the average flow for these three heights: 150mm, 136mm, 75mm in litres per second?
+
+a) 0.04563701
+b) 394.3037
+C) 45.63701
+
+? Which of these expressions calculates the flow in cubic meters per second for all heights between 50 and 500mm? Try each of the formulas and explore the output.
+
+a) `(2/3) * Cd * sqrt(2 * 9.81) * b * (0.05:0.50)^(3/2)`
+B) `(2/3) * Cd * sqrt(2 * 9.81) * b * ((50:500)/1000)^(3/2)`
+c) Repeat for each value of `h`$: `(2/3) * Cd * sqrt(2 * 9.81) * b * (0.05/1000)^(3/2)`
+
+? 
+{/quiz}
 
 ## RStudio scripts and projects
 The console provides a running record of the actions taken by R. While this is great, using the console makes it hard to reconstruct what steps you have taken to get to your result. To create reproducible code, you need to write your code in a file. 
 
-Create a new R script by going to *File > New File > R Script* or by hitting Control-Shift N.
+Create a new R script by going to *File > New File > R Script* or by hitting Control-Shift N. You can open an existing file from the same menu.
 
-X> Add the same code as above in the script.
+X> Review the code in the `channel.R` file in the `basicr` folder.
 
 When you hit enter within a script, nothing happens. To execute a line of code in the editor, you need to type Control-Enter. When you hit the Source button to run all code in the script. Note that you don't have to use the `print()` function to show results. 
 
@@ -186,8 +207,6 @@ A project is a set of files that relate to each other. RStudio projects divide y
 * Selecting a project from the list of most recently opened projects (also available from both the File menu and toolbar).
 * Double-clicking on the project file within Windows Explorer, OSX Finder, or another file manager.
 
-X> Open the project file for this course.
-
 After you open this file, you see the relevant files in the bottom-left window. When you close the project after this session, all variables, the history of your commands and open files are stored for use in a later session.
 
 ### The Help Function
@@ -196,6 +215,10 @@ The R language has a built-in help function for every function. For example, typ
 The first section describes the function in words. The second section shows how to use the function. The arguments of the function are listed in the third section.
 
 The following sections in the help function provide background information and links to other similar functions. Most help entries also show examples that help you to reverse-engineer the functionality.
+
+X> Open the help file for the `plot()` function. How do you plot a function with dots and lines? 
+
+X> Plot the flow values calculated in the quiz and plot them.
 
 ## Answers
 These are the answers to the questions in this chapter.
@@ -218,40 +241,3 @@ min(a)
 max(a)
 ```
 
-### Channel flows
-The solution is also available in the `channel.R` script in the `basicr` folder.
-
-{format: r, line-numbers: false}
-```R 
-## Measurements
-b <- 0.3 
-h <- c(.125, .1, .05) # Heights in meters
-
-## Constant
-Cd <- 0.6 # approximation
-
-## Kindsvater-Carter
-q = (2/3) * Cd * sqrt(2 * 9.81) * b * h^(3/2)
-
-q * 3600 * 2400 / 1E6
-
-h <- (0:300) / 1000
-
-flow = (2/3) * Cd * sqrt(2 * 9.81) * b * h^(3/2) * 3600 * 24 / 1E6
-
-plot(h, flow, type = "l", main = "Channel flow (b = 300, Cd = 0.6)")
-```
-
-{width: 50%}
-![Channel flows.](resources/session2/channel_flow.png)
-
-In practice you would create a function for the formula, so you don't have to repeat the equation. Functions do not form part of this course. The example below shows how to create and call a function for this problem.
-
-```R
-## Fancy version
-kindsvater_carter <- function(b, h, Cd = 0.6) {
-    (2/3) * Cd * sqrt(2 * 9.81) * b * h^(3/2)
-}
-
-kindsvater_carter(0.6, 0.3, 0.3)
-```	
