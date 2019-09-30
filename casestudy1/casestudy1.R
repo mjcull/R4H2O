@@ -52,10 +52,6 @@ nrow(subset(turbidity, Zone != "Bealiba" & Result < 0.1))
 
 hist(turbidity$Result)
 
-
-
-
-
 ## Histogram
 b <- max(turbidity$Result) / 0.1
 hist(turbidity$Result, breaks = b, main = "Turbidity Results")
@@ -65,30 +61,20 @@ l <- subset(turbidity, Zone = "Laanecoorie")
 b <- max(l$Result) / 0.1
 hist(l$Result, breaks = b)
 
-par(mfrow = c(2, 2))
+par(mfrow = c(2, 2)) # Divide plot screen in two by two columns
 for (z in unique(turbidity$Zone)) {
     l <- subset(turbidity, Zone = z)
     b <- max(l$Result) / 0.1
     hist(l$Result, breaks = b, main = z)
 }
+par(mfrow = c(1, 1)) ## Reset screen
 
 turbidity_bealiba <- turbidity$Result[turbidity$Zone == "Bealiba"]
 hist(turbidity_bealiba)
 
 max(turbidity_bealiba)
 
-
-
-
-
-
-
-
-
-
 boxplot(turbidity$Result)
-
-
 
 ## Boxplot
 boxplot(Result ~ Zone, data = turbidity, col = "lightblue",
@@ -114,3 +100,4 @@ aggregate(turbidity$Result, list(turbidity$Zone), max) ## Maximum turbidity per 
 
 ## Determine the 95^th^percentile using the Weibull method for all water quality zones in Laanecoorie.
 aggregate(turbidity$Result, list(turbidity$Zone), quantile, 0.95, method = 6)
+

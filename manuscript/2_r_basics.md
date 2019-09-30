@@ -149,7 +149,7 @@ Another useful function of the console is to use the arrow keys to repeat or mod
 ### Assignment
 Now it is your turn to play with the basic syntax of R and functionality of RStudio. The answers are at the end of this chapter.
 
-You need to measure the flow in a rural channel with a rectangular weir. You take three measurements: 125, 100, and 50mm. The width of the weir is 300mm. To calculate the flow, use a simplified version of the Kindsvater-Carter rectangular weir equation ([ISO 1438:2017](https://www.iso.org/standard/66463.html):
+You need to measure the flow in a rural channel with a rectangular weir. You take three measurements: 125, 100, and 50mm. The width of the weir is 300mm. To calculate the flow, use a simplified version of the Kindsvater-Carter rectangular weir equation ([ISO 1438: 2017])(https://www.iso.org/standard/66463.html):
 
 ```$
 q = \frac{2}{3} C_d \sqrt{(2g)} bh^{(3/2)}
@@ -158,18 +158,20 @@ q = \frac{2}{3} C_d \sqrt{(2g)} bh^{(3/2)}
 - `q`$: Flow rate (m^3^/s).
 - `C_d`$: Discharge constant (assume 0.6).
 - `g`$: Gravitation (9.81 m/s^2^).
-- `b`$: Width of the weir (assume 600 mm).
-- `h`$: Measured head at the weir (mm).
+- `b`$: Width of the weir [m].
+- `h`$: Measured head at the weir [m].
 
 The value for `C_d`$ is approximated because it depends on the dimensions of the weir. Follow [this link](https://www.engineeringexcelspreadsheets.com/tag/kindsvater-carter-formula/) for a detailed discussion on using this formula. The photo below shows what such a weir looks like in practice. 
 
 {width: 100%}
 ![Example of a channel with a rectangular weir (Photo: Coliban Water).](resources/session2/weirplate.jpg)
 
-{quiz, id: quiz1}
+{quiz, id: channel, attempts: 10}
 With this information, answer the quiz questions below. Remember to use the arrow button to retrieve previous commands.
 
-T> One megalitre is one million litres (1000 cubic metres). This is a unit of volume measurement used in Australia.
+T> The width of the weir is 600mm.
+
+T> One megalitre is one million litres (1000 cubic metres). This is a unit of volume measurement only used in Australia.
 
 ? What is the flow in the channel in megalitres per day when the height is 100mm?
 
@@ -177,7 +179,7 @@ A) 290.4521 ML
 b) 0.3361714 ML
 c) 121.0217 ML
 
-? What is the average flow for these three heights: 150mm, 136mm, 75mm in litres per second?
+? What is the average flow for these three heights: 150mm, 136mm, 75mm in litres per second? Ensure that you only use the formula once by using a vector for the data.
 
 a) 0.04563701
 b) 394.3037
@@ -187,9 +189,8 @@ C) 45.63701
 
 a) `(2/3) * Cd * sqrt(2 * 9.81) * b * (0.05:0.50)^(3/2)`
 B) `(2/3) * Cd * sqrt(2 * 9.81) * b * ((50:500)/1000)^(3/2)`
-c) Repeat for each value of `h`$: `(2/3) * Cd * sqrt(2 * 9.81) * b * (0.05/1000)^(3/2)`
-
-? 
+c) Repeat for each value of `h`$: `(2/3) * Cd * sqrt(2 * 9.81) * b * h^(3/2)`
+ 
 {/quiz}
 
 ## RStudio scripts and projects
@@ -208,6 +209,8 @@ A project is a set of files that relate to each other. RStudio projects divide y
 * Double-clicking on the project file within Windows Explorer, OSX Finder, or another file manager.
 
 After you open this file, you see the relevant files in the bottom-left window. When you close the project after this session, all variables, the history of your commands and open files are stored for use in a later session.
+
+X> Review the function at the end of the channel script. Can you reverse-engineer and understand the code?
 
 ### The Help Function
 The R language has a built-in help function for every function. For example, type `help(mean)` to learn everything about the mean function. One of the weaknesses of R is that the help files can be quite cryptic to beginning users.
@@ -240,4 +243,3 @@ prod(a)
 min(a)
 max(a)
 ```
-

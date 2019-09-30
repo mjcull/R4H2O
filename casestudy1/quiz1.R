@@ -37,7 +37,7 @@ turbidity <- subset(gormsey, Measure == "Turbidity")
 boxplot(Result ~ Zone, data = turbidity)
 turbidity[turbidity$Result == max(turbidity$Result), ]
 
-## Question 9: What is the lowest level of turbidity measured in teh system?
+## Question 9: What is the lowest level of turbidity measured in the system?
 min(turbidity$Result)
 
 ## Question 10: What is the 95^th^ percentile of the turbidity for each zone in the Gormsey system, using the Weibull method?
