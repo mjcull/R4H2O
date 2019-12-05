@@ -1,51 +1,53 @@
 # Visualisations with Tidyerse {#tidyverse}
-One of the most exciting aspects of the R language is that developers can write extensions, the so-called packages or libraries. R has a large community of users who develop code and make it freely available to other users in the form of packages. 
 
-Thousands of specialised packages undertake a vast range of specialised tasks. You can, for example, use R as a GIS and analyse spatial data or implement machine learning. Other packages help you to access data from various sources, such as SQL databases.
+### Visualise the data
+The fastest way to explore data is to visualise it. R has extensive built-in visualisation function, some of which we explore below. The [R Graph Gallery](https://www.r-graph-gallery.com/) provides some guidance on the available methods.
 
-The majority of R packages are available on [CRAN](https://cran.r-project.org/), the *Comprehensive R Archive Network*.
+X> Use the Chart Chooser or the R Graph Gallery to determine the best way to visualise the data.
 
-## Packages for water management
-The CRAN library contains many packages with functions to analyse water. This workshop does not cover any of these packages. The list below gives some examples:
+Given the requirements n the regulations, we need to visualise the distribution of the results for each zone. We only have a single variable, which leads us to a histogram.
 
-* [baytrends](https://cran.r-project.org/web/packages/baytrends/index.html): Long Term Water Quality Trend Analysis.
-* [biotic](https://cran.r-project.org/web/packages/biotic/index.html): Calculation of Freshwater Biotic Indices.
-* [CityWaterBalance](https://cran.r-project.org/web/packages/CityWaterBalance/index.html): Track Flows of Water Through an Urban System.
-* [driftR](https://cran.r-project.org/web/packages/driftR/index.html): Drift Correcting Water Quality Data.
-* [EmiStatR](https://cran.r-project.org/web/packages/EmiStatR/index.html): Emissions and Statistics in R for Wastewater and Pollutants in Combined Sewer Systems.
+The `hist()` function plots a histogram of a vector of integers or numerical values. The breaks option in this function defines the number of bars in the graph. The results of the turbidity tests have a maximum value of 1.5 NTU, so to get bars at 0.1 NTU, the number of breaks needs to be 15. The variable `b` in the code below calculates the size of the bars by dividing the maximum value by the desired resolution (Figure 2.1).
 
-## The Tidyverse
-One of the most popular series of packages is the [Tidyverse](https://www.tidyverse.org/), developed by R guru Hadley Wickham and many others.
+{format: r, line-numbers: false}
+```
+b <- max(turbidity$Result) / 0.1
+hist(turbidity$Result, breaks = b, main = "Turbidity Results")
+```
+{width: 60%, alt: "Histogram of turbidity results."}
+![Figure 2.1: Histogram of turbidity results.](resources/session3/histogram.png)
 
-The Tidyverse packages provide additional functionality to extract, transform, visualise and analyse data. The features offered by these packages are easier to use and understand than the base R code.
+The regulations apply separately to each water quality zone, so we need to subset the data before plotting.
 
-This case study discusses cleaning and visualising customer data. The next case study uses Tidyverse to analyse smart metering data.
+Q> Plot the histogram of each of the Laanecoorie water quality zone.
 
-You can install packages in R with the `install.packages()` function. Within RStudio you can install packages in the *Tools* menu. Before you can start using a library, you need to initiate it with the `library()` command.
+Sub-setting each zone is tedious. One of the visualisations not listed on the *Chart Chooser* is the boxplot. This versatile visualisation summarises the distribution of numerical data (Figure 2.2).
 
-T> Install the Tidyverse collection of packages using `install.packages(tidyverse)`. When completed, initiate it with `library(tidyverse)`.
+{width: 60%, alt: "Boxplot anatomy."}
+![Figure 2.2: Boxplot anatomy.](resources/session3/boxplot-example.png)
 
-Installing the complete Tidyverse can take a little while, depending on your computer and the operating system. If you have problems installing, make sure that you are connected to the internet, and that your firewall or proxy don't block [cloud.r-project.org](https://cloud.r-project.org/).
+* The line that divides the box indicates the median.
+* The ends of the box shows the upper (`Q3`$) and lower (`Q1`$) quartiles. The difference between quartiles 1 and 3 is the interquartile range (`IQR`$)
+* The lines show `Q3-1.5 \times IQR`$ to `Q1+1.5 \times IQR`$ (the highest and lowest value, excluding outliers).
+* Dots beyond the lines shows outliers.
 
-When you load the Tidyverse, the following packages are loaded by default:
-* [dplyr](https://dplyr.tidyverse.org/): Data manipulation.
-* [ggplot2](https://ggplot2.tidyverse.org/): Visualise data.
-* [forcats](https://forcats.tidyverse.org/): Working with factor variables.
-* [purrr](https://purrr.tidyverse.org/): Functional programming. 
-* [readr](https://readr.tidyverse.org/): Read and write CSV files.
-* [stringr](https://stringr.tidyverse.org/): Manipulate text.
-* [tibble](https://tibble.tidyverse.org/): Replacement for data frames.
-* [tidyr](https://tidyr.tidyverse.org/): Data transformation.
+The boxplot function includes a convenient way to group the results by a factor variable. To achieve this, use the tilde `~` symbol to indicate the variable that is analysed and the variable by which it is grouped, as shown below. Because the data option indicates the data frame, we don't have to use the `$` indicator. The `main` and `ylab` options add text to the plot, as shown below and in figure 2.3.
 
-Some data scientists prefer not to load the complete set of packages and choose to load each one separately to spare computer memory. This course does not discuss the *purrr*, *stringr* or *forcats* libraries. Many other packages are available that follow the principles of the Tidyverse.
+{format: r, line-numbers: false} 
+```
+boxplot(Result ~ Zone, data = turbidity, col = "lightblue",
+        main = "Turbidity Results Laanecoorie water system",
+        ylab = "Turbidity (NTU)")
+```
 
-The startup message also shows some warnings about conflicts with some of the base functionality, which we can ignore for now. 
+{width: 50%, alt: "Distribution of turbidity results."}
+![Figure 2.3: Distribution of turbidity results.](resources/session3/boxplot-zones.png)
 
-The Tidyverse developers frequently update the software. You can see if updates are available, and optionally install them, by running `tidyverse_update()`. You can also upgrade packages in the *Tools > Check for Package Updates* in RStudio.
+Each of these visualisation functions has extensive options to change the plot, which are outside the scope of this course. In the next two case studies, we explore the powerful visualisation functionality of the Tidyverse extension to the R language.
 
-The following section introduces data visualisation using the *ggplot2* library from the Tidyverse collection. 
 
-The next [case study](#casestudy2) looks at data collected from tap water consumers in the United States and introduces the Tidyverse principles using this data. The [last case study](#casestudy3) in this course uses various Tidyverse functions to analyse smart meter data.
+
+The next [case study](#casestudy2) looks at data collected from tap water consumers in the United States and introduces the Tidyverse principles using this data. This chapter introduces data visualisation using *ggplot2* from the Tidyverse collection of libraries. 
 
 #### Visualising Data
 Data visualisations are everywhere. They are no longer the domain of scientific publications and business reports. Publications in every medium use graphs to tell stories. The internet is awash with infographics on a wide range of topics. These popular images are often data science porn because they are designed to entertain and titillate, with limited usability from a business perspective. They are a fantastic tool to supply information to customers but should not be used to report data science.

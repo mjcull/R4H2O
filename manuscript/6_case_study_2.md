@@ -178,7 +178,7 @@ customers <- rawdata[-1, ] %>%
     select(c(1, 20:56)) %>%
     left_join(cities) %>%
     rename(id = V1, City = city_name) %>%
-    select(- city)
+    select(-city)
 ```
 The name of the customers variable only appears once because it is transported through the pipe. The result of the first expression is moved to the `type_convert()` function, the result of which is filtered, and so on.
 

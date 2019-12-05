@@ -146,10 +146,10 @@ Now retype the plot command, but only type the first two letters and then hit th
 
 Another useful function of the console is to use the arrow keys to repeat or modify previous commands.
 
-### Assignment
+### Quiz 1
 Now it is your turn to play with the basic syntax of R and functionality of RStudio. The answers are at the end of this chapter.
 
-You need to measure the flow in a rural channel with a rectangular weir. You take three measurements: 125, 100, and 50mm. The width of the weir is 300mm. To calculate the flow, use a simplified version of the Kindsvater-Carter rectangular weir equation ([ISO 1438: 2017])(https://www.iso.org/standard/66463.html):
+You need to measure the flow in a rural channel with a rectangular weir. You take three measurements: 125, 100, and 50mm. The width of the weir is 300mm. To calculate the flow, use a simplified version of the Kindsvater-Carter rectangular weir equation ([ISO 1438: 2017](https://www.iso.org/standard/66463.html)):
 
 ```$
 q = \frac{2}{3} C_d \sqrt{(2g)} bh^{(3/2)}
@@ -167,30 +167,42 @@ The value for `C_d`$ is approximated because it depends on the dimensions of the
 ![Example of a channel with a rectangular weir (Photo: Coliban Water).](resources/session2/weirplate.jpg)
 
 {quiz, id: channel, attempts: 10}
-With this information, answer the quiz questions below. Remember to use the arrow button to retrieve previous commands.
+You are processing measurements from a channel operator and need to calculate various flow rates. You can use the Kindsvater-Carter formula: 
 
-T> The width of the weir is 600mm.
+```$
+q = \frac{2}{3} C_d \sqrt{(2g)} bh^{(3/2)}
+```
 
-T> One megalitre is one million litres (1000 cubic metres). This is a unit of volume measurement only used in Australia.
+The discharge factor `C_d = 0.6`$. 
 
-? What is the flow in the channel in megalitres per day when the height is 100mm?
+The gravity constant `g = 9.81 m/s^2`$.
 
-A) 290.4521 ML
-b) 0.3361714 ML
-c) 121.0217 ML
+The width of the weir `b = 0.6m`$.
+
+One megalitre is one million litres (1000 cubic metres). This is a unit of volume measurement commonly used in Australia.
+
+
+Answer the quiz questions below with this information. Remember to use the arrow button to retrieve previous commands. 
+
+? What is the flow in the channel in megalitres per day when the height `h = 100mm`$?
+
+A) 2.9045 ML
+b) 0.033 ML
+c) 121.02 ML
 
 ? What is the average flow for these three heights: 150mm, 136mm, 75mm in litres per second? Ensure that you only use the formula once by using a vector for the data.
 
-a) 0.04563701
-b) 394.3037
-C) 45.63701
+a) 0.0456
+b) 394.30
+C) 45.637
 
-? Which of these expressions calculates the flow in cubic meters per second for all heights between 50 and 500mm? Try each of the formulas and explore the output.
+? Which of these expressions calculates the flow in cubic meters per second for all heights (`h`$) between 50mm and 500mm? 
 
 a) `(2/3) * Cd * sqrt(2 * 9.81) * b * (0.05:0.50)^(3/2)`
 B) `(2/3) * Cd * sqrt(2 * 9.81) * b * ((50:500)/1000)^(3/2)`
 c) Repeat for each value of `h`$: `(2/3) * Cd * sqrt(2 * 9.81) * b * h^(3/2)`
  
+You can find the answers are in the `channel.R` script in the `basicr` folder.
 {/quiz}
 
 ## RStudio scripts and projects
@@ -212,7 +224,7 @@ After you open this file, you see the relevant files in the bottom-left window. 
 
 X> Review the function at the end of the channel script. Can you reverse-engineer and understand the code?
 
-### The Help Function
+### Finding help
 The R language has a built-in help function for every function. For example, type `help(mean)` to learn everything about the mean function. One of the weaknesses of R is that the help files can be quite cryptic to beginning users.
 
 The first section describes the function in words. The second section shows how to use the function. The arguments of the function are listed in the third section.

@@ -163,7 +163,7 @@ write_csv(flow, "casestudy3/flow.csv")
 ```
 
 ### Visualising Consumption
-Now that we have the flow in litres per hour for each service it because pretty easy to visualise consumption for individual properties.
+Now that we have the flow in litres per hour for each service it is pretty easy to visualise consumption for individual properties.
 
 Q> Recreate the graph in figure 7.3. Tip: First use the `slice()` function to select the first 48 rows and filter the data to only show the device with serial number RTU-210156. Make sure the y-axis scales between 0 by including `ylim(0, 100)` in your call of the ggplot function.
 

@@ -171,7 +171,7 @@ The numerical output of R functions often contains far to many decimals. Several
 a <- sqrt(7)
 print(a)
 
-ptions(digits = 15)
+options(digits = 15)
 print(a)
 ```
 
