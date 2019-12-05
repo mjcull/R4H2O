@@ -167,14 +167,19 @@ The value for `C_d`$ is approximated because it depends on the dimensions of the
 ![Example of a channel with a rectangular weir (Photo: Coliban Water).](resources/session2/weirplate.jpg)
 
 {quiz, id: channel, attempts: 10}
-You are processing measurements from a channel operator and need to calculate various flow rates. You can use the Kindsvater-Carter formula: $q = \frac{2}{3} C_d \sqrt{(2g)} bh^{(3/2)}$
+You are processing measurements from a channel operator and need to calculate various flow rates. You can use the Kindsvater-Carter formula: 
+
+```$
+q = \frac{2}{3} C_d \sqrt{(2g)} bh^{(3/2)}
+```
 
 - The discharge factor `C_d = 0.6`.
 - The gravity constant `g = 9.81 m/s^2`.
 - The width of the weir `b = 0.6m`.
 - One megalitre is one million litres (1000 cubic metres). This is a unit of volume measurement commonly used in Australia.
 
-With this information, answer the quiz questions below. Remember to use the arrow button to retrieve previous commands. 
+
+Answer the quiz questions below with this information. Remember to use the arrow button to retrieve previous commands. 
 
 ? What is the flow in the channel in megalitres per day when the height `h = 100mm`?
 
