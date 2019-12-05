@@ -14,9 +14,9 @@ The content of this course represents a steep learning curve because we take a d
 
 >The steeper the learning curve, the larger to payoff.
 
-This workshop is not an exhaustive introduction into data science programming but a teaser to inspire water professionals to ditch their spreadsheets and instead write code to analyse data. The best way to learn to solve problems with computer code is to start with practical examples and learn the principles as you progress through ever more complex cases.
+This workshop is not an exhaustive introduction into data science programming, but a teaser to inspire water professionals to ditch their spreadsheets and instead write code to analyse data. The best way to learn to solve problems with computer code is to start with practical examples and learn the principles as you progress through ever more complex cases.
 
-This course only discusses the basics of using the R language with a limited scope. This course does not include advanced techniques such as machine learning. All data used in this course is tabular, text analysis and other unstructured data are not part of the curriculum.
+This course discusses the basics of using the R language with a limited scope. This course does not include advanced techniques such as machine learning. All data used in this course is tabular, text analysis and other unstructured data are not part of the curriculum.
 
 The course consists of seven sessions. The introduction introduces the principles of data science within the context of managing a water utility. The three case studies look at water quality data, customer perception and digital metering data. The case studies use material previously published on [The Devil is in the data](https://lucidmanager.org/data-science/), a blog about creating value and having fun with the R language.
 
@@ -39,11 +39,13 @@ The [second session](#basics) introduces the basic principles of the R language 
 ## Case Study 1: Water Quality Regulations
 In this [first case study](#casestudy1), participants apply their skills to laboratory testing data from an imaginary drinking water network. The case study revolves around checking the data for compliance with water quality regulations.
 
+The analysis uses the Tidyverse library. The ![Tidyverse](https://tidyverse.org/) is a collection of extensions of the R language that simplifies manipulating, analysing and presenting data science. 
+
 {width: "80%", alt: "Distribution of turbidity results.", align: "middle"}
 ![Distribution of turbidity results (Case Study 1).](resources/session3/boxplot-zones.png)
 
-## The Tidyverse
-The ![Tidyverse](https://tidyverse.org/) is an extension of the R language that provides additional functionality to simplify manipulating, analysing and presenting data science. The [fourth session](#tidyverse) delves into the basic principles of visualising data with the ggpot2 library, using data from the first case study.
+## Visualising Data
+The [fourth session](#tidyverse) delves into the basic principles of visualising data with the ggpot2 library, using data from the first case study.
 
 ## Case Study 2: Understanding Customer Perception
 The data for the [second case study](#casestudy2) consists of the results of a survey of American consumers about their perception of tap water services. Participants use the Tidyverse to clean, transform and visualise this data.
